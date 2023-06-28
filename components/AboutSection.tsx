@@ -35,14 +35,15 @@ const AboutSection = () => {
             <br />
             <p>
               Ever since my college days, I had a strong passion for technology. I used to explore the realm of mobile devices by rooting them and
-              even managed to hack the college's Wi-Fi network. 
-              
-              This enthusiasm and interest in software eventually led me to pursue a career in this
-              field.
-            </p>
+              even managed to hack the college's Wi-Fi network.
+            </p> 
+             <br />
+            <p>
+            This enthusiasm and interest in software eventually led me to pursue a career in this field.
+             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions that keep me busy. From reading, playing sports, traveling, to making YouTube videos, I am
+              I have a wide range of hobbies and passions that keep me busy. From playing sports, traveling, to learning new stuff about myself, I am
               always seeking new experiences and love to keep myself engaged and learning new things.
             </p>
             <br />
