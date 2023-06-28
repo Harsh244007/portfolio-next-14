@@ -12,9 +12,9 @@ const Footer = () => {
       <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
       <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
         <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
-          © {new Date().getFullYear()}
+          © {new Date().getFullYear()}{" "}
           <a href="https://www.linkedin.com/in/harsh-patel244/" rel="noreferrer" target="_blank">
-            <p className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" >{" "}Harsh Patel</p>{" "}
+            <p className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"> Harsh Patel</p>{" "}
           </a>
           <a href="/" className="hover:underline"></a>
         </div>
