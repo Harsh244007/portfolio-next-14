@@ -13,14 +13,7 @@ const projects = [
     // github: "https://github.com/hqasmei/thankful-thoughts",
     link: "https://apperture-gear3.vercel.app/",
   },
-  {
-    name: "Vagreya.com",
-    description:
-      "Vagreya is an event booking web application designed specifically for artists. It serves as a bridge connecting clients and artists, facilitating the organization of events. Built on the full MERN stack, this robust platform offers a comprehensive solution for managing and coordinating various aspects of event bookings.",
-    image: "/vagreya.jpeg",
-    // github: "https://github.com/hqasmei/platoio",
-    link: "https://vagreya.com/",
-  },
+
   {
     name: "Aplus Audios",
     description:
@@ -28,6 +21,14 @@ const projects = [
     image: "/aplus.jpeg",
     // github: "https://github.com/hqasmei/katorfamilyphotos",
     link: "https://www.aplusaudios.com/aplusfrontend/build/index.html",
+  },
+  {
+    name: "Vagreya.com",
+    description:
+      "Vagreya is an event booking web application designed specifically for artists. It serves as a bridge connecting clients and artists, facilitating the organization of events. Built on the full MERN stack, this robust platform offers a comprehensive solution for managing and coordinating various aspects of event bookings.",
+    image: "/vagreya.jpeg",
+    // github: "https://github.com/hqasmei/platoio",
+    link: "https://vagreya.com/",
   },
 ]
 
