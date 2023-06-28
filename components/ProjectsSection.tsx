@@ -24,7 +24,7 @@ const projects = [
   {
     name: "Aplus Audios",
     description:
-      "Aplus Audios, a leading provider of audio solutions. This website offers customers a convenient platform to access and explore the wide range of products available. By leveraging the power of the MERN stack, Aplus Audios aims to optimize the customer experience and simplify the process of discovering and purchasing their audio solutions online.",
+      "Aplus Audios, a leading provider of audio solutions. This website offers customers a convenient platform to access and explore their products available. Built on top of MERN stack, Aplus Audios aims to optimize the customer experience and simplify the process of discovering and purchasing their audio solutions online.",
     image: "/aplus.jpeg",
     // github: "https://github.com/hqasmei/katorfamilyphotos",
     link: "https://www.aplusaudios.com/aplusfrontend/build/index.html",
