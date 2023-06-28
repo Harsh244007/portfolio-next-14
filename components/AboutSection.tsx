@@ -7,11 +7,11 @@ const skills = [
   { skill: "Next.js" },
   { skill: "Node JS" },
   { skill: "Express JS" },
-  { skill: "JavaScript" },
   { skill: "TypeScript" },
-  { skill: "Algorithms" },
   { skill: "HTML" },
   { skill: "CSS" },
+  { skill: "JavaScript" },
+  { skill: "Algorithms" },
   { skill: "Git" },
 ]
 
