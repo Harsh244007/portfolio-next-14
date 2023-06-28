@@ -25,12 +25,11 @@ const Footer = () => {
               size={30}
             />
           </a>
-          
-        
+
           <a href="mailto:patelharsh241999@gmail.com" rel="noreferrer" target="_blank">
             <AiOutlineMail className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
-          </a> 
-           <a href="tel:+918141924047" rel="noreferrer" target="_blank">
+          </a>
+          <a href="tel:+918141924047" rel="noreferrer" target="_blank">
             <AiFillPhone className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
           </a>
         </div>

@@ -35,7 +35,7 @@ const AboutSection = () => {
             <br />
             <p>
               Ever since my college days, I had a strong passion for technology. I used to explore the realm of mobile devices by rooting them and
-              even managed to hack the college's Wi-Fi network.
+              even managed to hack the colleges Wi-Fi network.
             </p> 
              <br />
             <p>
