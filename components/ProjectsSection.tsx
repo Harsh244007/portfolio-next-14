@@ -6,22 +6,25 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Aperture Gear - WIP",
-    description: "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
+    name: "Apperture Gear Studios - WIP",
+    description:
+      "Apperture Gear Studios is built on Next JS for their photography business. This platform consolidates all their clients' needs, providing a centralized hub for their event images and videos.",
     image: "/apperture.jpeg",
     // github: "https://github.com/hqasmei/thankful-thoughts",
     link: "https://apperture-gear3.vercel.app/",
   },
   {
     name: "Vagreya.com",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
+    description:
+      "Vagreya is an event booking web application designed specifically for artists. It serves as a bridge connecting clients and artists, facilitating the organization of events. Built on the full MERN stack, this robust platform offers a comprehensive solution for managing and coordinating various aspects of event bookings.",
     image: "/vagreya.jpeg",
     // github: "https://github.com/hqasmei/platoio",
     link: "https://vagreya.com/",
   },
   {
     name: "Aplus Audios",
-    description: "Kator Family Photos is a photos and video digitization service in the LA area.",
+    description:
+      "Aplus Audios, a leading provider of audio solutions. This website offers customers a convenient platform to access and explore the wide range of products available. By leveraging the power of the MERN stack, Aplus Audios aims to optimize the customer experience and simplify the process of discovering and purchasing their audio solutions online.",
     image: "/aplus.jpeg",
     // github: "https://github.com/hqasmei/katorfamilyphotos",
     link: "https://www.aplusaudios.com/aplusfrontend/build/index.html",
