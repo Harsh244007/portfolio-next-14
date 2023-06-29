@@ -34,8 +34,8 @@ const HeroSection = () => {
           >
             Projects
           </Link>
-             <Link
-            href="/resume.pdf"
+          <Link
+            to="/resume.pdf"
             target="_blank"
             className="text-neutral-100 m-3 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             activeClass="active"
@@ -46,7 +46,6 @@ const HeroSection = () => {
           >
             Resume
           </Link>
-       
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">
