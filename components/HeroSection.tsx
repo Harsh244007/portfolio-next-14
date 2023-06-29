@@ -39,10 +39,6 @@ const HeroSection = () => {
             target="_blank"
             className="text-neutral-100 m-3 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
           >
             Resume
           </Link>
