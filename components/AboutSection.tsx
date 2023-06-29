@@ -58,9 +58,9 @@ const AboutSection = () => {
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
-                  <p key={idx} className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold">
+                  <a key={idx} className="bg-teal-600 px-4 py-2 mr-2 mt-2 text-white rounded font-semibold">
                     {item.skill}
-                  </p>
+                  </a>
                 )
               })}
             </div>
