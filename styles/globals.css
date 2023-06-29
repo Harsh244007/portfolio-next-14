@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #1c1917 !important; 
+}
 html,
 body,
 body * {
@@ -124,4 +127,35 @@ a:hover::before {
     min-height: 2px;
        /* max-height: 5px; */
 
+}
+.loader{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background-color: #1c1917 !important; 
+  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+.loader p{
+  /* position:absolute; */
+  font-family: "Ysabeau SC", sans-serif !important;
+  /* bottom:50px; */
+  margin-top:20px;
+  color:white;
+}
+.loader span{
+  margin:0px !important; 
+}
+@keyframes fadein{
+    0% { opacity:1; }
+    66% { opacity:0.5; }
+    100% { opacity:0; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:1; }
+    66% { opacity:0.5; }
+    100% { opacity:0; }
 }
