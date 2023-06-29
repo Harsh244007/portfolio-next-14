@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+a {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    /* color: #999999;
+    background: #ffffff; */
+    /* border: 3px solid #999999; */
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+}
+
+
+a::after,
+a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+a::after {
+    top: 2px;
+    left: 2px;
+    /* border-top: 3px solid transparent; */
+    /* border-left: 3px solid transparent; */
+}
+
+a::before {
+    bottom: 2px;
+    right: 2px;
+    /* border-bottom: 3px solid transparent; */
+    /* border-right: 3px solid transparent; */
+}
+
+
+a:hover::after,
+a:hover::before {
+
+    border-radius: 5px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    /* border-color: #222222; */
+    background-color: rgba(131,131,131);
+    /* color: black; */
+    opacity: 0.2;
+}
+
+.bg-teal-600:hover::after,
+.bg-teal-600:hover::before{
+
+    background-color: inherit;
+}
