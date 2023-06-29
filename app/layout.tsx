@@ -15,6 +15,7 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
+      <style>@import url('/font.css');</style>
       <head />
       <body className="dark:bg-stone-900">
         <ThemeProvider enableSystem={true} attribute="class">
