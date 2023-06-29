@@ -97,8 +97,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div id="progressBarContainer" style={{  height: `${scroll * 15}px` }}>
-        <div id="progressBar" style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}`, height: `${scroll* 15}px` }} />
+      <div id="progressBarContainer" style={{ height: `${scroll * 12}px` }}>
+        <div id="progressBar" style={{ transform: `scale(${scroll}, 1)`, opacity: `${scroll}`, height: `${scroll * 12}px` }} />
       </div>
     </header>
   )
