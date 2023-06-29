@@ -34,27 +34,20 @@ const HeroSection = () => {
           >
             Projects
           </Link>
-          <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-          <a href="https://github.com/Harsh244007" rel="noreferrer" target="_blank">
-            <AiOutlineGithub className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
-          </a>
-
-          <a href="https://www.linkedin.com/in/harsh-patel244/" rel="noreferrer" target="_blank">
-            <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
-          </a>
-
-          <a href="mailto:patelharsh241999@gmail.com" rel="noreferrer" target="_blank">
-            <AiOutlineMail className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
-          </a>
-          <a href="tel:+918141924047" rel="noreferrer" target="_blank">
-            <AiFillPhone className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
-          </a>
+             <Link
+            href="/resume.pdf"
+            target="_blank"
+            className="text-neutral-100 m-3 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Resume
+          </Link>
+       
         </div>
-        </div>
-        
       </div>
       <div className="flex flex-row items-center text-center justify-center ">
         <Link to="about" activeClass="active" spy={true} smooth={true} offset={-100} duration={500}>
