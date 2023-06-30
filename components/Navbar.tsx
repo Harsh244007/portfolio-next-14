@@ -25,10 +25,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Projects",
     page: "projects",
-  },
-  {
-    label: "Resume",
-    page: "resume",
   }
 ]
 
@@ -89,7 +85,14 @@ export default function Navbar() {
                   </LinkScroll>
                 )
               })}
-
+<a
+            href="/Resume-Harsh-Patel.pdf"
+            target="_blank"
+            className="block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
+            // activeClass="active"
+          >
+            Resume
+          </a>
               {/* {currentTheme === "dark" ? (
                 <button onClick={() => setTheme("light")} className="bg-slate-100 p-2 rounded-xl">
                   <RiSunLine size={25} color="black" />
