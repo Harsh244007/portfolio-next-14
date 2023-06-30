@@ -85,18 +85,7 @@ export default function Navbar() {
                   </LinkScroll>
                 )
               })}
-                 <Link
-                    href={"/resume"}
-                    className={"block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"}
-                    // activeClass="active"
-                    // spy={true}
-                    // smooth={true}
-                    // offset={-100}
-                    // duration={500}
-                    // onClick={() => setNavbar(!navbar)}
-                  >
-                    {"Resume"}
-                  </Link>
+
               {/* {currentTheme === "dark" ? (
                 <button onClick={() => setTheme("light")} className="bg-slate-100 p-2 rounded-xl">
                   <RiSunLine size={25} color="black" />
