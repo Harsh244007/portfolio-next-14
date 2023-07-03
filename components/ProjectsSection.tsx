@@ -11,7 +11,7 @@ const projects = [
       "Apperture Gear Studios is built on Next JS for their photography business. This platform consolidates all their clients' needs, providing a centralized hub for their event images and videos.",
     image: "/apperture.jpeg",
     // github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://apperture-gear3.vercel.app/",
+    link: "https://www.aperturegearstudio.com/",
   },
 
   {
