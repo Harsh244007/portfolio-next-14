@@ -20,6 +20,9 @@ export default function RootLayout({
   }
    const [loading, setLoading] = React.useState(true)
   React.useEffect(() => {
+    document.addEventListener("contextmenu", function (e){
+      e.preventDefault();
+  }, false);
     setTimeout(() => setLoading(false), 1000)
   }, [])
   return (
