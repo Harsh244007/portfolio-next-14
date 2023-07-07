@@ -18,7 +18,7 @@ const HeroSection = () => {
           <Image src="/headshot.png" alt="" width={325} height={325} className=" shadow-2xl" />
         </div>
         <div className="md:mt-2 md:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">Hi, I&#39;m Harsh!</h1>
+          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl bg-teal-500 bg-opacity-50 w-max-content">Hi, I&#39;m Harsh!</h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I&#39;m a <span className="font-semibold text-teal-600">Software Engineer </span>
             based in Delhi, India. Working towards creating software that makes life easier and more meaningful.
