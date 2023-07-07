@@ -36,7 +36,7 @@ export default function RootLayout({
       innerSize={8}
       outerSize={15}
       color='255, 255, 255'
-      outerAlpha={0.5}
+      outerAlpha={0.4}
       innerScale={2}
       outerScale={5}
       clickables={[
