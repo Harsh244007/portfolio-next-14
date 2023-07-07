@@ -5,7 +5,10 @@ import Footer from "@/components/Footer"
 import { ThemeProvider } from "next-themes"
 import React from "react"
 import { ClipLoader } from "react-spinners"
-
+import dynamic from 'next/dynamic'
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
 export default function RootLayout({
   children,
 }: {
@@ -26,6 +29,27 @@ export default function RootLayout({
       <body className="dark:bg-stone-900">
         {!loading ? (
           <ThemeProvider enableSystem={true} attribute="class">
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={15}
+      color='255, 255, 255'
+      outerAlpha={0.5}
+      innerScale={2}
+      outerScale={5}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+    />
             <Navbar />
             {children}
             <Footer />

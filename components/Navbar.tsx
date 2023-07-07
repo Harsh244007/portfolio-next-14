@@ -83,6 +83,17 @@ export default function Navbar() {
                   </Link>
                 )
               })}
+<<<<<<< HEAD
+=======
+<a
+            href="/Resume-Harsh-Patel.pdf"
+            target="_blank"
+            className="block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
+            // activeClass="active"
+          >
+            Resume
+          </a>
+>>>>>>> 0a277c0ba3e44947ca2a7fc960f6c392c8a2899b
               {/* {currentTheme === "dark" ? (
                 <button onClick={() => setTheme("light")} className="bg-slate-100 p-2 rounded-xl">
                   <RiSunLine size={25} color="black" />
