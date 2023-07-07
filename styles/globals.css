@@ -12,6 +12,9 @@ body * {
   transition: all 0.2s ease-in;
   scrollbar-width: thin;
   -webkit-transition: all 0.3s;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select:none;
   -moz-transition: all 0.3s;
   scroll-behavior: smooth;
   font-family: "Ysabeau SC", sans-serif !important;
