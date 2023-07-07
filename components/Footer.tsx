@@ -5,7 +5,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineMail,
 } from "react-icons/ai"
-
+import {SiLeetcode} from "react-icons/si"
 const Footer = () => {
   return (
     <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
@@ -35,6 +35,14 @@ const Footer = () => {
           </a>
           <a href="tel:+918141924047" rel="noreferrer" target="_blank">
             <AiFillPhone className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
+          </a>
+          <a
+            href="https://leetcode.com/patelharsh241999/"
+            rel="noreferrer"
+            target="_blank"
+            // activeClass="active"
+          >
+            <SiLeetcode className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100" size={30} />
           </a>
         </div>
       </div>
