@@ -29,7 +29,7 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
   }, [ref])
 
   return (
-    <div ref={ref} className="relative opacity-0">
+    <div ref={ref} className="relative opacity-1">
       {children}
     </div>
   )

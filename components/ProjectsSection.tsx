@@ -44,7 +44,7 @@ const ProjectsSection = () => {
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
-              <SlideUp className="opacity-1" offset="-300px 0px -300px 0px">
+              <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col mb-8  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
                     <Link href={project.link}>
