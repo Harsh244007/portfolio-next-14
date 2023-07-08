@@ -25,7 +25,7 @@ const HeroSection = () => {
           </p>
           <Link
             to="projects"
-            className="text-neutral-100  font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             activeClass="active"
             spy={true}
             smooth={true}
@@ -37,7 +37,7 @@ const HeroSection = () => {
           <a
             href="/Resume-Harsh-Patel.pdf"
             target="_blank"
-            className="text-neutral-100 m-3  font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             // activeClass="active"
           >
             Resume
@@ -46,8 +46,8 @@ const HeroSection = () => {
             href="https://leetcode.com/patelharsh241999/"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-100 m-3  font-semibold px-3 sm:px-6 py-3  bg-teal-600 rounded shadow hover:bg-teal-700"
-            // activeClass="active"
+            className="text-neutral-100 m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+             // activeClass="active"
           >
             Leetcode
           </a>

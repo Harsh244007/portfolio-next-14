@@ -34,10 +34,12 @@ export default function RootLayout({
           <ThemeProvider enableSystem={true} attribute="class">
     <AnimatedCursor
       innerSize={8}
-      outerSize={15}
+      // showSystemCursor={true}
+      outerSize={14}
       color='255, 255, 255'
       outerAlpha={0.4}
-      innerScale={2}
+      trailingSpeed={2}
+      innerScale={3}
       outerScale={5}
       clickables={[
         'a',
@@ -52,6 +54,7 @@ export default function RootLayout({
         'button',
         '.link'
       ]}
+     
     />
             <Navbar />
             {children}
