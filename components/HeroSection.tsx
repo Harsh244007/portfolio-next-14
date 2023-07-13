@@ -1,21 +1,32 @@
 "use client" // this is a client component
-import React from "react"
+import React,{useEffect,useState} from "react"
 import Image from "next/image"
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
-import {
-  AiOutlineGithub,
-  AiFillPhone,
-  AiOutlineLinkedin,
-  AiOutlineMail,
-} from "react-icons/ai"
+import "styles/globals.css"
 
 const HeroSection = () => {
+  const image=["/headshot.png","/headshot.png"]
+  const len = image.length-1
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [activeIndex,len])
   return (
     <section id="home">
       <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2 md:w-1/2">
-          <Image src="/headshot.png" alt="" width={325} height={325} className=" shadow-2xl" />
+        <div className="md:mt-2 md:w-1/2 CarouselParent">
+          {image.map((e,i)=>{
+            return (
+<Image src={e} key={i} alt="" width={325} height={325} className={`shadow-2xl ${activeIndex == i && "active"}`} />
+          
+            )
+          })}
+        
         </div>
         <div className="md:mt-2 md:w-3/5">
           <h1 className="text-4xl font-bold mt-6 leading-tight md:mt-0 md:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">Hi, I&#39;m Harsh!</h1>

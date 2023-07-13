@@ -170,3 +170,40 @@ html {
 html.dark-mode {
   --cursor-color: #fff
 }
+.CarouselParent {
+  width: 100%;
+  /* margin: 0px 108px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: max-content;
+}
+
+.false {
+  min-width: 100% !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  height: 100% !important;
+  display: none;
+  transition: ease-in-out 1s;
+}
+.active {
+  display: inline-block !important;
+  animation: fadeIn 1.5s ease-in forwards;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  height: 100% !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
