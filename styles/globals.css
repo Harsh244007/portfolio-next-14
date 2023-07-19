@@ -224,6 +224,11 @@ html.dark-mode {
 .h-90vh {
   height: 80vh !important;
 }
+@media (max-width:1022px){
+  .h-90vh {
+    height: 95vh !important;
+  }
+}
 .carousel-dots {
   display: flex;
   justify-content: center;
