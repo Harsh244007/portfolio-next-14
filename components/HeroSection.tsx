@@ -110,6 +110,7 @@ const HeroSection = () => {
           to="about"
           activeClass="active"
           spy={true}
+          className="noBlackShadow"
           smooth={true}
           offset={-100}
           duration={500}
