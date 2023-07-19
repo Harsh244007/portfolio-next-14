@@ -190,7 +190,7 @@ html.dark-mode {
   display: none;
   transition: ease-in-out 1s;
 }
-.active {
+.activeCarousal {
   display: inline-block !important;
   animation: fadeIn 1.5s ease-in forwards;
   min-width: 100% !important;
