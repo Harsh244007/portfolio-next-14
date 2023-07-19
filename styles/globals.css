@@ -64,7 +64,9 @@ a {
   -webkit-transition: ease-out 0.5s;
   -moz-transition: ease-out 0.5s;
 }
-
+a:not(.noBlackShadow){
+  box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.2) !important; 
+}
 a::after,
 a::before {
   position: absolute;

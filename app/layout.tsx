@@ -41,9 +41,9 @@ export default function RootLayout({
             <AnimatedCursor
               innerSize={8}
               // showSystemCursor={true}
-              outerSize={14}
+              outerSize={10}
               color="255, 255, 255"
-              outerAlpha={0.4}
+              outerAlpha={0.2}
               trailingSpeed={2}
               innerScale={3}
               outerScale={5}
