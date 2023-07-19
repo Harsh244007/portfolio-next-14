@@ -57,6 +57,7 @@ export default function RootLayout({
                 "label[for]",
                 "select",
                 "textarea",
+                ".carousel-dot",
                 "button",
                 ".link",
               ]}

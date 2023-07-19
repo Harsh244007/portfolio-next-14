@@ -55,7 +55,7 @@ const HeroSection = () => {
           })}
                     <div className="carousel-dots">
             {image.map((e, i) => (
-              <div
+              <span
                 key={i}
                 className={`carousel-dot ${activeIndex === i ? "active-dot":""}`}
                 onClick={() => setActiveIndex(i)}
