@@ -16,7 +16,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/harsh-patel244/" className="noBlackShadow" rel="noreferrer" target="_blank">
             <p className="hover:-translate-y-1 noBlackShadow transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"> Harsh Patel</p>{" "}
           </a>
-          <a href="/" className="hover:underline"></a>
+          {/* <a href="/" className="hover:underline"></a> */}
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
           <a href="https://github.com/Harsh244007" rel="noreferrer" className="noBlackShadow" target="_blank">
