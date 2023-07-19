@@ -207,3 +207,6 @@ html.dark-mode {
     opacity: 1;
   }
 }
+.h95vh{
+  height: 90vh;
+}
