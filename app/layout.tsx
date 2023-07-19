@@ -1,5 +1,6 @@
 "use client";
 import "../styles/globals.css";
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
@@ -34,6 +35,7 @@ export default function RootLayout({
       <style>@import url(`${"/font.css"}`);</style>
       <head />
       <body className="dark:bg-stone-900">
+      <Analytics />
         {!loading ? (
           <ThemeProvider enableSystem={true} attribute="class">
             <AnimatedCursor
