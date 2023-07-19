@@ -32,7 +32,7 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
-      <style>@import url(`${"/font.css"}`);</style>
+    <style>@import url('/font.css');</style>
       <head />
       <body className="dark:bg-stone-900">
       <Analytics />
