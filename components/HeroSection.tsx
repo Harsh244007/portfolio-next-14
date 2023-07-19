@@ -71,7 +71,10 @@ const HeroSection = () => {
             <span className="font-semibold text-teal-600">
               A Software Engineer{" "}
             </span>
-            from Delhi, India, dedicated to developing software that enhances lives and adds value.
+            from Delhi, India.
+            </p> 
+          <p className="text-lg mt-4 mb-6 md:text-2xl">
+            dedicated to developing software that enhances lives and adds value.
           </p>
           <Link
             to="projects"
