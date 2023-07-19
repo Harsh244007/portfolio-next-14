@@ -65,15 +65,13 @@ const HeroSection = () => {
         </div>
         <div className="md:mt-2 md:w-3/5">
           <h1 className="text-4xl font-bold mt-6 leading-tight md:mt-0 md:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">
-            Hi, I&#39;m Harsh!
-          </h1>
+            Hello, I&#39;m Harsh!</h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
-            I&#39;m a{" "}
+            
             <span className="font-semibold text-teal-600">
-              Software Engineer{" "}
+              A Software Engineer{" "}
             </span>
-            based in Delhi, India. Working towards creating software that makes
-            life easier and more meaningful.
+            from Delhi, India, dedicated to developing software that enhances lives and adds value.
           </p>
           <Link
             to="projects"

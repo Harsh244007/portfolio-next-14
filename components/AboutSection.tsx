@@ -28,29 +28,36 @@ const AboutSection = () => {
           <div className="md:w-1/2 ">
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Get to know me!</h1>
             <p>
-              Hi, my name is Harsh and I am a <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software engineer based in Delhi, India.
+              Hello, {"I'm"} Harsh, a <span className="font-bold">{"highly ambitious"}</span> and 
+              <span className="font-bold">{" self-motivated"}</span> software engineer based in Delhi, India.
             </p>
             <br />
             <p>
-              Ever since my college days, I had a strong passion for technology. I used to explore the realm of mobile devices by rooting them and
-              even managed to hack the colleges Wi-Fi network.
+            Since my college days, {"I've"} been driven by a strong passion for technology. I would explore the world of mobile devices by rooting them and even managed to hack my college's Wi-Fi network.  🤫 
             </p> 
-             <br />
-            <p>
-            This enthusiasm and interest in software eventually led me to pursue a career in this field.
-             </p>
             <br />
             <p>
-              I have a wide range of hobbies and passions that keep me busy. From playing sports, traveling, to learning new stuff about myself, I am
-              always seeking new experiences and love to keep myself engaged and learning new things.
+            This deep interest and enthusiasm in software led me to pursue a career in this field. 
+            </p>
+            <br />
+            
+            <p>
+            Alongside my professional journey, I have a diverse range of hobbies and passions that keep me engaged.
+            </p>
+            
+            <p>
+            Whether it's playing sports, traveling, or exploring new aspects of myself, I am always seeking fresh experiences and opportunities to learn.
             </p>
             <br />
             <p>
-              I believe that you should <span className="font-bold text-teal-500">never stop growing</span> and that&#39;s what I strive to do, I have
-              a passion for technology and a desire to always push the limits of what is possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+
+            I firmly believe in <span className="font-bold text-teal-500">continuous growth</span> and <span className="font-bold text-teal-500">constantly pushing the boundaries</span> of what is possible. 
+            Technology is my passion, and I am excited to see where my career takes me. 
+            </p>
+            <br />
+            
+            <p>
+            Currently, I am open to new opportunities and eagerly embracing the next chapter of my professional journey. 🙂
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
