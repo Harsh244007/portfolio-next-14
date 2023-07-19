@@ -218,7 +218,7 @@ html.dark-mode {
     /* transform: translateX(-100%); */
   }
 }
-.h95vh {
+/* .h95vh {
   height: 90vh;
 }
 .h-90vh {
@@ -228,7 +228,7 @@ html.dark-mode {
   .h-90vh {
     height: 95vh !important;
   }
-}
+} */
 .carousel-dots {
   display: flex;
   justify-content: center;
