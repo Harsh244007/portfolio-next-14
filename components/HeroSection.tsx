@@ -13,7 +13,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
-    }, 2000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [activeIndex, len]);
 
