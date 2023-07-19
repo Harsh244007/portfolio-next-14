@@ -193,6 +193,9 @@ html.dark-mode {
 .activeCarousal {
   display: inline-block !important;
   animation: fadeIn 1.5s ease-in forwards;
+
+  /* transition: transform 4s ease-in-out;
+  transform: translateX(0); */
   min-width: 100% !important;
   min-height: 100% !important;
   width: 100% !important;
@@ -202,9 +205,11 @@ html.dark-mode {
 @keyframes fadeIn {
   0% {
     opacity: 0.5;
+    /* transform: translateX(0); */
   }
   100% {
     opacity: 1;
+    /* transform: translateX(-100%); */
   }
 }
 .h95vh{
