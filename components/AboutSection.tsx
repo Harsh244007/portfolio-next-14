@@ -33,7 +33,7 @@ const AboutSection = () => {
             </p>
             <br />
             <p>
-            Since my college days, {"I've"} been driven by a strong passion for technology. {"🔍"} I would explore the world of mobile devices by rooting them and even managed to hack my college's Wi-Fi network.  🤫 
+            Since my college days, {"I had"} strong passion for technology. {"🔍"} I was exploring the world of mobile performance improvement by rooting them and even managed to hack my {"college's"} Wi-Fi networks.  🤫 
             </p> 
             <br />
             <p>
@@ -45,13 +45,19 @@ const AboutSection = () => {
             Alongside my professional journey, I have a diverse range of hobbies and passions that keep me engaged.
             </p>
             
+            <br />
             <p>
-            Whether it's playing sports {"⚽"}, traveling {"✈️, "} or exploring new aspects of myself, I am always seeking fresh experiences and opportunities to learn.
+            Whether it's playing sports {"⚽"}, traveling {"✈️, "} or exploring new aspects of myself, I am always seeking fresh experiences in life and opportunities to learn.
             </p>
             <br />
             <p>
 
             I firmly believe in <span className="font-bold text-teal-500">continuous growth</span> and <span className="font-bold text-teal-500">constantly pushing the boundaries</span> of what is possible. 
+           
+            </p>
+            <br />
+            <p>
+
             Technology {"💡"} is my passion, and I am excited to see where my career takes me. 
             </p>
             <br />
