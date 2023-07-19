@@ -222,7 +222,7 @@ html.dark-mode {
   height: 90vh;
 }
 .h-90vh {
-  height: 80vh !important;
+  height: 85vh !important;
 }
 @media (max-width:1022px){
   .h-90vh {
