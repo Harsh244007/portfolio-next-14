@@ -221,6 +221,9 @@ html.dark-mode {
 .h95vh {
   height: 90vh;
 }
+.h-90vh {
+  height: 80vh !important;
+}
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -241,10 +244,10 @@ html.dark-mode {
 .active-dot {
   background-color: #0d9488;
   width: 26px;
-  box-shadow:2px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
+  box-shadow: 2px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
   border: 1px solid rgba(13, 148, 136, 0.5);
   border-radius: 20px;
 }
-.shadow-2xl img{
+.shadow-2xl img {
   margin: auto;
 }
