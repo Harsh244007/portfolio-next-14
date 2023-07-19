@@ -6,7 +6,7 @@ import { HiArrowDown } from "react-icons/hi";
 import "styles/globals.css";
 
 const HeroSection = () => {
-  const image = ["/headshot.png", "/headshot.png"];
+  const image = ["/headshot.png", "/headshot2.png", "/headshot3.png"];
   const len = image.length - 1;
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -16,20 +16,41 @@ const HeroSection = () => {
     }, 2000);
     return () => clearInterval(interval);
   }, [activeIndex, len]);
+
+  const [startX, setStartX] = useState(null)
+  const handleSwipeStart = (event:any) => {
+    setStartX(event.touches[0].clientX)
+  }
+  const handleSwipeMove = (event:any) => {
+    if (startX !== null) {
+      const currentX = event.touches[0].clientX
+      const difference = startX - currentX
+      if (difference > 0) {
+        // Swiped left
+        setActiveIndex((prevIndex) => (prevIndex === len ? 0 : prevIndex + 1))
+      }
+      if (difference < 0) {
+        // Swiped right
+        setActiveIndex((prevIndex) => (prevIndex == 0 ? len : prevIndex - 1))
+      }
+      setStartX(null)
+    }
+  }
   return (
     <section id="home">
       <div className="flex h-90vh flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-1/2 CarouselParent">
           {image.map((e, i) => {
             return (
+              <div key={i} onTouchStart={handleSwipeStart} onTouchMove={handleSwipeMove} className={`shadow-2xl ${activeIndex == i && "activeCarousal"}`}        >
               <Image
                 src={e}
-                key={i}
-                alt=""
+                alt="Main Image Harsh Patel"
                 width={325}
                 height={325}
-                className={`shadow-2xl object-cover ${activeIndex == i && "activeCarousal"}`}
+                className={`shadow-2xl object-cover`}
               />
+              </div>
             );
           })}
         </div>
