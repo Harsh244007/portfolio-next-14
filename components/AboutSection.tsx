@@ -28,16 +28,16 @@ const AboutSection = () => {
           <div className="md:w-1/2 ">
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Get to know me!</h1>
             <p>
-              Hello, {"I'm"} Harsh, a <span className="font-bold">{"highly ambitious"}</span> and 
+             {"👋"} Hello, {"I'm"} Harsh, a <span className="font-bold">{"highly ambitious"}</span> and 
               <span className="font-bold">{" self-motivated"}</span> software engineer based in Delhi, India.
             </p>
             <br />
             <p>
-            Since my college days, {"I've"} been driven by a strong passion for technology. I would explore the world of mobile devices by rooting them and even managed to hack my college's Wi-Fi network.  🤫 
+            Since my college days, {"I've"} been driven by a strong passion for technology. {"🔍"} I would explore the world of mobile devices by rooting them and even managed to hack my college's Wi-Fi network.  🤫 
             </p> 
             <br />
             <p>
-            This deep interest and enthusiasm in software led me to pursue a career in this field. 
+           {"🚀"} This deep interest and enthusiasm in software led me to pursue a career in this field. 
             </p>
             <br />
             
@@ -46,13 +46,13 @@ const AboutSection = () => {
             </p>
             
             <p>
-            Whether it's playing sports, traveling, or exploring new aspects of myself, I am always seeking fresh experiences and opportunities to learn.
+            Whether it's playing sports {"⚽"}, traveling {"✈️, "} or exploring new aspects of myself, I am always seeking fresh experiences and opportunities to learn.
             </p>
             <br />
             <p>
 
             I firmly believe in <span className="font-bold text-teal-500">continuous growth</span> and <span className="font-bold text-teal-500">constantly pushing the boundaries</span> of what is possible. 
-            Technology is my passion, and I am excited to see where my career takes me. 
+            Technology {"💡"} is my passion, and I am excited to see where my career takes me. 
             </p>
             <br />
             
