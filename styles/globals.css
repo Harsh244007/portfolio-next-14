@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: #1c1917; 
+body {
+  background-color: #1c1917;
   color: white;
 }
 html,
@@ -14,7 +14,7 @@ body * {
   -webkit-transition: all 0.3s;
   user-select: none;
   -ms-user-select: none;
-  -webkit-user-select:none;
+  -webkit-user-select: none;
   -moz-transition: all 0.3s;
   scroll-behavior: smooth;
   font-family: "Ysabeau SC", sans-serif !important;
@@ -48,127 +48,133 @@ body::-webkit-scrollbar-track {
 }
 
 a {
-    position: relative;
-    display: inline-block;
-    /* margin: 15px;*/
-    padding: 5px 5px;
-    text-align: center;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    /* color: #999999;
+  position: relative;
+  display: inline-block;
+  /* margin: 15px;*/
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  /* color: #999999;
     background: #ffffff; */
-    /* border: 3px solid #999999; */
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    -webkit-transition: ease-out 0.5s;
-    -moz-transition: ease-out 0.5s;
+  /* border: 3px solid #999999; */
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
 }
-
 
 a::after,
 a::before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    transition: .5s;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 0.5s;
 }
 
 a::after {
-    top: 2px;
-    left: 2px;
-    /* border-top: 3px solid transparent; */
-    /* border-left: 3px solid transparent; */
+  top: 2px;
+  left: 2px;
+  /* border-top: 3px solid transparent; */
+  /* border-left: 3px solid transparent; */
 }
 
 a::before {
-    bottom: 2px;
-    right: 2px;
-    /* border-bottom: 3px solid transparent; */
-    /* border-right: 3px solid transparent; */
+  bottom: 2px;
+  right: 2px;
+  /* border-bottom: 3px solid transparent; */
+  /* border-right: 3px solid transparent; */
 }
-
 
 a:hover::after,
 a:hover::before {
-
-    border-radius: 5px;
-    width: calc(100% + 5px);
-    height: calc(100% + 2px);
-    /* border-color: #222222; */
-    background-color: rgba(131,131,131);
-    /* color: black; */
-    opacity: 0.2;
+  border-radius: 5px;
+  width: calc(100% + 5px);
+  height: calc(100% + 2px);
+  /* border-color: #222222; */
+  background-color: rgba(131, 131, 131);
+  /* color: black; */
+  opacity: 0.2;
 }
 
 .bg-teal-600:hover::after,
-.bg-teal-600:hover::before{
-
-    height: calc(100% + 5px);
-    opacity: 0.3;
-    background-color: inherit;
+.bg-teal-600:hover::before {
+  height: calc(100% + 5px);
+  opacity: 0.3;
+  background-color: inherit;
 }
 #progressBarContainer {
-    position: absolute;
-    z-index: 10;
-    background: rgba(255,255,255,0.05);
-    width: 100%;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
-  
-  
+
 #progressBar {
-    background: linear-gradient(to right, #b9cfce, #0d9488);
-    transform-origin: top left;
-    transform: scale(0,0);
-    opacity: 0;
+  background: linear-gradient(to right, #b9cfce, #0d9488);
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
 }
 
 #progressBarContainer,
 #progressBar {
-    min-height: 2px;
-       /* max-height: 5px; */
-
+  min-height: 2px;
+  /* max-height: 5px; */
 }
-.loader{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  background-color: #1c1917 !important; 
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1c1917 !important;
   -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-    animation: 3s ease 0s normal forwards 1 fadein;
+  animation: 3s ease 0s normal forwards 1 fadein;
 }
-.loader p{
+.loader p {
   /* position:absolute; */
   font-family: "Ysabeau SC", sans-serif !important;
   /* bottom:50px; */
-  margin-top:20px;
-  color:white;
+  margin-top: 20px;
+  color: white;
 }
-.loader span{
-  margin:0px !important; 
+.loader span {
+  margin: 0px !important;
 }
-@keyframes fadein{
-    0% { opacity:1; }
-    66% { opacity:0.5; }
-    100% { opacity:0; }
+@keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@-webkit-keyframes fadein{
-    0% { opacity:1; }
-    66% { opacity:0.5; }
-    100% { opacity:0; }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 html {
-  --cursor-color: #333
+  --cursor-color: #333;
 }
 
 html.dark-mode {
-  --cursor-color: #fff
+  --cursor-color: #fff;
 }
 .CarouselParent {
   width: 100%;
@@ -212,20 +218,21 @@ html.dark-mode {
     /* transform: translateX(-100%); */
   }
 }
-.h95vh{
+.h95vh {
   height: 90vh;
 }
 .carousel-dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0.5rem;
-  transition:all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .carousel-dot {
   width: 10px;
   height: 10px;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   margin: 0 0.25rem;
   border-radius: 50%;
   background-color: #000;
@@ -234,7 +241,10 @@ html.dark-mode {
 .active-dot {
   background-color: #0d9488;
   width: 20px;
-  
+
   border: 1px solid rgba(13, 148, 136, 0.5);
   border-radius: 25%;
+}
+.shadow-2xl {
+  margin: auto;
 }
