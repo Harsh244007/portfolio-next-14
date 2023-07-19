@@ -70,6 +70,7 @@ a::before {
   position: absolute;
   content: "";
   width: 0;
+  box-shadow: 2px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
   height: 0;
   transition: 0.5s;
 }
