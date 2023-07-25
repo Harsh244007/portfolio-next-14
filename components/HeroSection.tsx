@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
 import "styles/globals.css";
+import { lightOrange } from "./RGBADataUrl.jsx"
 
 const HeroSection = () => {
   const image = ["/headshot.png", "/headshot2.png", "/headshot3.png"];
@@ -46,7 +47,9 @@ const HeroSection = () => {
               <Image
                 src={e}
                 alt="Main Image Harsh Patel"
+                placeholder="blur"
                 width={325}
+                blurDataURL={lightOrange}
                 height={325}
                 className={`shadow-2xl object-cover`}
               />
