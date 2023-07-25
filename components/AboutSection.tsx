@@ -47,7 +47,7 @@ const AboutSection = () => {
             
             <br />
             <p>
-            Whether it's playing sports {"⚽"}, traveling {"✈️, "} or exploring new aspects of myself, I am always seeking fresh experiences in life and opportunities to learn.
+            Whether it{"`"}s playing sports {"⚽"}, traveling {"✈️, "} or exploring new aspects of myself, I am always seeking fresh experiences in life and opportunities to learn.
             </p>
             <br />
             <p>
