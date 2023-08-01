@@ -46,7 +46,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", progressBarHandler)
   })
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow  bg-stone-900 bg-opacity-70  border-b border-stone-600">
+    <header className="w-full backdrop-blur-sm mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow  bg-stone-900 bg-opacity-70  border-b border-stone-600">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -64,11 +64,12 @@ export default function Navbar() {
         </div>
 
         <div>
-          <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
+          <div className={`flex-1 bg-opacity-100 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <Link
+
                     key={idx}
                     to={item.page}
                     className={"block lg:inline-block text-neutral-100  hover:text-neutral-500"}
