@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
     <style>@import url("/font.css")</style>
       <head />
-      <body className="dark:bg-stone-900">
+      <body className="bg-stone-900">
       <Analytics />
         {!loading ? (
           <ThemeProvider enableSystem={true} attribute="class">
