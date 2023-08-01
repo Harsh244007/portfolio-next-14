@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         <div>
-          <div className={`flex-1 bg-opacity-100 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
+          <div className={`flex-1 bg-opacity-90 bg-stone-900 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, idx) => {
                 return (
@@ -72,7 +72,7 @@ export default function Navbar() {
 
                     key={idx}
                     to={item.page}
-                    className={"block lg:inline-block text-neutral-100  hover:text-neutral-500"}
+                    className={"block min-md:noBlackShadow lg:inline-block text-neutral-100  hover:text-neutral-500"}
                     // activeClass="active"
                     spy={true}
                     smooth={true}
