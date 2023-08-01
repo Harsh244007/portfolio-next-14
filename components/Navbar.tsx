@@ -46,7 +46,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", progressBarHandler)
   })
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow  bg-stone-900 border-b border-stone-600">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
