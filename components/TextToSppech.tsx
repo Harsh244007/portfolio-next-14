@@ -4,12 +4,12 @@ const TextToSpeechPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
   const [pausedAt, setPausedAt] = useState(0);
-
+// @ts-ignore
   const [highlightedWord, setHighlightedWord] = useState<string | null>(null);
-//   const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   const getTextToRead = () => {
-    const textContent = document.body.textContent;
+    // @ts-ignore
+    const textContent:any = document.body.textContent;
     const withoutTags = textContent.replace(/<[^>]+>/g, " ");
     const withoutFunctions = withoutTags.replace(/\{[^}]+\}/g, "");
     return withoutFunctions.trim().split(" ");
