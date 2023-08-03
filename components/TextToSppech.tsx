@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import TEXTJSON from "./Text.json";
 
+// @ts-ignore
 const TextToSpeechPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
@@ -9,10 +11,8 @@ const TextToSpeechPlayer: React.FC = () => {
 
   const getTextToRead = () => {
     // @ts-ignore
-    const textContent:any = document.body.textContent;
-    const withoutTags = textContent.replace(/<[^>]+>/g, " ");
-    const withoutFunctions = withoutTags.replace(/\{[^}]+\}/g, "");
-    return withoutFunctions.trim().split(" ");
+    const textContent:any = TEXTJSON[0].MainText;
+    return textContent.trim().split(" ");
   };
 
   useEffect(() => {
