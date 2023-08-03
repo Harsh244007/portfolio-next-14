@@ -267,3 +267,6 @@ html.dark-mode {
 .shadow-2xl img {
   margin: auto;
 }
+.text-to-speech-player button{
+  cursor:pointer !important;
+}

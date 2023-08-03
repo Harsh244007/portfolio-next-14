@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import React from "react";
 import { ClipLoader } from "react-spinners";
 import dynamic from "next/dynamic";
+import TextToSpeechPlayer from "@/components/TextToSppech";
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
@@ -65,6 +66,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <TextToSpeechPlayer/>
           </ThemeProvider>
         ) : (
           <div className="loader">
