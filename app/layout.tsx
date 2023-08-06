@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="bg-stone-900">
       <Analytics />
         {!loading ? (
-          <ThemeProvider enableSystem={true} attribute="class">
+          <>
             <AnimatedCursor
               innerSize={8}
               // showSystemCursor={true}
@@ -67,7 +67,7 @@ export default function RootLayout({
             {children}
             <Footer />
             {/* <TextToSpeechPlayer/> */}
-          </ThemeProvider>
+          </>
         ) : (
           <div className="loader">
             <ClipLoader
