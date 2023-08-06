@@ -22,14 +22,15 @@ body * {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
+::-webkit-scrollbar,
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 body *:-webkit-scrollbar {
-  width: 15px;
-  height: 0;
+  width: 15px !important;
+  height: 15px;
   background: #0d9488 !important;
 }
-
+::-webkit-scrollbar-thumb,
 body *::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
@@ -38,7 +39,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-border-radius: 1ex;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
-
+::-webkit-scrollbar-track,
 body *::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
