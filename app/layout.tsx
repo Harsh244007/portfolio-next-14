@@ -66,7 +66,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
-            <TextToSpeechPlayer/>
+            {/* <TextToSpeechPlayer/> */}
           </ThemeProvider>
         ) : (
           <div className="loader">
