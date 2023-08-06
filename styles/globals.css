@@ -1,7 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+::-webkit-scrollbar,
+body * :-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+  width: 12px !important;
+  height: 0px;
+  background: black !important;
+}
+::-webkit-scrollbar-thumb,
+body * ::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #0d9488 !important;
+  border-radius:0px;
+  -webkit-border-radius: 0ex;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-track,
+body * ::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #0d9488 !important;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+/* Set custom width for the scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
+html,
+body,
+body * {
+  transition: all 0.2s ease-in;
+  scrollbar-width: thin;
+  -webkit-transition: all 0.3s;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-transition: all 0.3s;
+  scroll-behavior: smooth;
+  font-family: "Ysabeau SC", sans-serif !important;
+  box-sizing: border-box;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+body {
+  background-color: #1c1917;
+  color: white;
+}
 body {
   background-color: #1c1917;
   color: white;
@@ -15,9 +66,6 @@ a {
   font-size: 16px;
   letter-spacing: 1px;
   text-decoration: none;
-  /* color: #999999;
-    background: #ffffff; */
-  /* border: 3px solid #999999; */
   cursor: pointer;
   transition: ease-out 0.5s;
   -webkit-transition: ease-out 0.5s;
@@ -232,45 +280,4 @@ background-color:rgb(201, 133, 57);
 box-shadow: 0px 0px 18px 4px rgba(201, 133, 57, 0.7) !important;
 border: 1px solid rgba(201, 133, 57, 0.5);
 }
-html,
-body,
-body * {
-  transition: all 0.2s ease-in;
-  scrollbar-width: thin;
-  -webkit-transition: all 0.3s;
-  user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -moz-transition: all 0.3s;
-  scroll-behavior: smooth;
-  font-family: "Ysabeau SC", sans-serif !important;
-  box-sizing: border-box;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-}
-::-webkit-scrollbar,
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-body *:-webkit-scrollbar {
-  width: 15px !important;
-  height: 15px;
-  background: #0d9488 !important;
-}
-::-webkit-scrollbar-thumb,
-body *::-webkit-scrollbar-thumb,
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
-  background: #0d9488 !important;
-  border-radius:1px;
-  -webkit-border-radius: 1ex;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-}
-::-webkit-scrollbar-track,
-body *::-webkit-scrollbar-track,
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px #0d9488 !important;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
+

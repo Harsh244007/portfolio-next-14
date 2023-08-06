@@ -36,7 +36,7 @@ export default function RootLayout({
     <style>@import url("/font.css")</style>
       <head />
       <body className="bg-stone-900">
-      <Analytics />
+      {/* <Analytics /> */}
         {!loading ? (
           <>
             <AnimatedCursor
