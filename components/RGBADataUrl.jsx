@@ -8,5 +8,6 @@ const RgbaDataURL = (r, g, b, a) => {
   return `data:image/gif;base64,R0lGODlhAQABAPAA${triplet(0, r, g)}${triplet(b, alpha, alpha)}/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
 }
 
-const lightOrange = RgbaDataURL(13, 148, 136, 0.7)
-export { lightOrange }
+const lightOrange = RgbaDataURL(201, 133, 57, 0.5)
+const teal = RgbaDataURL(13, 148, 136, 0.7)
+export { lightOrange,teal }

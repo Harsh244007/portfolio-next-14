@@ -4,10 +4,10 @@ import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
 import "styles/globals.css";
-import { lightOrange } from "./RGBADataUrl.jsx"
+import { teal,lightOrange } from "./RGBADataUrl.jsx"
 
 const HeroSection = () => {
-  const image = ["/headshot.png", "/headshot2.png", "/headshot3.png"];
+  const image = ["/headshot.jpg", "/headshot4.png","/headshot2.png", "/headshot3.png"];
   const len = image.length - 1;
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 alt="Main Image Harsh Patel"
                 placeholder="blur"
                 width={325}
-                blurDataURL={lightOrange}
+                blurDataURL={i===0?lightOrange:teal}
                 height={325}
                 className={`shadow-2xl object-cover`}
               />
@@ -60,7 +60,7 @@ const HeroSection = () => {
             {image.map((e, i) => (
               <span
                 key={i}
-                className={`carousel-dot ${activeIndex === i ? "active-dot":""}`}
+                className={`carousel-dot ${i===0?"orangeDot":""} ${activeIndex === i ? "active-dot":""}`}
                 onClick={() => setActiveIndex(i)}
               />
             ))}

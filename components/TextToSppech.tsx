@@ -23,7 +23,7 @@ const TextToSpeechPlayer: React.FC = () => {
       utterance.onboundary = (event) => {
         if (event.name === "word") {
             // setHighlightedIndex(event.charIndex / 2); // Dividing by 2 to account for spaces
-          setHighlightedWord(words[event.charIndex / 2]); // Dividing by 2 to account for spaces
+          setHighlightedWord(words[event.charIndex]); // Dividing by 2 to account for spaces
         }
       };
       utterance.onend = () => {
