@@ -77,8 +77,11 @@ const HeroSection = () => {
             from Delhi, India.
             </p> 
           <p className="text-lg mt-4 mb-6 md:text-2xl">
-            dedicated to developing software that enhances lives and adds value.
-          </p>
+          Dedicated to developing software that enhances lives and adds value. 
+          
+          </p> 
+          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          Also, creating insightful DSA and System Design videos on YouTube and Instagram for effective learning.          </p>
           <Link
             to="projects"
             className="text-neutral-100 m-1 sm:m-3 md:ml-0 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
@@ -106,6 +109,15 @@ const HeroSection = () => {
             // activeClass="active"
           >
             Leetcode
+          </a>
+          <a
+            href="https://www.youtube.com/@codingwithharsh__/videos"
+            rel="noreferrer"
+            target="_blank"
+            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            // activeClass="active"
+          >
+            YouTube
           </a>
         </div>
       </div>

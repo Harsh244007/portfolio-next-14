@@ -4,6 +4,8 @@ import {
   AiOutlineGithub,
   AiFillPhone,
   AiOutlineLinkedin,
+  AiFillInstagram,
+  AiFillYoutube,
   AiOutlineMail,
 } from "react-icons/ai"
 import {SiLeetcode} from "react-icons/si"
@@ -44,6 +46,22 @@ const Footer = () => {
             // activeClass="active"
           >
             <SiLeetcode className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 text-neutral-100" size={30} />
+          </a>
+          <a
+            href="https://www.youtube.com/@codingwithharsh__/videos" className="noBlackShadow"
+            rel="noreferrer"
+            target="_blank"
+            // activeClass="active"
+          >
+            <AiFillYoutube className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 text-neutral-100" size={30} />
+          </a>
+          <a
+            href="https://www.instagram.com/codingwithharsh__" className="noBlackShadow"
+            rel="noreferrer"
+            target="_blank"
+            // activeClass="active"
+          >
+            <AiFillInstagram className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 text-neutral-100" size={30} />
           </a>
         </div>
       </div>
