@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
-import { HiArrowDown } from "react-icons/hi";
 import "styles/globals.css";
 import { teal, lightOrange } from "./RGBADataUrl.jsx";
 
@@ -134,19 +133,7 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-row items-center text-center justify-center ">
-        <Link
-          to="about"
-          activeClass="active"
-          spy={true}
-          className="noBlackShadow"
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className="animate-bounce" />
-        </Link>
-      </div>
+ 
     </section>
   );
 };
