@@ -9,7 +9,7 @@ interface IframeComponentProps {
 
 const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
   return (
-    <div className="w-full h-screen flex gap-10 flex-col justify-center items-center">
+    <section id="car" className="w-full h-screen flex gap-10 flex-col justify-center items-center">
       <iframe
         src={url}
         className="w-full h-full border-none"
@@ -28,7 +28,7 @@ const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
           <HiArrowDown size={35} className="animate-bounce" />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

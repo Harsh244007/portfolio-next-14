@@ -16,6 +16,9 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
     page: "home",
+  },  {
+    label: "Car",
+    page: "car",
   },
   {
     label: "About",
