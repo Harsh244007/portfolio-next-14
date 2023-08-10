@@ -37,7 +37,7 @@ html,
 body,
 body * {
   transition: all 0.2s ease-in;
-  scrollbar-width: thin;
+  scrollbar-width: thin !important;
   -webkit-transition: all 0.3s;
   user-select: none;
   -ms-user-select: none;
@@ -271,3 +271,17 @@ box-shadow: 0px 0px 18px 4px rgba(201, 133, 57, 0.7) !important;
 border: 1px solid rgba(201, 133, 57, 0.5);
 }
 
+.h-500{
+  height:500px;
+  overflow:hidden;
+}
+@media (max-width:600px){
+  .h-500{
+    height:400px;
+}
+}
+@media (max-width:385px){
+  .h-500{
+    height:50vh;
+}
+}

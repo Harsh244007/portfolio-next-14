@@ -4,7 +4,7 @@ import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
 
 interface IframeComponentProps {
-  url: string;
+  url?: string;
 }
 
 const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
