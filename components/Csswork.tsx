@@ -7,7 +7,7 @@ interface EmbeddedIframesProps {
   url5?: string;
 
 }
-const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url2, url3 url4, url5 }) => {
+const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url2, url3 ,url4, url5 }) => {
   const [expandedSection, setExpandedSection] = React.useState<boolean>(false);
 
   return (
