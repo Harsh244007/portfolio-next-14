@@ -16,7 +16,7 @@ const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
         </h1>
       <iframe
         src={url}
-        className="w-full bg-teal-500 h-full border-none"
+        className="w-full bg-teal-car h-full border-none"
         title="Harsh Car"
       />
            <div className="flex flex-row pt-5 items-center text-center justify-center ">
