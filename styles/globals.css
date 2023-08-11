@@ -217,7 +217,7 @@ html.dark-mode {
 }
 .activeCarousal {
   display: inline-block !important;
-  animation: fadeIn 1.5s ease-in forwards;
+  animation: fadeIn 750ms ease-in forwards;
 
   /* transition: transform 4s ease-in-out;
   transform: translateX(0); */
