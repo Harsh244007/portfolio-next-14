@@ -258,7 +258,7 @@ html.dark-mode {
   background-color: #0d9488;
   width: 26px;
   box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
-  border: 1px solid rgba(13, 148, 136, 0.5);
+  border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 20px;
 }
 .shadow-2xl img {
@@ -270,7 +270,7 @@ html.dark-mode {
 .carousel-dot.orangeDot.active-dot {
   background-color: rgb(201, 133, 57);
   box-shadow: 0px 0px 18px 4px rgba(201, 133, 57, 0.7) !important;
-  border: 1px solid rgba(201, 133, 57, 0.5);
+  border: 1px solid rgba(0, 0, 0, 1);
 }
 .carousel-dot.lightGreyDot.active-dot {
   background-color: rgb(157, 157, 157);
@@ -280,7 +280,7 @@ html.dark-mode {
 .carousel-dot.lightReddishDot.active-dot {
   background-color: #fd7260;
   box-shadow: 0px 0px 18px 4px rgba(245, 62, 49, 0.7) !important;
-  border: 1px solid rgba(245, 62, 49, 0.5);
+  border: 1px solid rgba(6, 6, 6, 1);
 }
 .h-500 {
   height: 500px;
