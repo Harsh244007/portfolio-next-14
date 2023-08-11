@@ -63,9 +63,9 @@ const HeroSection = () => {
                   blurDataURL={
                     i === 0
                       ? lightOrange
-                      : i === 2
-                      ? lightGrey
                       : i === 4
+                      ? lightGrey
+                      : i === 2
                       ? lightReddish
                       : teal
                   }
@@ -82,9 +82,9 @@ const HeroSection = () => {
                 className={`carousel-dot ${
                   i === 0
                     ? "orangeDot"
-                    : i === 2
-                    ? "lightGreyDot"
                     : i === 4
+                    ? "lightGreyDot"
+                    : i === 2
                     ? "lightReddishDot"
                     : ""
                 } ${activeIndex === i ? "active-dot" : ""}`}
