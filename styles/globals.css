@@ -4,7 +4,7 @@
 ::-webkit-scrollbar,
 body * :-webkit-scrollbar,
 html::-webkit-scrollbar,
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 12px !important;
   height: 0px;
   background: black !important;
@@ -14,7 +14,7 @@ body * ::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background: #0d9488 !important;
-  border-radius:0px;
+  border-radius: 0px;
   -webkit-border-radius: 0ex;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
@@ -71,8 +71,8 @@ a {
   -webkit-transition: ease-out 0.5s;
   -moz-transition: ease-out 0.5s;
 }
-a:not(.noBlackShadow){
-  box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.2) !important; 
+a:not(.noBlackShadow) {
+  box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.2) !important;
 }
 a::after,
 a::before {
@@ -103,15 +103,18 @@ a:hover::before {
   width: calc(100% + 5px);
   height: calc(100% + 2px);
   /* border-color: #222222; */
-  
+
   box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
   background-color: rgba(131, 131, 131);
   /* color: black; */
   opacity: 0.2;
 }
 
-a:active::after,.carousel-dot:hover,.carousel-dot:active,
-.noBlackShadow:hover,.noBlackShadow:active,
+a:active::after,
+.carousel-dot:hover,
+.carousel-dot:active,
+.noBlackShadow:hover,
+.noBlackShadow:active,
 a:active::before {
   box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
 }
@@ -261,31 +264,40 @@ html.dark-mode {
 .shadow-2xl img {
   margin: auto;
 }
-.text-to-speech-player button{
-  cursor:pointer !important;
+.text-to-speech-player button {
+  cursor: pointer !important;
 }
 .carousel-dot.orangeDot.active-dot {
-background-color:rgb(201, 133, 57);
-box-shadow: 0px 0px 18px 4px rgba(201, 133, 57, 0.7) !important;
-border: 1px solid rgba(201, 133, 57, 0.5);
+  background-color: rgb(201, 133, 57);
+  box-shadow: 0px 0px 18px 4px rgba(201, 133, 57, 0.7) !important;
+  border: 1px solid rgba(201, 133, 57, 0.5);
 }
-
-.h-500{
-  height:500px;
-  overflow:hidden;
+.carousel-dot.lightGreyDot.active-dot {
+  background-color: rgb(139, 170, 200);
+  box-shadow: 0px 0px 18px 4px rgba(139, 170, 200, 0.7) !important;
+  border: 1px solid rgba(139, 170, 200, 0.5);
 }
-@media (max-width:600px){
-  .h-500{
-    height:400px;
+.carousel-dot.lightReddishDot.active-dot {
+  background-color: rgb(255, 177, 132);
+  box-shadow: 0px 0px 18px 4px rgba(255, 177, 132, 0.7) !important;
+  border: 1px solid rgba(255, 177, 132, 0.5);
 }
+.h-500 {
+  height: 500px;
+  overflow: hidden;
 }
-@media (max-width:385px){
-  .h-500{
-    height:50vh;
+@media (max-width: 600px) {
+  .h-500 {
+    height: 400px;
+  }
 }
+@media (max-width: 385px) {
+  .h-500 {
+    height: 50vh;
+  }
 }
-.bg-teal-car{
+.bg-teal-car {
   background-color: #0d9488;
   border-radius: 0px;
-  border-color:  #0d9488;
+  border-color: #0d9488;
 }

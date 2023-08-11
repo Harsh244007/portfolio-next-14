@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import "styles/globals.css";
-import { teal, lightOrange } from "./RGBADataUrl.jsx";
+import { teal, lightOrange, lightGrey, lightReddish } from "./RGBADataUrl.jsx";
 
 const HeroSection = () => {
   const image = [
     "/headshot.jpg",
     "/headshot4.png",
+    "headshot3.JPG",
     "/headshot2.png",
+    "headshot5.JPG",
     "/headshot3.png",
   ];
   const len = image.length - 1;
@@ -58,7 +60,15 @@ const HeroSection = () => {
                   alt="Main Image Harsh Patel"
                   placeholder="blur"
                   width={325}
-                  blurDataURL={i === 0 ? lightOrange : teal}
+                  blurDataURL={
+                    i === 0
+                      ? lightOrange
+                      : i === 2
+                      ? lightGrey
+                      : i === 4
+                      ? lightReddish
+                      : teal
+                  }
                   height={325}
                   className={`shadow-2xl object-cover`}
                 />
@@ -69,9 +79,15 @@ const HeroSection = () => {
             {image.map((e, i) => (
               <span
                 key={i}
-                className={`carousel-dot ${i === 0 ? "orangeDot" : ""} ${
-                  activeIndex === i ? "active-dot" : ""
-                }`}
+                className={`carousel-dot ${
+                  i === 0
+                    ? "orangeDot"
+                    : i === 2
+                    ? "lightGreyDot"
+                    : i === 4
+                    ? "lightReddishDot"
+                    : ""
+                } ${activeIndex === i ? "active-dot" : ""}`}
                 onClick={() => setActiveIndex(i)}
               />
             ))}
@@ -133,7 +149,6 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
- 
     </section>
   );
 };

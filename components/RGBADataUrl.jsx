@@ -10,4 +10,6 @@ const RgbaDataURL = (r, g, b, a) => {
 
 const lightOrange = RgbaDataURL(201, 133, 57, 0.5)
 const teal = RgbaDataURL(13, 148, 136, 0.7)
-export { lightOrange,teal }
+const lightGrey = RgbaDataURL(139, 170, 200, 0.7)
+const lightReddish = RgbaDataURL(255, 177, 132, 0.7)
+export { lightOrange,teal,lightGrey,lightReddish }
