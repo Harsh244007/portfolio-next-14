@@ -286,4 +286,6 @@ border: 1px solid rgba(201, 133, 57, 0.5);
 }
 .bg-teal-car{
   background-color: #0d9488;
+  border-radius: 0px;
+  border-color:  #0d9488;
 }
