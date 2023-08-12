@@ -26,28 +26,35 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   const startFilling = (progress: number, value: number) => {
 
     if (progress <= value) {
-      if(!disabled) setDisabled((prev)=>!prev)
       if (progressBarTextRef.current && progressBarRef.current) {
+        if(disabled=== false) setDisabled(true)
         progressBarTextRef.current.innerText = progress.toString();
         fillProgressBar(progress);
         setTimeout(() => startFilling(progress + 2, value), 2000);
       }
+      else{
+
+        if(disabled === true) setDisabled(false)
+      }
+   
     }
     else{
 
-      if(disabled) setDisabled((prev)=>!prev)
+      if(disabled === true) setDisabled(false)
     }
  
   };
 
   const handleNumberInput = () => {
-    setShowSlider(true)
+    if(showSlider === false) setShowSlider(true)
+    if(disabled === true) setDisabled(false)
     if (numberInputRef.current) {
       let value = parseInt(numberInputRef.current.value, 10);
       if (value % 2 !== 0) {
         value += 1;
       }
       value = Math.min(value, 100);
+      value = Math.max(value, 2);
 
       if (progressBarRef.current && progressBarTextRef.current) {
         progressBarRef.current.max = `${value}`;
@@ -76,14 +83,19 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   placeholder="Enter a number"
   onChange={handleNumberInput}
 />
+
 {showSlider?
+<>
+
       <div id="progress-bar" className="w-full h-2 my-4 rounded">
         <input type="range" ref={progressBarRef} step="2" defaultValue="0" className="w-full h-2 mt-4 thumb-teal" />
 
       </div>
+        <p className="mt-4 text-sm">Progress Bar Value: <span ref={progressBarTextRef}>0</span></p>
+
+</>
 :""}
       
-      <p className="mt-4 text-sm">Progress Bar Value: <span ref={progressBarTextRef}>0</span></p>
       </div>
       <div className="flex flex-row pt-5 items-center text-center justify-center ">
         <Link
