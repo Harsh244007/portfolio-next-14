@@ -26,6 +26,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   const startFilling = (progress: number, value: number) => {
 
     if (progress <= value) {
+      if(progress== value) setDisabled(false)
       if (progressBarTextRef.current && progressBarRef.current) {
         if(disabled=== false) setDisabled(true)
         progressBarTextRef.current.innerText = progress.toString();
@@ -75,7 +76,6 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   id="numberInput"
   disabled={disabled}
   ref={numberInputRef}
-  inputmode="numeric"
   className="w-full text-2xl text-white  placeholder-white placeholder-opacity-70 bg-teal-500 px-4 py-2 mt-4 rounded-lg"
   pattern="^(0*[1-9][0-9]?|100)$"
   placeholder="Enter a number"
