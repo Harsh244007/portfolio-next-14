@@ -9,7 +9,7 @@ const HeroSection = () => {
   const image = [
     "/headshot.jpg",
     "/headshot4.png",
-    "/headshot3.jpg",
+    "/headshot3.JPG",
     "/headshot2.png",
     "/headshot5.JPG",
     "/headshot3.png",
