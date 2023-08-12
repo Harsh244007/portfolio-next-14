@@ -71,7 +71,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
         </h1>
       <div className="w-80 flex -flex-col flex-wrap m-auto">
       <input
-  type="text"
+  type="number"
   id="numberInput"
   disabled={disabled}
   ref={numberInputRef}
