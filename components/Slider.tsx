@@ -25,7 +25,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
 
   const startFilling = (progress: number, value: number) => {
 
-    if (progress < value) {
+    if (progress <= value) {
       if (progressBarTextRef.current && progressBarRef.current) {
         if(disabled=== false) setDisabled(true)
         progressBarTextRef.current.innerText = progress.toString();
@@ -33,21 +33,18 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
         setTimeout(() => startFilling(progress + 2, value), 2000);
       }
       else{
-
-        if(disabled === true) setDisabled(false)
+      setDisabled(false)
       }
    
     }
     else{
-
-      if(disabled === true) setDisabled(false)
+      setDisabled(false)
     }
  
   };
 
   const handleNumberInput = () => {
     if(showSlider === false) setShowSlider(true)
-    if(disabled === true) setDisabled(false)
     if (numberInputRef.current) {
       let value = parseInt(numberInputRef.current.value, 10);
       if (value % 2 !== 0) {
