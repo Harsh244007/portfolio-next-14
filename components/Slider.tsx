@@ -25,7 +25,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
 
   const startFilling = (progress: number, value: number) => {
 
-    if (progress <= value) {
+    if (progress < value) {
       if (progressBarTextRef.current && progressBarRef.current) {
         if(disabled=== false) setDisabled(true)
         progressBarTextRef.current.innerText = progress.toString();
@@ -51,6 +51,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
     if (numberInputRef.current) {
       let value = parseInt(numberInputRef.current.value, 10);
       if (value % 2 !== 0) {
+        if(value<=2) value = 2;
         value += 1;
       }
       value = Math.min(value, 100);
