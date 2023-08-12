@@ -8,7 +8,8 @@ const SliderComponent: React.FC = () => {
   const numberInputRef = useRef<HTMLInputElement>(null);
   const progressBarRef = useRef<HTMLInputElement>(null);
   const progressBarTextRef = useRef<HTMLSpanElement>(null);
-
+const [disabled,setDisabled]=useState<boolean>(false)
+const [showSlider,setShowSlider]=useState<boolean>(false)
   const fillProgressBar = (percentage: number) => {
     if (progressBarRef.current) {
       progressBarRef.current.value = `${percentage}`;
@@ -17,18 +18,26 @@ const SliderComponent: React.FC = () => {
 
   useEffect(() => {
     if (progressBarTextRef.current && progressBarRef.current) {
+      setShowSlider(true)
       progressBarTextRef.current.innerText = progressBarRef.current.value;
     }
   }, []);
 
   const startFilling = (progress: number, value: number) => {
+
     if (progress <= value) {
+      if(!disabled) setDisabled((prev)=>!prev)
       if (progressBarTextRef.current && progressBarRef.current) {
         progressBarTextRef.current.innerText = progress.toString();
         fillProgressBar(progress);
         setTimeout(() => startFilling(progress + 2, value), 2000);
       }
     }
+    else{
+
+      if(disabled) setDisabled((prev)=>!prev)
+    }
+ 
   };
 
   const handleNumberInput = () => {
@@ -54,19 +63,23 @@ const SliderComponent: React.FC = () => {
           <h1 className="text-center flex justify-center items-center gap-10 flex-wrap">Give any number in this input and see the magic <BsMagic/></h1>
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
         </h1>
-      <div className="w-60 flex -flex-col flex-wrap m-auto">
+      <div className="w-80 flex -flex-col flex-wrap m-auto">
       <input
   type="text"
   id="numberInput"
+  disabled={disabled}
   ref={numberInputRef}
-  className="w-full text-2xl text-white  placeholder-white bg-teal-500 px-4 py-2 mt-4 rounded-lg"
+  className="w-full text-2xl text-white  placeholder-white placeholder-opacity-70 bg-teal-500 px-4 py-2 mt-4 rounded-lg"
   pattern="^(0*[1-9][0-9]?|100)$"
   placeholder="Enter a number"
   onChange={handleNumberInput}
 />
+{showSlider?
       <div id="progress-bar" className="w-full h-2 my-4 rounded">
         <input type="range" ref={progressBarRef} step="2" defaultValue="0" className="w-full h-2 mt-4 thumb-teal" />
+
       </div>
+:""}
       
       <p className="mt-4 text-sm">Progress Bar Value: <span ref={progressBarTextRef}>0</span></p>
       </div>
