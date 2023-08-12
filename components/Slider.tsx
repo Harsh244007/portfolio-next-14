@@ -18,7 +18,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
 
   useEffect(() => {
     if (progressBarTextRef.current && progressBarRef.current) {
-      setShowSlider(true)
+
       progressBarTextRef.current.innerText = progressBarRef.current.value;
     }
   }, []);
@@ -41,6 +41,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   };
 
   const handleNumberInput = () => {
+    setShowSlider(true)
     if (numberInputRef.current) {
       let value = parseInt(numberInputRef.current.value, 10);
       if (value % 2 !== 0) {
@@ -69,6 +70,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   id="numberInput"
   disabled={disabled}
   ref={numberInputRef}
+  inputmode="numeric"
   className="w-full text-2xl text-white  placeholder-white placeholder-opacity-70 bg-teal-500 px-4 py-2 mt-4 rounded-lg"
   pattern="^(0*[1-9][0-9]?|100)$"
   placeholder="Enter a number"
