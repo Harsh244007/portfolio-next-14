@@ -9,9 +9,9 @@ const HeroSection = () => {
   const image = [
     "/headshot.jpg",
     "/headshot4.png",
-    "headshot3.JPG",
+    "/headshot3.jpg",
     "/headshot2.png",
-    "headshot5.JPG",
+    "/headshot5.JPG",
     "/headshot3.png",
   ];
   const len = image.length - 1;

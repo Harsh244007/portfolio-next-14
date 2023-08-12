@@ -301,3 +301,18 @@ html.dark-mode {
   border-radius: 0px;
   border-color: #0d9488;
 }
+.thumb-teal::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #0d9488;
+  cursor: pointer;
+}
+
+.thumb-teal::-moz-range-thumb {
+  width: 15px;
+  height: 25px;
+  background: #0d9488;
+  cursor: pointer;
+}

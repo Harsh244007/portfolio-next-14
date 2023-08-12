@@ -1,4 +1,5 @@
 import AboutSection from "@/components/AboutSection"
+import SliderComponent from "@/components/Slider"
 import HeroSection from "@/components/HeroSection"
 import EmbeddedIframes from "@/components/Csswork"
 import CarComponent from "@/components/Car"
@@ -30,6 +31,7 @@ export default function Home() {
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
       <HeroSection />
       <CarComponent url={iframeUrl1}/>
+      <SliderComponent/>
       <AboutSection />
       <EmbeddedIframes url2={iframeUrl2} url3={iframeUrl3} url4={iframeUrl4} url5={iframeUrl5}/>
       <ProjectsSection />
