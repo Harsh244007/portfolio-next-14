@@ -27,7 +27,7 @@ export default function RootLayout({
       function (e) {
         e.preventDefault();
       },
-      false
+      true
     );
     setTimeout(() => setLoading(false), 1000);
   }, []);
