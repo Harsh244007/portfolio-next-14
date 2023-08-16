@@ -9,7 +9,7 @@ const SliderComponent: React.FC = () => {
   const progressBarRef = useRef<HTMLInputElement>(null);
   const progressBarTextRef = useRef<HTMLSpanElement>(null);
 const [disabled,setDisabled]=useState<boolean>(false)
-const [sliderNumber,setSliderNumber]=useState<boolean | number | string>(false)
+const [sliderNumber,setSliderNumber]=useState<any>(false)
 const [showSlider,setShowSlider]=useState<boolean>(false)
   const fillProgressBar = (percentage: number) => {
     if (progressBarRef.current) {
@@ -62,7 +62,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
       value = Math.max(value, 2);
       console.log("start filling 1",sliderNumber)
       
-      progressBarRef.current.max = `${value}`;
+      progressBarRef && progressBarRef.current && progressBarRef.current.max = `${value}`;
       setTimeout(() => startFilling(2, value), 2000);
       console.log("start filling 3",sliderNumber)
     }
