@@ -9,7 +9,7 @@ const SliderComponent: React.FC = () => {
   const progressBarRef = useRef<HTMLInputElement>(null);
   const progressBarTextRef = useRef<HTMLSpanElement>(null);
 const [disabled,setDisabled]=useState<boolean>(false)
-const [sliderNumber,setSliderNumber]=useState<boolean | number>(false)
+const [sliderNumber,setSliderNumber]=useState<boolean | number | string>(false)
 const [showSlider,setShowSlider]=useState<boolean>(false)
   const fillProgressBar = (percentage: number) => {
     if (progressBarRef.current) {
