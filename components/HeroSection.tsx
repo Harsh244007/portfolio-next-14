@@ -110,17 +110,15 @@ const HeroSection = () => {
             Also, creating insightful DSA and System Design videos on YouTube
             and Instagram for effective learning.{" "}
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 m-1 sm:m-3 md:ml-0 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
+          <a
+            href="https://github.com/Harsh244007?tab=repositories"
+            rel="noreferrer"
+            target="_blank"
+            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            // activeClass="active"
           >
-            Projects
-          </Link>
+            Github
+          </a>
           <a
             href="/Resume-Harsh-Patel.pdf"
             target="_blank"
