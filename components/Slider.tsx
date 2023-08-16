@@ -61,8 +61,7 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
       value = Math.min(value, 100);
       value = Math.max(value, 2);
       console.log("start filling 1",sliderNumber)
-      
-      progressBarRef.current.max = `${value}`;
+      if(progressBarRef.current) progressBarRef.current.max = `${value}`;
       setTimeout(() => startFilling(2, value), 2000);
       console.log("start filling 3",sliderNumber)
     }
