@@ -85,8 +85,9 @@ const [showSlider,setShowSlider]=useState<boolean>(false)
   placeholder="Enter a number"
 />
 <button
-            className="text-neutral-100 m-auto sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 m-auto sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded mt-4 shadow hover:bg-teal-700"
             onClick={handleNumberInput}
+  loading={disabled}
             // activeClass="active"
           >
             Submit
