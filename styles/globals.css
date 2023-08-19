@@ -126,10 +126,12 @@ a:active::before {
   background-color: inherit;
 }
 .grid-templateh-24{
-  grid-template-row:300px;
+  grid-template-rows:300px;
+  display:grid !important;
 }
 .grid-templateh-max{
-  grid-template-row:max-content;
+  grid-template-rows:max-content;
+  display:grid !important;
 }
 #progressBarContainer {
   position: absolute;
