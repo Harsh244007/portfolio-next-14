@@ -126,7 +126,7 @@ a:active::before {
   background-color: inherit;
 }
 .grid-templateh-24{
-  grid-template-rows:300px;
+  grid-template-rows:100px;
   display:grid !important;
 }
 .grid-templateh-max{
