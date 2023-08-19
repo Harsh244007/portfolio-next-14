@@ -36,7 +36,7 @@ html,
 body,
 body * {
   
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in !important;
   scrollbar-width: thin !important;
   -webkit-transition: all 0.3s;
   user-select: none;
@@ -126,13 +126,13 @@ a:active::before {
   background-color: inherit;
 }
 .grid-templateh-24{
-  grid-template-rows:100px;
+  grid-template-rows:0.5fr;
   display:grid !important;
   overflow:hidden;
 }
 .grid-templateh-max{
   overflow:hidden;
-  grid-template-rows:max-content;
+  grid-template-rows:1fr;
   display:grid !important;
 }
 #progressBarContainer {
