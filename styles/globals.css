@@ -125,6 +125,12 @@ a:active::before {
   opacity: 0.3;
   background-color: inherit;
 }
+.grid-templateh-24{
+  grid-template-row:300px;
+}
+.grid-templateh-max{
+  grid-template-row:max-content;
+}
 #progressBarContainer {
   position: absolute;
   z-index: 10;
