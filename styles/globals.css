@@ -128,8 +128,10 @@ a:active::before {
 .grid-templateh-24{
   grid-template-rows:100px;
   display:grid !important;
+  overflow:hidden;
 }
 .grid-templateh-max{
+  overflow:hidden;
   grid-template-rows:max-content;
   display:grid !important;
 }
