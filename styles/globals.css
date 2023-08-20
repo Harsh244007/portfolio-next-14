@@ -36,9 +36,9 @@ html,
 body,
 body * {
   
-  transition: all 0.3s ease-in !important;
+  transition: height 0.3s ease-in !important;
   scrollbar-width: thin !important;
-  -webkit-transition: all 0.3s ease-in !important;
+  -webkit-transition: height 0.3s ease-in !important;
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -47,8 +47,8 @@ body * {
   scroll-behavior: smooth;
   font-family: "Ysabeau SC", sans-serif !important;
   box-sizing: border-box;
-  -ms-transition: all 0.3s ease-in !important;
-  -o-transition: all 0.3s ease-in !important;
+  -ms-transition: height 0.3s ease-in !important;
+  -o-transition: height 0.3s ease-in !important;
   }
 body {
   background-color: #1c1917;
