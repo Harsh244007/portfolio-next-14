@@ -328,7 +328,7 @@ html.dark-mode {
   cursor: pointer;
 }
 .max-h-960{
-  transition:all 800ms ease-in !important;
-  max-height:1600px !important;
+  transition:all 1000ms ease-in !important;
+  max-height:2200px !important;
   /* display:block; */
 }
