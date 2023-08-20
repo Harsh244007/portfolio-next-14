@@ -329,6 +329,6 @@ html.dark-mode {
 }
 .max-h-960{
   transition:all 800ms ease-in !important;
-  max-height:1200px !important;
+  max-height:1600px !important;
   /* display:block; */
 }
