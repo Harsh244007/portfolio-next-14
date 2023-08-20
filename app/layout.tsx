@@ -40,11 +40,11 @@ export default function RootLayout({
         {!loading ? (
           <>
             <AnimatedCursor
-              innerSize={8}
-              outerSize={20}
+              innerSize={15}
+              outerSize={30}
               color="255, 255, 255"
               outerAlpha={0.2}
-              trailingSpeed={2}
+              trailingSpeed={1}
               innerScale={3}
               outerStyle={{
                 mixBlendMode: 'exclusion'
@@ -64,6 +64,11 @@ export default function RootLayout({
                 "button",
                 ".link",
               ]}
+              innerStyle={{
+                backgroundColor: 'var(--cursor-color)',
+                mixBlendMode: 'exclusion',
+                border: '30px solid white'
+              }}
             />
             <Navbar />
             {children}

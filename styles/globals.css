@@ -31,11 +31,17 @@ body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+html {
+  --cursor-color:(133,133,133);
+}
 
-header ,header *,
-main,main *,
-footer,footer * {
-  --transition_delay:0.3s;
+header,
+header *,
+main,
+main *,
+footer,
+footer * {
+  --transition_delay: 0.3s;
   transition: all 0.3s ease-in !important;
   transition: all 0.5s ease-in !important;
   -webkit-transition: all 0.3s ease-in !important;
@@ -50,7 +56,7 @@ footer,footer * {
   scroll-behavior: smooth;
   font-family: "Ysabeau SC", sans-serif !important;
   box-sizing: border-box;
-  }
+}
 body {
   background-color: #1c1917;
   color: white;
@@ -70,7 +76,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: all ease-out 0.5s;
-  -webkit-transition:all ease-out 0.5s;
+  -webkit-transition: all ease-out 0.5s;
   -moz-transition: all ease-out 0.5s;
 }
 a:not(.noBlackShadow) {
@@ -126,15 +132,15 @@ a:active::before {
   opacity: 0.3;
   background-color: inherit;
 }
-.grid-templateh-24{
-  grid-template-rows:0.5fr;
-  display:grid !important;
-  overflow:hidden;
+.grid-templateh-24 {
+  grid-template-rows: 0.5fr;
+  display: grid !important;
+  overflow: hidden;
 }
-.grid-templateh-max{
-  overflow:hidden;
-  grid-template-rows:1fr;
-  display:grid !important;
+.grid-templateh-max {
+  overflow: hidden;
+  grid-template-rows: 1fr;
+  display: grid !important;
 }
 #progressBarContainer {
   position: absolute;
@@ -328,12 +334,13 @@ html.dark-mode {
   background: #0d9488;
   cursor: pointer;
 }
-.max-h-960{
-  transition:max-height 1000ms ease-in !important;
-  max-height:3000px !important;
+.max-h-960 {
+  transition: max-height 1000ms ease-in !important;
+  max-height: 3000px !important;
   /* display:block; */
 }
-#about,#projects{
+#about,
+#projects {
   transition: all 0.3s ease-in !important;
   transition: all 0.5s ease-in !important;
   -webkit-transition: all 0.3s ease-in !important;
