@@ -16,7 +16,8 @@ const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url2, url3 ,url4, url
           Some of CSS Work
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
         </h1>
-        <div className={`flex flex-wrap justify-around ${expandedSection?"h-max":"h-500"}`}>
+        <div className={`flex flex-wrap justify-around overflow-hidden h-max ${expandedSection ? "max-h-960" : "max-h-96"
+                }`}>
       <div className="max-w-full h-500 w-full  md:w-1/2  p-1">
         <iframe
           src={url2}
