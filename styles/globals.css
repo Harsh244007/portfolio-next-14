@@ -49,12 +49,7 @@ body * {
   box-sizing: border-box;
   -ms-transition: all 0.3s ease-in !important;
   -o-transition: all 0.3s ease-in !important;
-  transition:max-height 1000ms ease-in !important;
-  -webkit-transition:max-height 1000ms ease-in !important;
-  -moz-transition:max-height 1000ms ease-in !important;
-  -ms-transition:max-height 1000ms ease-in !important;
-  -o-transition:max-height 1000ms ease-in !important;
-}
+  }
 body {
   background-color: #1c1917;
   color: white;
