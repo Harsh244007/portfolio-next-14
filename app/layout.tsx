@@ -41,11 +41,14 @@ export default function RootLayout({
           <>
             <AnimatedCursor
               innerSize={8}
-              outerSize={10}
+              outerSize={20}
               color="255, 255, 255"
               outerAlpha={0.2}
               trailingSpeed={2}
               innerScale={3}
+              outerStyle={{
+                mixBlendMode: 'exclusion'
+              }}
               outerScale={5}
               clickables={[
                 "a",

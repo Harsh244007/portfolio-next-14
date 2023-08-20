@@ -32,23 +32,24 @@ body::-webkit-scrollbar {
   height: 10px;
 }
 
-html,
-body,
-body * {
-  
-  transition: height 0.3s ease-in !important;
+header ,header *,
+main,main *,
+footer,footer * {
+  --transition_delay:0.3s;
+  transition: all 0.3s ease-in !important;
+  transition: all 0.5s ease-in !important;
+  -webkit-transition: all 0.3s ease-in !important;
+  -o-transition: all 0.3s ease-in !important;
+  -moz-transition: all 0.3s ease-in !important;
+  -ms-transition: all 0.3s ease-in !important;
   scrollbar-width: thin !important;
-  -webkit-transition: height 0.3s ease-in !important;
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   accent-color: #0d9488;
-  -moz-transition: all 0.3s;
   scroll-behavior: smooth;
   font-family: "Ysabeau SC", sans-serif !important;
   box-sizing: border-box;
-  -ms-transition: height 0.3s ease-in !important;
-  -o-transition: height 0.3s ease-in !important;
   }
 body {
   background-color: #1c1917;
@@ -331,4 +332,12 @@ html.dark-mode {
   transition:max-height 1000ms ease-in !important;
   max-height:3000px !important;
   /* display:block; */
+}
+#about,#projects{
+  transition: all 0.3s ease-in !important;
+  transition: all 0.5s ease-in !important;
+  -webkit-transition: all 0.3s ease-in !important;
+  -o-transition: all 0.3s ease-in !important;
+  -moz-transition: all 0.3s ease-in !important;
+  -ms-transition: all 0.3s ease-in !important;
 }

@@ -12,4 +12,4 @@ git add .
 git commit -m "* ${commitMessage^} ."
 git push
 
-echo "Successfully committed with this message: ${commitMessage^}"
+echo "Successfully committed with this message: *  ${commitMessage^}"
