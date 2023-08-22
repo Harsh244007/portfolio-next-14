@@ -3,6 +3,9 @@ import React from "react"
 
 const skills = [
   { skill: "AEM V6.5" },
+    { skill: "Java" },
+    { skill: "Spring-FrameWork" },
+    { skill: "Hibernate V5.5" },
   { skill: "React" },
   { skill: "Next.js" },
   { skill: "Socket.io" },
