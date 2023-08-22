@@ -1,5 +1,5 @@
 {
-  "name": "temp",
+  "name": "portfolio-flax",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,8 @@
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
     "next-themes": "^0.2.1",
+    "react-animated-cursor": "^2.8.1",
     "react": "18.2.0",
-    "react-animated-cursor": "^2.7.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-scroll": "^1.8.9",

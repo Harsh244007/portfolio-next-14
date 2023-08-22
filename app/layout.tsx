@@ -30,6 +30,13 @@ export default function RootLayout({
       false
     );
     setTimeout(() => setLoading(false), 1000);
+    console.log(()=>{})
+    console.info(()=>{})
+
+    console.error(()=>{})
+
+    console.warn(()=>{})
+
   }, []);
   return (
     <html lang="en">
@@ -40,12 +47,15 @@ export default function RootLayout({
         {!loading ? (
           <>
             <AnimatedCursor
-              innerSize={8}
-              outerSize={10}
+              innerSize={15}
+              outerSize={30}
               color="255, 255, 255"
               outerAlpha={0.2}
-              trailingSpeed={2}
+              trailingSpeed={1}
               innerScale={3}
+              outerStyle={{
+                mixBlendMode: 'exclusion'
+              }}
               outerScale={5}
               clickables={[
                 "a",
@@ -61,6 +71,11 @@ export default function RootLayout({
                 "button",
                 ".link",
               ]}
+              innerStyle={{
+                backgroundColor: 'var(--cursor-color)',
+                mixBlendMode: 'exclusion',
+                border: '30px solid white'
+              }}
             />
             <Navbar />
             {children}
