@@ -41,13 +41,13 @@ main,
 main *,
 footer,
 footer * {
-  --transition_delay: 0.3s;
-  transition: all 0.3s ease-in !important;
+  --transition_delay: 0.2s;
+  transition: all 0.2s ease-in !important;
   transition: all 0.5s ease-in !important;
-  -webkit-transition: all 0.3s ease-in !important;
-  -o-transition: all 0.3s ease-in !important;
-  -moz-transition: all 0.3s ease-in !important;
-  -ms-transition: all 0.3s ease-in !important;
+  -webkit-transition: all 0.2s ease-in !important;
+  -o-transition: all 0.2s ease-in !important;
+  -moz-transition: all 0.2s ease-in !important;
+  -ms-transition: all 0.2s ease-in !important;
   scrollbar-width: thin !important;
   user-select: none;
   -ms-user-select: none;
@@ -94,7 +94,7 @@ a::before {
   transition: 0.5s;
   opacity:0.8;
   animation:scale-out 4s ease-in infinite; 
-  animation-delay:20ms;
+  /* animation-delay:20ms; */
 }
 @keyframes scale-out {
 100%{
@@ -356,10 +356,10 @@ html.dark-mode {
 }
 #about,
 #projects {
-  transition: all 0.3s ease-in !important;
+  transition: all 0.2s ease-in !important;
   transition: all 0.5s ease-in !important;
-  -webkit-transition: all 0.3s ease-in !important;
-  -o-transition: all 0.3s ease-in !important;
-  -moz-transition: all 0.3s ease-in !important;
-  -ms-transition: all 0.3s ease-in !important;
+  -webkit-transition: all 0.2s ease-in !important;
+  -o-transition: all 0.2s ease-in !important;
+  -moz-transition: all 0.2s ease-in !important;
+  -ms-transition: all 0.2s ease-in !important;
 }
