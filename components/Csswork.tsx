@@ -1,13 +1,14 @@
 "use client"; // this is a client component
 import React from "react";
 interface EmbeddedIframesProps {
+  url1?: string;
   url2?: string;
   url3?: string;
   url4?: string;
   url5?: string;
 
 }
-const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url2, url3 ,url4, url5 }) => {
+const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url1,url2, url3 ,url4, url5 }) => {
   const [expandedSection, setExpandedSection] = React.useState<boolean>(false);
 
   return (
@@ -18,6 +19,13 @@ const EmbeddedIframes: React.FC<EmbeddedIframesProps> = ({ url2, url3 ,url4, url
         </h1>
         <div className={`flex flex-wrap justify-around overflow-hidden h-max ${expandedSection ? "max-h-960" : "max-h-96"
                 }`}>
+      <div className="max-w-full h-500 w-full  md:w-1/2  p-1">
+        <iframe
+          src={url1}
+          className="w-full h-full"
+          title="Circular Overlap"
+          />
+      </div>
       <div className="max-w-full h-500 w-full  md:w-1/2  p-1">
         <iframe
           src={url2}

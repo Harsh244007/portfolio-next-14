@@ -26,6 +26,8 @@ export default function Home() {
             currentProtocol === 'https:'
               ? 'https://chameleon-harsh.netlify.app/'
               : 'http://chameleon-harsh.netlify.app/';
+              const iFrameURL6=
+              currentProtocol === 'https:'?'https://css-piano-ts.vercel.app/':'http://css-piano-ts.vercel.app/'
 
   return (
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
@@ -33,7 +35,7 @@ export default function Home() {
       <CarComponent url={iframeUrl1}/>
       <SliderComponent/>
       <AboutSection />
-      <EmbeddedIframes url2={iframeUrl2} url3={iframeUrl3} url4={iframeUrl4} url5={iframeUrl5}/>
+      <EmbeddedIframes url1={iFrameURL6} url2={iframeUrl2} url3={iframeUrl3} url4={iframeUrl4} url5={iframeUrl5}/>
       <ProjectsSection />
     </main>
   )
