@@ -65,6 +65,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <p>Made by Harsh with ❤️</p>
     </footer>
   )
 }
