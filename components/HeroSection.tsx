@@ -136,15 +136,7 @@ const HeroSection = () => {
           >
             Leetcode
           </a>
-          <a
-            href="https://www.youtube.com/@codingwithharsh__/videos"
-            rel="noreferrer"
-            target="_blank"
-            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
-            // activeClass="active"
-          >
-            YouTube
-          </a>
+    
         </div>
       </div>
     </section>
