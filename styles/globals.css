@@ -99,9 +99,8 @@ a::before {
 @keyframes scale-out {
 100%{
   opacity:0;
-  transform:scale(2);
+  transform:scale(1.2);
   
-  filter:hue-rotate(360deg);
 }
 }
 a::after {
