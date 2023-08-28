@@ -47,14 +47,15 @@ export default function RootLayout({
         {!loading ? (
           <>
             <AnimatedCursor
-              innerSize={15}
-              outerSize={30}
+              innerSize={10}
+              outerSize={20}
               color="255, 255, 255"
               outerAlpha={0.2}
               trailingSpeed={1}
               innerScale={3}
               outerStyle={{
-                mixBlendMode: 'exclusion'
+                mixBlendMode: 'var(--cursor-blend)',      
+                visibility:"var(--cursor-visibility)"
               }}
               outerScale={5}
               clickables={[
@@ -73,8 +74,9 @@ export default function RootLayout({
               ]}
               innerStyle={{
                 backgroundColor: 'var(--cursor-color)',
-                mixBlendMode: 'exclusion',
-                border: '30px solid white'
+                mixBlendMode: 'var(--cursor-blend)',
+                visibility:"var(--cursor-visibility)",      
+                border: '20px solid white'
               }}
             />
             <Navbar />

@@ -31,8 +31,12 @@ const AboutSection = () => {
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
         </h1>
 
-        <div key={expandedSection?"aboutUsExpand":"aboutUsHidden"} className={`flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left overflow-hidden h-max ${expandedSection?"max-h-960":"max-h-72"}`}>
-          <div className="md:w-1/2 ">
+        <div
+          key={expandedSection ? "aboutUsExpand" : "aboutUsHidden"}
+          className={`flex flex-col space-y-10 items-stretch justify-center align-top  md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left h-max overflow-hidden transition-max-height duration-1000 ease-in ${
+            expandedSection ? "max-h-960" : "max-h-80"
+          }`}
+        >   <div className={`md:w-1/2 h-auto overflow-hidden `}>
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">Get to know me!</h1>
             <p>
              {"👋"} Hello, {"I'm"} Harsh, a <span className="font-bold">{"highly ambitious"}</span> and 
@@ -84,7 +88,6 @@ const AboutSection = () => {
                 )
               })}
             </div>
-            {/* <Image src="/hero-image.png" alt="" width={325} height={325} className="hidden md:block md:relative md:bottom-4 md:left-32 md:z-0" /> */}
           </div>
         </div>
         
