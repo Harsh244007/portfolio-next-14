@@ -53,8 +53,7 @@ export default function RootLayout({
               outerAlpha={0.2}
               trailingSpeed={1}
               innerScale={3}
-              outerStyle={{
-                mixBlendMode: 'var(--cursor-blend)',      
+              outerStyle={{      
                 visibility:"var(--cursor-visibility)"
               }}
               outerScale={5}
