@@ -24,7 +24,7 @@ const skills = [
 const AboutSection = () => {
   const [expandedSection, setExpandedSection] = React.useState<boolean>(false);
   return (
-    <section id="about">
+    <section id="about" className="h-full">
       <div className="my-12 h-max pb-10 md:pt-14 md:pb-46">
         <h1 className="text-center font-bold text-4xl">
           About Me

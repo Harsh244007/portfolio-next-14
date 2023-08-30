@@ -18,19 +18,25 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "home",
   },
   {
-    label: "Car",
-    page: "car",
+    label: "Tic-Tac-Toe",
+    page: "tictactoe",
   },
   {
-    label: "Slider Game",
-    page: "slider",
+    label:"CSS",
+    page:"css"
   },
   {
     label: "About",
     page: "about",
   },
-  {label:"CSS Work",
-page:"css"},
+  {
+    label: "Car",
+    page: "car",
+  },
+  {
+    label: "Slider",
+    page: "slider",
+  },
   {
     label: "Projects",
     page: "projects",
@@ -38,7 +44,6 @@ page:"css"},
 ]
 
 export default function Navbar() {
-  // const currentTheme = theme === "system" ? systemTheme : theme
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
   const [scroll, setScroll] = useState(0)

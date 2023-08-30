@@ -5,14 +5,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       screens: { sm: "480px", md: "768px", lg: "976px", xl: "1440pd" },
       animation: {
+        "fade-out-down":"fade-out-down linear forwards",
         fadeIn: "fadeIn 1.5s",
         bounce:
           "bounce 0.5s alternate cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite",
@@ -27,6 +26,12 @@ module.exports = {
         6: "0.6s",
       },
       keyframes: {
+        'fade-out-down':{from: {
+opacity:"1",
+transform:'translateY(0)' },
+to: {
+  opacity:"0",
+  transform:'translateY(40%)' }},
         fadeIn: {
           from: { opacity: 0 },
           to: { opacity: 1 },
