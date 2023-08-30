@@ -54,7 +54,6 @@ export default function RootLayout({
               trailingSpeed={1}
               innerScale={3}
               outerStyle={{      
-                visibility:"var(--cursor-visibility)"
               }}
               outerScale={5}
               clickables={[
@@ -73,8 +72,6 @@ export default function RootLayout({
               ]}
               innerStyle={{
                 backgroundColor: 'var(--cursor-color)',
-                mixBlendMode: 'var(--cursor-blend)',
-                visibility:"var(--cursor-visibility)",      
                 border: '20px solid white'
               }}
             />

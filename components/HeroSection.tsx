@@ -1,5 +1,5 @@
-"use client"; // this is a client component
-import React, { useEffect, useState } from "react";
+"use client"; 
+import React, { useEffect, useState,memo } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import "styles/globals.css";
@@ -143,4 +143,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default memo(HeroSection);

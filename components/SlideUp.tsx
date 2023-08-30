@@ -1,36 +1,46 @@
-"use client" // this is a client component
+import React, { useEffect, useRef, ReactNode, useCallback } from "react";
 
-import React, { useEffect, useRef, ReactNode } from "react"
 interface Props {
-  offset?: string
-  children?: ReactNode
-  // any props that come into the component
+  offset?: string;
+  children?: ReactNode;
 }
 
-export default function SlideUp({ children, offset = "0px" }: Props) {
-  const ref = useRef(null)
+const SlideUp: React.FC<Props> = ({ children, offset = "0px" }) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0");
+          // entry.target.classList.add("animate-slideUpCubiBezier");
+        }
+      });
+    },
+    []
+  );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("opacity-0")
-            // entry.target.classList.add("animate-slideUpCubiBezier")
-          }
-        })
-      },
-      { rootMargin: offset }
-    )
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: offset,
+    });
 
     if (ref.current) {
-      observer.observe(ref.current)
+      observer.observe(ref.current);
     }
-  }, [ref])
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [offset, handleIntersection]);
 
   return (
     <div ref={ref} className="relative opacity-1">
       {children}
     </div>
-  )
-}
+  );
+};
+
+export default SlideUp;

@@ -1,5 +1,5 @@
 "use client"; // this is a client component
-import React from 'react';
+import React,{memo}  from 'react';
 
 interface IframeComponentProps {
   url?: string;
@@ -22,4 +22,4 @@ const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
   );
 };
 
-export default CarComponent;
+export default memo(CarComponent);
