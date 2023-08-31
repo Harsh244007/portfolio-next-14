@@ -48,7 +48,7 @@ const ProjectsSection = () => {
     }
   };
   return (
-    <section id="projects">
+    <section id="projects" tabIndex={1}>
     <h1 className="my-10 text-center font-bold text-4xl">
       Projects
       <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
     <div className="flex h-95vh flex-col space-y-28">
       {projects.map((project, idx) => {
         return (
-          <div key={idx}>
+          <div key={idx} tabIndex={2}>
             <SlideUp offset="-300px 0px -300px 0px">
               <div className="flex flex-col mb-8  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                 <div className=" md:w-1/2">

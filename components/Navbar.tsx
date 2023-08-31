@@ -76,6 +76,7 @@ const Navbar = () => {
         spy={true}
         smooth={true}
         offset={-100}
+        tabIndex={0}
         duration={500}
         onClick={handleNavbarToggle}
       >
