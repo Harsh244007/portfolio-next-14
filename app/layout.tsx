@@ -47,7 +47,7 @@ export default function RootLayout({
         {!loading ? (
           <>
             <AnimatedCursor
-              innerSize={10}
+              innerSize={7}
               outerSize={20}
               color="255, 255, 255"
               outerAlpha={0.2}
@@ -72,7 +72,7 @@ export default function RootLayout({
               ]}
               innerStyle={{
                 backgroundColor: 'var(--cursor-color)',
-                border: '20px solid white'
+                border: '10px solid white'
               }}
             />
             <Navbar />
