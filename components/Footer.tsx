@@ -59,7 +59,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p>Made by Harsh with ❤️</p>
+      <p className="text-center">Made by Harsh with ❤️</p>
     </footer>
   );
 };
