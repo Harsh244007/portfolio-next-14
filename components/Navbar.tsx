@@ -17,7 +17,11 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "home",
   },
   {
-    label: "Tic-Tac-Toe",
+    label: "Solar",
+    page: "solar",
+  },
+  {
+    label: "Tic-Tac",
     page: "tictactoe",
   },
   {

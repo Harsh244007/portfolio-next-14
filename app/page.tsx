@@ -2,6 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import SliderComponent from "@/components/Slider";
 import HeroSection from "@/components/HeroSection";
 import EmbeddedIframes from "@/components/Csswork";
+import SolarComponent from "@/components/Solar";
 import TictactoeComponent from "@/components/Tictactoe";
 import CarComponent from "@/components/Car";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -36,10 +37,15 @@ export default function Home() {
     currentProtocol === "https:"
       ? "https://css-piano-ts.vercel.app/"
       : "http://css-piano-ts.vercel.app/";
+  const iframeUrlSolar = 
+      currentProtocol === "https:"
+      ? "https://solar-system-css-harsh-preact-ts-tw.vercel.app/"
+      : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/";
 
   return (
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
       <HeroSection />
+      <SolarComponent url={iframeUrlSolar}/>
       <TictactoeComponent url={iframeUrlTic} />
       <EmbeddedIframes
         url1={iFrameURL6}
