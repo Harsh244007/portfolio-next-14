@@ -26,7 +26,7 @@ const projects = [
     description:
       "Aplus Audios, a leading provider of audio solutions. This website offers customers a convenient platform to access and explore their products available. Built on top of MERN stack, Aplus Audios aims to optimize the customer experience and simplify the process of discovering and purchasing their audio solutions online.",
     image: "/aplus.jpeg",
-    link: "https://www.aplusaudios.com/aplusfrontend/build/index.html",
+    link: "https://www.aplusaudios.com/",
   },
   {
     name: "Vagreya.com",
