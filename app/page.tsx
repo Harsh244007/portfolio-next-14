@@ -44,8 +44,8 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
-      <HeroSection />
-      <div className="iframe">
+ <HeroSection />
+      {/*      <div className="iframe">
 
       <SolarComponent url={iframeUrlSolar}/>
       </div>
@@ -62,7 +62,7 @@ export default function Home() {
         url4={iframeUrl4}
         url5={iframeUrl5}
       />
-            </div>
+        </div> */}
       <AboutSection />
       
       <div className="iframe">
