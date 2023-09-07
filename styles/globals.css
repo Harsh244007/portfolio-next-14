@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
   height: 10px;
 }
 body {
-  cursor:none;
+  /* cursor:none; */
 }
 img{
   --cursor-blend:unset;

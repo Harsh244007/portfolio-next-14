@@ -5,7 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React, { useEffect, useState, useRef } from "react";
 import { ClipLoader } from "react-spinners";
-
+import dynamic from "next/dynamic";
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 interface CustomCursorProps {
   nodeName: string;
   nodeText: string;
@@ -112,6 +115,12 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     );
 
     setTimeout(() => setLoading(false), 1000);
+    console.log(()=>{})
+    console.info(()=>{})
+
+    console.error(()=>{})
+
+    console.warn(()=>{})
     return () => {
       document.removeEventListener("contextmenu",  (e) => {
         e.preventDefault();
@@ -143,7 +152,35 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
             onClick={onClick}
         /> */}
         {!loading ? (
-          <>
+          <>      <AnimatedCursor
+          innerSize={7}
+          outerSize={20}
+          color="255, 255, 255"
+          outerAlpha={0.2}
+          trailingSpeed={1}
+          innerScale={3}
+          outerStyle={{      
+          }}
+          outerScale={5}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            ".carousel-dot",
+            "button",
+            ".link",
+          ]}
+          innerStyle={{
+            backgroundColor: 'var(--cursor-color)',
+            border: '10px solid white'
+          }}
+        />
             <Navbar />
             {children}
             <Footer />
