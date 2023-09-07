@@ -134,14 +134,14 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <head />
       <body className="bg-stone-900">
         {/* <Analytics /> */}
-        <CustomCursor
+        {/* <CustomCursor
             nodeName={nodeName}
             setNodeName={setNodeName}
             nodeText={nodeText}
             setNodeText={setNodeText}
             isClicked={isClicked}
             onClick={onClick}
-        />
+        /> */}
         {!loading ? (
           <>
             <Navbar />
