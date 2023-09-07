@@ -362,6 +362,9 @@ html.dark-mode {
   cursor: pointer;
 }
 .max-h-960 {
+@starting-style{
+  max-height: 20rem;
+}
   transition: max-height 1000ms ease-in !important;
   max-height: 3000px !important;
   /* display:block; */
