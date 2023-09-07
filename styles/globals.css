@@ -387,7 +387,8 @@ html.dark-mode {
   place-items:center;
   justify-content:center;
   background-color: rgba(255, 255, 255, 0.608);
-  pointer-events: none; transition: all 0.3s ease-in;
+  pointer-events: none;
+   transition: all 0.3s ease-in;
  
   overflow: visible;
   color:black;
@@ -399,9 +400,9 @@ html.dark-mode {
 }
 .custom-cursor > div{
   border:3px solid #a9e4de;
+  transition: all 0.3s ease-in;
   border-top-color:#0d9488;
   animation:liner 15s linear infinite;
-  /* background-image:linear-gradient(var(--rotate),green,red 43%,blue); */
   position:absolute;
   border-radius: 50%;
   width:100%;

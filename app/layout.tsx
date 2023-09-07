@@ -24,28 +24,22 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   onClick,
 }) => {
   const cursorRef = useRef<HTMLDivElement>(null);
-  let mouseDebouncer: number; // Use let instead of const
-
+  let  mouseDebouncer:number
   useEffect(() => {
-    mouseDebouncer = window.setTimeout(() => {
-      if (cursorRef.current) {
-        cursorRef.current.style.display = "none";
-        document.body.style.cursor = "auto";
-      }
-    }, 7000);
 
     const handleMouseMove = (event: MouseEvent) => {
       if (event.target instanceof HTMLElement) {
         if (
-          event.target.nodeName === "IFRAME" ||
-          event.target.localName === "img"
+          event.target.nodeName === "IFRAME"||
+                   event.target.nodeName === "img"
         ) {
           if (cursorRef.current) {
             cursorRef.current.style.display = "none";
             document.body.style.cursor = "auto";
           }
         } else {
-          setNodeName(event.target.localName);
+          console.log("Mouse Move Event : ",event)
+          setNodeName(event.target.nodeName);
           setNodeText(event.target.innerText);
           clearTimeout(mouseDebouncer);
 
@@ -53,6 +47,15 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
             cursorRef.current.style.display = "flex";
             document.body.style.cursor = "none";
           }
+          const mouseX = event.pageX;
+          const mouseY = event.pageY;
+          const positionElement = () => {
+            if (cursorRef.current) {
+              cursorRef.current.style.top = mouseY + "px";
+              cursorRef.current.style.left = mouseX + "px";
+            }
+          };
+          positionElement();
 
           mouseDebouncer = window.setTimeout(() => {
             if (cursorRef.current) {
@@ -61,15 +64,6 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
             }
           }, 7000);
 
-          const mouseX = event.clientX;
-          const mouseY = event.clientY;
-          const positionElement = () => {
-            if (cursorRef.current) {
-              cursorRef.current.style.top = mouseY + "px";
-              cursorRef.current.style.left = mouseX + "px";
-            }
-          };
-          positionElement();
         }
       }
     };
@@ -80,19 +74,18 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       document.removeEventListener("mousemove", handleMouseMove);
       clearTimeout(mouseDebouncer);
     };
-  }, [setNodeName, setNodeText]);
+  }, []);
 
-  const clickedClass = isClicked ? "-clicked" : "";
 
   return (
     <div
       onClick={onClick}
-      className={`custom-cursor ${clickedClass} ${
-        nodeName === "a" || nodeName === "button" ? "hovered" : ""
+      className={`custom-cursor ${
+        nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? "hovered" : ""
       }`}
       ref={cursorRef}
     >
-      <p>{nodeName === "a" || nodeName === "button" ? nodeText : "Hello!"}</p>
+      <p>{nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText : "Hello!"}</p>
       <div />
     </div>
   );
@@ -119,6 +112,11 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     );
 
     setTimeout(() => setLoading(false), 1000);
+    return () => {
+      document.removeEventListener("contextmenu",  (e) => {
+        e.preventDefault();
+      });
+          };
   }, []);
 
   const [nodeName, setNodeName] = useState("");
@@ -137,12 +135,12 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <body className="bg-stone-900">
         {/* <Analytics /> */}
         <CustomCursor
-          nodeName={nodeName}
-          setNodeName={setNodeName}
-          nodeText={nodeText}
-          setNodeText={setNodeText}
-          isClicked={isClicked}
-          onClick={onClick}
+            nodeName={nodeName}
+            setNodeName={setNodeName}
+            nodeText={nodeText}
+            setNodeText={setNodeText}
+            isClicked={isClicked}
+            onClick={onClick}
         />
         {!loading ? (
           <>
