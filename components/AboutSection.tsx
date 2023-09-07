@@ -34,7 +34,7 @@ const AboutSection = () => {
 
         <div
           key={expandedSection ? "aboutUsExpand" : "aboutUsHidden"}
-          className={`flex flex-col space-y-10 items-stretch justify-center align-top  md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left h-max overflow-hidden transition-max-height duration-1000 ease-in ${
+          className={`flex flex-col space-y-10 items-stretch justify-center align-top  md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left h-max overflow-hidden transition-max-height custom-height duration-1000 ease-in ${
             expandedSection ? "max-h-960" : "max-h-80"
           }`}
         >
