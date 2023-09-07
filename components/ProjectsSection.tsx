@@ -76,7 +76,7 @@ const ProjectsSection = () => {
                     {expandedId === idx ? "Read Less" : "Read More"}
                   </button>
                   <div className="flex flex-row align-bottom space-x-4">
-                    <Link href={project.link} target="_blank">
+                    <Link href={project.link} target="_blank" className="projectSection">
                       <BsArrowUpRightSquare size={30} className="hover:-translate-y-1 transition-transform cursor-pointer" />
                     </Link>
                   </div>
