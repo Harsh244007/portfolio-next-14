@@ -45,16 +45,14 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
  <HeroSection />
-      {/*      <div className="iframe">
-
+    <div className="iframe">
       <SolarComponent url={iframeUrlSolar}/>
-      </div>
-      
-      <div className="iframe">
+    </div>
+    <div className="iframe">
       <TictactoeComponent url={iframeUrlTic} />
-      </div>
+    </div>
       
-      <div className="iframe">
+     <div className="iframe">
       <EmbeddedIframes
         url1={iFrameURL6}
         url2={iframeUrl2}
@@ -62,7 +60,7 @@ export default function Home() {
         url4={iframeUrl4}
         url5={iframeUrl5}
       />
-        </div> */}
+      </div>
       <AboutSection />
       
       <div className="iframe">
