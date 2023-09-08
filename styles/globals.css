@@ -400,18 +400,18 @@ html.dark-mode {
   color:black;
   transform: translate(-50%, -50%);
   position: fixed;
-  position:relative;
+  position:absolute;
   backdrop-filter:blur(2px);
   --rotate:0deg;
 }
-.custom-cursor > div{
-  border:3px solid #a9e4de;
+.custom-cursor.hovered > div{
+  border:6px solid #a9e4de;
   transition: all 0ms ease-in;
   border-top-color:#0d9488;
   position:absolute;
+  animation:liner 15s linear infinite;
   transition: all 0 !important;
 transition-delay:0 !important;
-  animation:liner 15s linear infinite;
   border-radius: 50%;
   width:100%;
   aspect-ratio:1/1;
@@ -431,10 +431,9 @@ transition-delay:0 !important;
   transition-delay:0 !important;
   color:black;
 }
-.custom-cursor.hovered {
-animation-duration:6s !important;
+/* .custom-cursor.hovered {
 border-width:6px !important;
-}
+} */
 .min-h-20{
   min-height:20rem;
   padding-top:60px;
