@@ -30,7 +30,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   useEffect(() => {
 
     const handleMouseMove = (event: MouseEvent) => {
-      console.log("Mouse Move : ",event.target.nodeName)
+      // console.log("Mouse Move : ",event.target.nodeName)
       if (event.target instanceof HTMLElement) {
         if (
           event.target.nodeName.toLowerCase() === "iframe"||
