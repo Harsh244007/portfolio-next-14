@@ -79,7 +79,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       clearTimeout(mouseDebouncer);
     };
   }, []);
-  const words = ['Hello', 'Welcome', 'to My',"Portfolio"];
+  const words = ['Hello👋', 'Welcome', 'to My',"Portfolio"];
   const [index, setIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState(words[index]);
 
@@ -158,7 +158,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <style>@import url("/font.css");</style>
       <head />
       <body className="bg-stone-900">
-        {/* <Analytics /> */}
+        <Analytics />
         <CustomCursor
             nodeName={nodeName}
             setNodeName={setNodeName}
