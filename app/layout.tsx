@@ -95,7 +95,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   useEffect(() => {
     setCurrentWord(words[index]);
   }, [index])
-
+console.log("Mouse Mover : ",nodeText)
   return (
     <div
       onClick={onClick}
@@ -104,7 +104,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       }`}
       ref={cursorRef}
     >
-      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText :loading===false? currentWord:"Welcome"}</p>
+      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText===""?"Click":nodeText :loading===false? currentWord:"Welcome"}</p>
       <div />
     </div>
   );
