@@ -5,10 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React, { useEffect, useState, useRef } from "react";
 import { ClipLoader } from "react-spinners";
-import dynamic from "next/dynamic";
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
-  ssr: false,
-});
+// import dynamic from "next/dynamic";
+// const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+//   ssr: false,
+// });
 interface CustomCursorProps {
   nodeName: string;
   nodeText: string;
@@ -31,6 +31,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   useEffect(() => {
 
     const handleMouseMove = (event: MouseEvent) => {
+      // console.log("Mouse Move : ",event.clientX,event.x,event.pageX,event.screenX)
       if (event.target instanceof HTMLElement) {
         if (
           event.target.nodeName === "IFRAME"||
@@ -65,7 +66,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
               cursorRef.current.style.display = "none";
               document.body.style.cursor = "auto";
             }
-          }, 7000);
+          }, 4000);
 
         }
       }
@@ -89,7 +90,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       ref={cursorRef}
     >
       <p>{nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText : "Hello!"}</p>
-      <div />
+      {/* <div /> */}
     </div>
   );
 };
@@ -143,16 +144,17 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <head />
       <body className="bg-stone-900">
         {/* <Analytics /> */}
-        {/* <CustomCursor
+        <CustomCursor
             nodeName={nodeName}
             setNodeName={setNodeName}
             nodeText={nodeText}
             setNodeText={setNodeText}
             isClicked={isClicked}
             onClick={onClick}
-        /> */}
+        />
         {!loading ? (
-          <>      <AnimatedCursor
+          <>     
+           {/* <AnimatedCursor
           innerSize={7}
           outerSize={20}
           color="255, 255, 255"
@@ -180,7 +182,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
             backgroundColor: 'var(--cursor-color)',
             border: '10px solid white'
           }}
-        />
+        /> */}
             <Navbar />
             {children}
             <Footer />

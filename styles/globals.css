@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
   height: 10px;
 }
 body {
-  /* cursor:none; */
+  cursor:none;
 }
 img{
   --cursor-blend:unset;
@@ -394,8 +394,8 @@ html.dark-mode {
   justify-content:center;
   background-color: rgba(255, 255, 255, 0.608);
   pointer-events: none;
-   transition: all 0.3s ease-in;
- 
+   transition: all 0 !important;
+ transition-delay:0 !important;
   overflow: visible;
   color:black;
   transform: translate(-50%, -50%);
@@ -406,10 +406,12 @@ html.dark-mode {
 }
 .custom-cursor > div{
   border:3px solid #a9e4de;
-  transition: all 0.3s ease-in;
+  transition: all 0ms ease-in;
   border-top-color:#0d9488;
-  animation:liner 15s linear infinite;
   position:absolute;
+  transition: all 0 !important;
+transition-delay:0 !important;
+  animation:liner 15s linear infinite;
   border-radius: 50%;
   width:100%;
   aspect-ratio:1/1;
@@ -425,6 +427,8 @@ html.dark-mode {
 .custom-cursor p {
   font-weight:bold;
   font-size:18px;
+  transition: all 0 !important;
+  transition-delay:0 !important;
   color:black;
 }
 .custom-cursor.hovered {
