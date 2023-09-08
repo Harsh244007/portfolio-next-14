@@ -407,7 +407,7 @@ html.dark-mode {
 .custom-cursor.hovered > div{
   border:0px solid #a9e4de;
   transition: all 0ms ease-in;
-  border-top-width:10px;
+  border-top-width:6px;
   border-top-color:#0d9488;
   position:absolute;
   animation:liner 15s linear infinite;
