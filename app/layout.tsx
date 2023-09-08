@@ -66,7 +66,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
               cursorRef.current.style.display = "none";
               document.body.style.cursor = "auto";
             }
-          }, 4000);
+          }, 10000);
 
         }
       }
@@ -79,7 +79,22 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       clearTimeout(mouseDebouncer);
     };
   }, []);
+  const words = ['Hello', 'Welcome', 'to My',"Portfolio"];
+  const [index, setIndex] = useState(0);
+  const [currentWord, setCurrentWord] = useState(words[index]);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 2000); 
+    return () => {
+      clearInterval(timer); 
+    };
+  }, []);
+
+  useEffect(() => {
+    setCurrentWord(words[index]);
+  }, [index])
 
   return (
     <div
@@ -89,7 +104,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       }`}
       ref={cursorRef}
     >
-      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText :loading===false? "Hello!":"Welcome"}</p>
+      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText :loading===false? currentWord:"Welcome"}</p>
       <div />
     </div>
   );
