@@ -11,6 +11,7 @@ import { ClipLoader } from "react-spinners";
 // });
 interface CustomCursorProps {
   nodeName: string;
+  loading:boolean;
   nodeText: string;
   setNodeName: React.Dispatch<React.SetStateAction<string>>; 
   setNodeText: React.Dispatch<React.SetStateAction<string>>; 
@@ -22,6 +23,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   nodeName,
   nodeText,
   setNodeName,
+  loading,
   setNodeText,
   isClicked,
   onClick,
@@ -89,7 +91,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       }`}
       ref={cursorRef}
     >
-      <p>{nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText : "Hello!"}</p>
+      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText :loading===false? "Hello!":"Welcome"}</p>
       {/* <div /> */}
     </div>
   );
@@ -147,6 +149,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <CustomCursor
             nodeName={nodeName}
             setNodeName={setNodeName}
+            loading={loading}
             nodeText={nodeText}
             setNodeText={setNodeText}
             isClicked={isClicked}
