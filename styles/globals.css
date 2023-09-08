@@ -441,9 +441,9 @@ border-width:6px !important;
 }
 @media (max-width:1020px){
 .custom-cursor {
-display: none;
+display: none !important;
 }
 body {
-  cursor:auto;
+  cursor:auto !important;
 }
 }
