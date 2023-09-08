@@ -27,7 +27,7 @@ body::-webkit-scrollbar-track {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,* ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
