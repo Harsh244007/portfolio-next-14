@@ -64,6 +64,9 @@ export default function Home() {
       <div className="iframe">
       <CarComponent url={iframeUrl1} />
       </div>
+      <div className="iframe">
+      <SolarComponent url={iframeUrlSolar} />
+      </div>
       <SliderComponent />
       <ProjectsSection />
     </main>
