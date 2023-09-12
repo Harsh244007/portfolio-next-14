@@ -117,7 +117,6 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   useEffect(() => {
     setCurrentWord(words[index]);
   }, [index])
-console.log("Mouse Mover : ",nodeText)
   return (
     <div
       onClick={onClick}

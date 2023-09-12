@@ -45,8 +45,8 @@ const HeroSection = () => {
   };
   return (
     <section id="home" tabIndex={1}>
-      <div className="flex h-90vh flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
-        <div className="md:mt-2 md:w-1/2 CarouselParent">
+      <div className="flex h-90vh flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 lg:py-48 lg:flex-row lg:space-x-4 lg:text-left">
+        <div className="lg:mt-2 lg:w-1/2 CarouselParent">
           {image.map((e, i) => {
             return (
               <div
@@ -93,20 +93,20 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
-        <div className="md:mt-2 md:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 leading-tight md:mt-0 md:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">
+        <div className="lg:mt-2 lg:w-3/5">
+          <h1 className="text-4xl font-bold mt-6 leading-tight lg:mt-0 lg:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">
             Hello, I&#39;m Harsh!
           </h1>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl">
             <span className="font-semibold text-teal-600">
               A Software Engineer{" "}
             </span>
             from Delhi, India.
           </p>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl">
             Dedicated to developing software that enhances lives and adds value.
           </p>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl">
             Also, creating insightful DSA and System Design videos on YouTube
             and Instagram for effective learning.{" "}
           </p>

@@ -16,10 +16,7 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Home",
     page: "home",
   },
-  {
-    label: "Solar",
-    page: "solar",
-  },
+
   {
     label: "Tic-Tac",
     page: "tictactoe",
@@ -35,6 +32,10 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Car",
     page: "car",
+  },
+  {
+    label: "Solar",
+    page: "solar",
   },
   {
     label: "Slider",
@@ -76,7 +77,7 @@ const Navbar = () => {
       <Link
         key={idx}
         to={item.page}
-        className={"block min-md:noBlackShadow lg:inline-block text-neutral-100 hover:text-neutral-500"}
+        className={"block min-lg:noBlackShadow lg:inline-block text-neutral-100 hover:text-neutral-500"}
         spy={true}
         smooth={true}
         offset={-100}
@@ -91,16 +92,16 @@ const Navbar = () => {
 
   return (
     <header className="w-full backdrop-blur-sm mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-stone-900 bg-opacity-70 border-b border-stone-600">
-      <div className="justify-between md:items-center md:flex">
+      <div className="justify-between lg:items-center lg:flex mx-auto max-w-3xl  lg:max-w-5xl">
         <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link to="home" className="noBlackShadow">
               <div className="container flex items-center space-x-2">
                 <h2 className="text-2xl font-bold">Harsh Patel</h2>
               </div>
             </Link>
-            <div className="md:hidden">
-              <button className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={handleNavbarToggle}>
+            <div className="lg:hidden">
+              <button className="p-2 text-gray-700 rounded-lg outline-none focus:border-gray-400 focus:border" onClick={handleNavbarToggle}>
                 {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
               </button>
             </div>
@@ -108,8 +109,8 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div className={`flex-1 bg-opacity-90 bg-stone-900 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <div className={`flex-1 bg-opacity-90 bg-stone-900 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
+            <div className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {renderNavItems}
             </div>
           </div>
