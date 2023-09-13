@@ -178,7 +178,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     <html lang="en">
       <style>@import url("/font.css");</style>
       <head />
-      <body className="bg-stone-900">
+      <body className="bg-stone-900 overflow-x-hidden">
         <Analytics />
         <CustomCursor
             nodeName={nodeName}
