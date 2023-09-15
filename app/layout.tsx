@@ -28,28 +28,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   const cursorRef = useRef<HTMLDivElement>(null);
   let  mouseDebouncer:number
   useEffect(() => {
-    const hasSharedLocation = localStorage.getItem('sharedLocation') === 'true';
-    if (!hasSharedLocation && window.navigator.geolocation) {
-      window.navigator.geolocation.getCurrentPosition((position) => {
-        localStorage.setItem('sharedLocation', 'true');
-        
-      }, (error) => {
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
-            console.error('User denied the request for geolocation.');
-            break;
-          case error.POSITION_UNAVAILABLE:
-            console.error('Location information is unavailable.');
-            break;
-          case error.TIMEOUT:
-            console.error('The request to get user location timed out.');
-            break;
-          default:
-            console.error('An error occurred while getting user location.');
-            break;
-        }
-      });
-    }
+    
 
     const handleMouseMove = (event: MouseEvent) => {
       // console.log("Mouse Move : ",event.target.nodeName)
