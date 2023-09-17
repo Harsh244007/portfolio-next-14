@@ -46,8 +46,9 @@ export default function Home() {
     <>
       {/* // @ts-ignore */}
   <video   className="bgVideo" autoPlay loop muted >
-<source src={"/NatureBG.webm"} type="video/webm" />
 <source src={"/NatureBG.mp4"} type="video/mp4" />
+  <source src={"/NatureBG.webm"} type="video/webm" />
+
 
   </video>
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
