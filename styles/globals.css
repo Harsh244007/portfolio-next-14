@@ -448,6 +448,8 @@ border-width:6px !important;
   overflow: hidden;
   z-index: -1;
   opacity: 0.2;
+  /* z-index: 001000;
+  opacity: 1; */
 }
 
 @media (max-width:1020px){

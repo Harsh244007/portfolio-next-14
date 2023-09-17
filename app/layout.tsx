@@ -28,11 +28,13 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   const cursorRef = useRef<HTMLDivElement>(null);
   let  mouseDebouncer:number
   useEffect(() => {
-    const handleVideoPlay =()=>{
-      const videoElement = document.querySelector('.bgVideo')  as HTMLVideoElement;
-      // console.log("Video Element", videoElement,videoElement.play)
-        videoElement.play();
-    }
+    // const handleVideoPlay =()=>{
+    //   const videoElement = document.querySelector('.bgVideo')  as HTMLVideoElement;
+    //   console.log("Video Element", videoElement,videoElement.play)
+    //     videoElement.autoplay=true;
+    //     videoElement.load();
+    //     videoElement.play();
+    // }
     
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -80,10 +82,12 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
     };
 
     document.addEventListener("mousemove", handleMouseMove);
-    
+    // document.addEventListener("scroll", handleVideoPlay);
+
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-          clearTimeout(mouseDebouncer);
+      // document.removeEventListener("scroll", handleVideoPlay);
+      clearTimeout(mouseDebouncer);
     };
   }, []);
   const words = ['Hello👋', 'Welcome', 'to My',"Portfolio"];

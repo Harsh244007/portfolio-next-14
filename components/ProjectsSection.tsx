@@ -67,7 +67,7 @@ const ProjectsSection = () => {
                 <div className="md:w-1/2">
                   <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                   <p
-                    className={`text-xl leading-7 mb-4 h-max ${expandedId === idx ? "max-h-96" : "max-h-24"} text-neutral-600 text-neutral-400 overflow-hidden transition-max-height`}
+                    className={`text-xl leading-7 mb-4 h-max ${expandedId === idx ? "max-h-96 text-neutral-200" : "max-h-24 text-neutral-400"}   overflow-hidden transition-max-height`}
                   >
                     {project.description}
                   </p>

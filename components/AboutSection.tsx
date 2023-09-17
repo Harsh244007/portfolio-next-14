@@ -33,7 +33,7 @@ const AboutSection = () => {
   
       <p
         className={`flex flex-col space-y-10 items-stretch justify-center align-top  md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left overflow-hidden text-xl leading-7 mb-4 h-fit ${
-          expandedSection ? "max-h-960" : "max-h-80"
+          expandedSection ? "max-h-960  text-neutral-200" : "max-h-80  text-neutral-400"
         }  overflow-auto transition-max-height`}
       >
         <div className={`md:w-1/2  overflow-auto `}>
