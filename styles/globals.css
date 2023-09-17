@@ -451,7 +451,7 @@ body {
   position:fixed;
   width:100vw;
   transition:all 0.3s;
-  object-fit:fill;
+  object-fit:cover;
   height:100vh;
   overflow: hidden;
   z-index: -1;
