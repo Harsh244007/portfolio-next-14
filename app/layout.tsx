@@ -36,7 +36,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
 
     if (videoElement) {
       // Check if the video is paused (not playing)
-      if (videoElement.paused) {
+      if (videoElement) {
         // Play the video
         videoElement.play();
       }
