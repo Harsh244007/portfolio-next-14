@@ -43,9 +43,14 @@ export default function Home() {
       : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/";
 
   return (
+    <>
+  <video className="bgVideo"   loop  autoPlay muted >
+<source src={"/NatureBG.mp4"} type="video/mp4" />
+<source src={"/NatureBG.mp4"}  type="application/x-mplayer2" />
+
+  </video>
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
  <HeroSection />
-  
     <section className="iframe">
       <TictactoeComponent url={iframeUrlTic} />
     </section>
@@ -70,5 +75,6 @@ export default function Home() {
       <SliderComponent />
       <ProjectsSection />
     </main>
+    </>
   );
 }
