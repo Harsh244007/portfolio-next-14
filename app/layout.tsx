@@ -32,7 +32,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
 
     const handleMouseMove = (event: MouseEvent) => {
 
-         const videoElement = document.querySelector('.bgVideo');
+         const videoElement = document.querySelector('.bgVideo')  as HTMLVideoElement;
 
     if (videoElement) {
       // Check if the video is paused (not playing)
