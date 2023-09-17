@@ -80,12 +80,10 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
     };
 
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("scroll", handleVideoPlay);
-
+    
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("scroll", handleVideoPlay);
-      clearTimeout(mouseDebouncer);
+          clearTimeout(mouseDebouncer);
     };
   }, []);
   const words = ['Hello👋', 'Welcome', 'to My',"Portfolio"];
