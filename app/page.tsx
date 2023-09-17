@@ -44,8 +44,10 @@ export default function Home() {
 
   return (
     <>
-  <video className="bgVideo"   loop  autoPlay muted >
+    {/* @ts-ignore */}
+  <video className="bgVideo"   loop  autoPlay autoplay muted >
 <source src={"/NatureBG.mp4"} type="video/mp4" />
+<source src={"/NatureBG2.mp4"} type="video/mp4" />
 <source src={"/NatureBG.mp4"}  type="application/x-mplayer2" />
 
   </video>
