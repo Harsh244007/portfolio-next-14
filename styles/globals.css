@@ -451,9 +451,9 @@ body {
   position:fixed;
   width:100vw;
   transition:all 0.3s;
-  object-fit:contain;
+  object-fit:fill;
   height:100vh;
   overflow: hidden;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
