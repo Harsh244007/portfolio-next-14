@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       {/* // @ts-ignore */}
-  <video autoPLay  className="bgVideo"   loop autoPlay   muted >
+  <video   className="bgVideo" autoPlay loop muted >
 <source src={"/NatureBG.webm"} type="video/webm" />
 <source src={"/NatureBG.mp4"} type="video/mp4" />
 
