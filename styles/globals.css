@@ -458,7 +458,7 @@ display: none !important;
 }
 .bgVideo{
   object-fit:cover;
-  opacity:0.4;
+  opacity:0.35;
 }
 body {
   cursor:auto !important;
