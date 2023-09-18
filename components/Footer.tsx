@@ -11,7 +11,7 @@ const Footer = () => {
           © {new Date().getFullYear()}
           {" - "}
           <a href="https://www.linkedin.com/in/harsh-patel244/" className="noBlackShadow" rel="noreferrer" target="_blank">
-            <p className="hover:-translate-y-1 noBlackShadow transition-transform cursor-pointer text-neutral-500 text-neutral-100"> Harsh Patel</p>{" "}
+            <p className="hover:-translate-y-1 noBlackShadow transition-transform cursor-pointer text-neutral-400 "> Harsh Patel</p>{" "}
           </a>
           {/* <a href="/" className="hover:underline"></a> */}
         </div>
