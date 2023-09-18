@@ -15,8 +15,8 @@ export default function Home() {
       : "http://harsh-car.netlify.app/";
   const iframeUrlTic =
     currentProtocol === "https:"
-      ? "https://tic-tac-toe-preact-ts-tw.vercel.app/"
-      : "http://tic-tac-toe-preact-ts-tw.vercel.app/";
+      ? "https://tic-tac-toe-preact-ts-tw.vercel.app/?iframeUrl"
+      : "http://tic-tac-toe-preact-ts-tw.vercel.app/?iframeUrl";
   const iframeUrl3 =
     currentProtocol === "https:"
       ? "https://triangle-ballon.netlify.app/"
@@ -37,46 +37,55 @@ export default function Home() {
     currentProtocol === "https:"
       ? "https://css-piano-ts.vercel.app/"
       : "http://css-piano-ts.vercel.app/";
-  const iframeUrlSolar = 
-      currentProtocol === "https:"
-      ? "https://solar-system-css-harsh-preact-ts-tw.vercel.app/"
-      : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/";
+  const iframeUrlSolar =
+    currentProtocol === "https:"
+      ? "https://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl"
+      : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl";
 
   return (
     <>
       {/* // @ts-ignore */}
-  <video preload="auto"  className="bgVideo" autoPlay data-wf-ignore="true" data-object-fit="cover" loop muted playsInline>
-<source src={"/NatureBG.mp4"} type="video/mp4" />
-  <source src={"/NatureBG.webm"} type="video/webm" />
-<source src={"/NatureBG2.mp4"} type="video/mp4" />
-<source src={"/NatureBG3.mp4"} type="video/mp4" />
-  </video>
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
- <HeroSection />
-    <section className="iframe">
-      <TictactoeComponent url={iframeUrlTic} />
-    </section>
-      
-     <section className="iframe">
-      <EmbeddedIframes
-        url1={iFrameURL6}
-        url2={iframeUrl2}
-        url3={iframeUrl3}
-        url4={iframeUrl4}
-        url5={iframeUrl5}
-      />
-      </section>
-      <AboutSection />
-      
-      <section className="iframe">
-      <CarComponent url={iframeUrl1} />
-      </section>
-      <section className="iframe">
-      <SolarComponent url={iframeUrlSolar} />
-      </section>
-      <SliderComponent />
-      <ProjectsSection />
-    </main>
+      <video
+        preload="auto"
+        className="bgVideo"
+        autoPlay
+        data-wf-ignore="true"
+        data-object-fit="cover"
+        loop
+        muted
+        playsInline
+      >
+        <source src={"/NatureBG.mp4"} type="video/mp4" />
+        <source src={"/NatureBG.webm"} type="video/webm" />
+        <source src={"/NatureBG2.mp4"} type="video/mp4" />
+        <source src={"/NatureBG3.mp4"} type="video/mp4" />
+      </video>
+      <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
+        <HeroSection />
+        <section className="iframe">
+          <TictactoeComponent url={iframeUrlTic} />
+        </section>
+
+        <section className="iframe">
+          <EmbeddedIframes
+            url1={iFrameURL6}
+            url2={iframeUrl2}
+            url3={iframeUrl3}
+            url4={iframeUrl4}
+            url5={iframeUrl5}
+          />
+        </section>
+        <AboutSection />
+        <section className="iframe">
+          <SolarComponent url={iframeUrlSolar} />
+        </section>
+
+        <section className="iframe">
+          <CarComponent url={iframeUrl1} />
+        </section>
+        <SliderComponent />
+        <ProjectsSection />
+      </main>
     </>
   );
 }

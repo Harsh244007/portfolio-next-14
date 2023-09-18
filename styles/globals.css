@@ -346,6 +346,14 @@ html.dark-mode {
   border-radius: 0px;
   border-color: transparent;
 }
+.bg-sun{
+  background-color:rgba(28,25,23,0.6);
+  backdrop-filter:blue(5px);
+  border-width:0px;
+}
+.bg-sun body{
+    background:trasnparent !important
+}
 .thumb-teal::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;

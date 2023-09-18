@@ -12,7 +12,7 @@ const TictactoeComponent: React.FC<IframeComponentProps> = ({ url }) => {
     Tic-Tac-Toe(Dynamic)
     <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
   </h1>
-  <iframe src={url} className="w-full bg-teal-car h-full border " title="Harsh Car" />
+  <iframe src={url} className="w-full bg-sun h-full border " title="Harsh Car" />
 </section>
   );
 };
