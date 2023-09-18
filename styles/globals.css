@@ -367,7 +367,9 @@ html.dark-mode {
   background: #0d9488;
   cursor: pointer;
 }
-
+.carousel-dot{
+  cursor:pointer;
+}
 .thumb-teal::-moz-range-thumb {
   width: 15px;
   height: 25px;

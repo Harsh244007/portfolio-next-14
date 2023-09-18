@@ -39,12 +39,13 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
 
     const handleMouseMove = (event: MouseEvent) => {
 
-      // console.log("Mouse Move : ",event.target.nodeName)
+      // console.log("Mouse Move : ",event.target,event.target.nodeName)
       if (event.target instanceof HTMLElement) {
         if (
           event.target.nodeName.toLowerCase() === "iframe"||
           event.target.nodeName.toLowerCase() === "h1"||
-                   event.target.nodeName.toLowerCase() === "img"
+          event.target.className.includes("carousel-dot")||
+          event.target.nodeName.toLowerCase() === "img"
         ) {
           if (cursorRef.current) {
             cursorRef.current.style.display = "none";
