@@ -447,7 +447,7 @@ border-width:6px !important;
   height:100vh;
   overflow: hidden;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
   /* z-index: 001000;
   opacity: 1; */
 }
@@ -458,7 +458,7 @@ display: none !important;
 }
 .bgVideo{
   object-fit:cover;
-  opacity:0.3;
+  opacity:0.4;
 }
 body {
   cursor:auto !important;
