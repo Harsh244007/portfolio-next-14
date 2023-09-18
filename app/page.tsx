@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import EmbeddedIframes from "@/components/Csswork";
 import SolarComponent from "@/components/Solar";
 import TictactoeComponent from "@/components/Tictactoe";
+import Nudge from "@/components/IosNudge"
 import CarComponent from "@/components/Car";
 import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
         <source src={"/NatureBG2.mp4"} type="video/mp4" />
         <source src={"/NatureBG3.mp4"} type="video/mp4" />
       </video>
+      <Nudge/>
       <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
         <HeroSection />
         <section className="iframe">

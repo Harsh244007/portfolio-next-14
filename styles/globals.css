@@ -262,7 +262,8 @@ html.dark-mode {
 }
 .activeCarousal {
   display: inline-block !important;
-  animation: fadeIn 750ms ease-in forwards;
+  animation: fadeIn 750ms ease-in forwards, nudge .4s linear;
+  ;
 
   /* transition: transform 4s ease-in-out;
   transform: translateX(0); */
@@ -272,6 +273,10 @@ html.dark-mode {
   position: relative !important;
   height: 100% !important;
 }
+/* iframe:hover{
+  animation: nudge .4s linear;
+}  */
+
 @keyframes fadeIn {
   0% {
     opacity: 0.5;
@@ -471,4 +476,52 @@ display: none !important;
 body {
   cursor:auto !important;
 }
+}
+.iosNudge {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  z-index:10;
+  background-color: rgba(28, 20, 23, 0.5);
+  backdrop-filter: blur(3px);
+  display:none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  display: flex;
+  width:fit-content;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-family: "Ysabeau SC", sans-serif !important;
+}
+@supports (-webkit-touch-callout: none) {
+  .iosNudge{
+    display:flex;
+    animation:hideNudge 20s linear forwards;
+  }
+}
+@keyframes hideNudge{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+    display:none;
+  }
+}
+@keyframes nudge {
+  
+  0% {
+    transform: rotate(-7deg);
+  }
+  
+  33% {
+    transform: rotate(7deg);
+  }
+  
+  66% {
+    transform: rotate(-7deg);
+  }
 }
