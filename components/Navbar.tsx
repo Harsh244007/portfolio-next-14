@@ -30,12 +30,12 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "about",
   },
   {
-    label: "Car",
-    page: "car",
-  },
-  {
     label: "Solar",
     page: "solar",
+  },
+  {
+    label: "Car",
+    page: "car",
   },
   {
     label: "Slider",

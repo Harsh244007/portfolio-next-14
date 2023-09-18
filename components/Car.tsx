@@ -7,7 +7,7 @@ interface IframeComponentProps {
 
 const CarComponent: React.FC<IframeComponentProps> = ({ url }) => {
   return (
-    <section id="car" className="w-full h-screen flex flex-col justify-center items-center" tabIndex={1}>
+    <section id="car" className="w-full h-screen flex flex-col justify-center items-center pt-4" tabIndex={1}>
      <h1 className="text-center font-bold text-4xl">
           No Div CAR (CSS Only)
           <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>

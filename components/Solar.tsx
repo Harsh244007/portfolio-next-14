@@ -7,7 +7,7 @@ interface IframeComponentProps {
 
 const SolarComponent: React.FC<IframeComponentProps> = ({ url }) => {
   return (
-<section id="solar" className="w-full pt-4 h-screen flex flex-col justify-center items-center" tabIndex={1}>
+<section id="solar" className="w-full h-screen flex flex-col justify-center items-center" tabIndex={1}>
   <h1 className="text-center font-bold text-4xl">
     Sun-Moon-Earth
     <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
