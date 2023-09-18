@@ -48,6 +48,8 @@ export default function Home() {
   <video preload="auto"  className="bgVideo" autoPlay data-wf-ignore="true" data-object-fit="cover" loop muted playsInline>
 <source src={"/NatureBG.mp4"} type="video/mp4" />
   <source src={"/NatureBG.webm"} type="video/webm" />
+<source src={"/NatureBG2.mp4"} type="video/mp4" />
+<source src={"/NatureBG3.mp4"} type="video/mp4" />
   </video>
     <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
  <HeroSection />
