@@ -93,7 +93,7 @@ const SliderComponent: React.FC = () => {
     </p>
   </div>
   <div className="flex flex-row pt-5 items-center text-center justify-center ">
-    <Link to="about" activeClass="active" spy={true} className="noBlackShadow" smooth={true} offset={-100} duration={500}>
+    <Link to="projects" activeClass="active" spy={true} className="noBlackShadow" smooth={true} offset={-100} duration={500}>
       <HiArrowDown size={35} className="animate-bounce" />
     </Link>
   </div>
