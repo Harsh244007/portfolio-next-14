@@ -106,7 +106,7 @@ const HeroSection = () => {
           <p className="text-lg mt-4 mb-6 lg:text-2xl">
             Dedicated to developing software that enhances lives and adds value.
           </p>
-          <p className="text-lg mt-4 mb-6 lg:text-2xl">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl display-none">
             Also, creating insightful DSA and System Design videos on YouTube
             and Instagram for effective learning.{" "}
           </p>
