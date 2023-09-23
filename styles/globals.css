@@ -204,8 +204,8 @@ a:active::before {
   flex-direction: column;
   z-index: 1;
   background-color: #1c1917 !important;
-  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-  animation: 3s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 1.5s ease 0s normal forwards 1 fadein;
+  animation: 1.5s ease 0s normal forwards 1 fadein;
 }
 .loader p {
   /* position:absolute; */
@@ -237,6 +237,11 @@ a:active::before {
   bottom: 50%;
   animation: openDoor 3.5s ease-in  forwards;
   transform-origin:  right;
+}
+@keyframes fadein{
+  100%{
+    opacity: 0;
+  }
 }
 @keyframes openDoor {
   20% {
