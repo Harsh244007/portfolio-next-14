@@ -134,7 +134,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     );
 
     setTimeout(() => setLoading(false), 1000);
-    setTimeout(() => setLoadingDoor(false), 5500);
+    setTimeout(() => setLoadingDoor(false), 4500);
     console.log(()=>{})
     console.info(()=>{})
 

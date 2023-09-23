@@ -219,7 +219,7 @@ a:active::before {
 }
 .left-door,
 .right-door {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 50%;
   height: 100vh;
