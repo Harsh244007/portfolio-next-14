@@ -53,8 +53,8 @@ footer * {
   -webkit-transition: all 0.5s ease-in !important;
   -o-transition: all 0.5s ease-in !important;
   -moz-transition: all 0.5s ease-in !important;
-  overflow-x: hidden !important;
-  scroll-snap-type: y mandatory !important;
+  /* overflow-x: hidden !important; */
+  /* scroll-snap-type: y mandatory !important; */
   -ms-transition: all 0.5s ease-in !important;
   scrollbar-width: thin !important;
   user-select: none;
@@ -65,10 +65,7 @@ footer * {
   font-family: "Ysabeau SC", sans-serif !important;
   box-sizing: border-box;
 }
-main > div,.
-main > section{
-  scroll-snap-align: center !important;
-}
+
 body {
   background-color: #1c1917;
   color: white;
