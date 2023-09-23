@@ -28,14 +28,6 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   const cursorRef = useRef<HTMLDivElement>(null);
   let  mouseDebouncer:number
   useEffect(() => {
-    // const handleVideoPlay =()=>{
-    //   const videoElement = document.querySelector('.bgVideo')  as HTMLVideoElement;
-    //   console.log("Video Element", videoElement,videoElement.play)
-    //     videoElement.autoplay=true;
-    //     videoElement.load();
-    //     videoElement.play();
-    // }
-    
 
     const handleMouseMove = (event: MouseEvent) => {
 
@@ -83,7 +75,6 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
     };
 
     document.addEventListener("mousemove", handleMouseMove);
-    // document.addEventListener("scroll", handleVideoPlay);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -131,6 +122,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     margin: "auto",
   };
   const [loading, setLoading] = useState(true);
+  const [loadingDoor, setLoadingDoor] = useState(true);
 
   useEffect(() => {
     document.addEventListener(
@@ -142,6 +134,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     );
 
     setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoadingDoor(false), 3500);
     console.log(()=>{})
     console.info(()=>{})
 
@@ -184,6 +177,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
             <Navbar />
             {children}
             <Footer />
+            {loadingDoor?<>
+            <div className="left-door"></div>
+            <div className="right-door"></div></>:""}
             {/* <TextToSpeechPlayer/> */}
           </>
         ) : (
