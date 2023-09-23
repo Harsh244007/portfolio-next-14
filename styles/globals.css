@@ -247,6 +247,7 @@ a:active::before {
   }
   100% {
     transform: scaleX(-100%);
+    display:none;
   }
 
 }
