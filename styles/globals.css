@@ -196,6 +196,7 @@ a:active::before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1;
   background-color: #1c1917 !important;
   -webkit-animation: 3s ease 0s normal forwards 1 fadein;
   animation: 3s ease 0s normal forwards 1 fadein;
@@ -210,29 +211,43 @@ a:active::before {
 .loader span {
   margin: 0px !important;
 }
-@keyframes fadein {
-  0% {
-    opacity: 1;
+.left-door,
+.right-door {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  
+  background-color: #1c1917 !important;
+  z-index: 1;
+  transition: transform 1s ease-in-out;
+}
+.left-door {
+  transform-origin: top left;
+  animation: openLeftDoor 3s forwards;
+  left:0;
+}
+.right-door {
+  right: 0;
+  bottom: 50%;
+  animation: openRightDoor 3s forwards;
+  transform-origin: bottom right;
+}
+@keyframes openRightDoor {
+  100%{
+      /* transform: scaleZ(100%); */
+      transform: scaleX(-100%);
+      /* rotate: 180deg; */
   }
-  66% {
-    opacity: 0.5;
+}
+@keyframes openLeftDoor {
+  100%{
+
+      transform: scaleX(-100%);
   }
-  100% {
-    opacity: 0;
-  }
+  
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 1;
-  }
-  66% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 html {
   --cursor-color: #333;
 }
