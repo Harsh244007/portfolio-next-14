@@ -53,15 +53,21 @@ footer * {
   -webkit-transition: all 0.5s ease-in !important;
   -o-transition: all 0.5s ease-in !important;
   -moz-transition: all 0.5s ease-in !important;
+  
+  scroll-snap-type: y mandatory !important;
   -ms-transition: all 0.5s ease-in !important;
   scrollbar-width: thin !important;
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   accent-color: #0d9488;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   font-family: "Ysabeau SC", sans-serif !important;
   box-sizing: border-box;
+}
+main > div,.
+main > section{
+  scroll-snap-align: center !important;
 }
 body {
   background-color: #1c1917;
@@ -546,4 +552,16 @@ body {
   66% {
     transform: rotate(-7deg);
   }
+}
+button:hover{
+  text-decoration:underline;
+}
+.CarouselParent{
+max-width:325px;
+}
+
+.CarouselParent img:hover{
+  scale:1.2;
+  max-width:325px;
+  cursor:pointer;
 }

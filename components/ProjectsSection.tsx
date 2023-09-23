@@ -61,7 +61,7 @@ const ProjectsSection = () => {
               <div className="flex flex-col mb-8  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                 <div className=" md:w-1/2">
                   <Link href={project.link} target="_blank" className="noBlackShadow">
-                    <Image src={project.image} alt="" width={1000} height={1000} loading={"lazy"} className="rounded-xl shadow-xl hover:opacity-70" />
+                    <Image src={project.image} alt="" width={1000} height={1000} loading={"lazy"} className="rounded-xl shadow-xl hover:opacity-70 noBlackShadow" />
                   </Link>
                 </div>
                 <div className="md:w-1/2">
