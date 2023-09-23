@@ -219,34 +219,38 @@ a:active::before {
   height: 100%;
   
   background-color: #1c1917 !important;
-  z-index: 1;
-  transition: transform 1s ease-in-out;
+  z-index: 100;
 }
 .left-door {
-  transform-origin: top left;
-  animation: openLeftDoor 3s forwards;
+  transform-origin: left;
+  animation: openDoor 3s ease-in forwards;
   left:0;
 }
 .right-door {
   right: 0;
   bottom: 50%;
-  animation: openRightDoor 3s forwards;
-  transform-origin: bottom right;
+  animation: openDoor 3.5s ease-in  forwards;
+  transform-origin:  right;
 }
-@keyframes openRightDoor {
-  100%{
-      /* transform: scaleZ(100%); */
-      transform: scaleX(-100%);
-      /* rotate: 180deg; */
+@keyframes openDoor {
+  20% {
+    transform: scaleX(70%);
   }
-}
-@keyframes openLeftDoor {
-  100%{
+  40% {
+    transform: scaleX(75%);
+  }
+  60% {
+    transform: scaleX(50%);
+  }
+  80% {
+    transform: scaleX(55%);
+  }
+  100% {
+    transform: scaleX(-100%);
+  }
 
-      transform: scaleX(-100%);
-  }
-  
 }
+
 
 html {
   --cursor-color: #333;
