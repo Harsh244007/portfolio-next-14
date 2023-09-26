@@ -1,28 +1,30 @@
-import React, { useEffect } from 'react';
+"use client";
+import React, { useEffect } from "react";
 
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.7
+  threshold: 0.7,
 };
 
-function observerCallback(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
-  entries.forEach(entry => {
+function observerCallback(
+  entries: IntersectionObserverEntry[],
+  observer: IntersectionObserver
+) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.replace('fadeOut', 'fadeIn');
+      entry.target.classList.replace("fadeOut", "fadeIn");
     } else {
-      entry.target.classList.replace('fadeIn', 'fadeOut');
+      entry.target.classList.replace("fadeIn", "fadeOut");
     }
   });
 }
 
 const IntersectionObserverComponent = () => {
-  
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    const fadeElms = document.querySelectorAll('.fade');
-    fadeElms.forEach(el => observer.observe(el));
-
+  const fadeElms = document.querySelectorAll(".fade");
+  fadeElms.forEach((el) => observer.observe(el));
 };
 
 export default IntersectionObserverComponent;
