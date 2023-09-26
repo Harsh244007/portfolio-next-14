@@ -608,8 +608,8 @@ button:hover {
   opacity: 1;
   scale: 1.05;
   /* transform: none; */
-  animation: scroll-up 0.3s forwards linear ease-in;
-  -webkit-animation: scroll-up 0.3s forwards linear ease-in;
+  animation: scroll-up 1s forwards linear ease-in;
+  -webkit-animation: scroll-up 1s forwards linear ease-in;
   animation-iteration-count: 1 !important;
   -webkit-animation-iteration-count: 1 !important;
 }
@@ -625,11 +625,14 @@ button:hover {
   }
 }
 @keyframes scroll-up {
-  from {
+  0% {
     transform: translateY(-20px);
   }
-  to {
+  70% {
     transform: translateY(0px);
+  }
+  100%{
+  scale: 1;
   }
 }
 
