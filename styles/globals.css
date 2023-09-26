@@ -573,5 +573,7 @@ max-width:325px;
   transition: opacity 0.7s ease-in forwards;
 }
 
-.fadeOut { opacity: 0.2; }
-.fadeIn { opacity: 1; }
+.fadeOut { opacity: 0.2;
+         scale:0.95;}
+.fadeIn { opacity: 1;
+        scale:1.05;}
