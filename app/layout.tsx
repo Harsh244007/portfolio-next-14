@@ -99,8 +99,8 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
     setCurrentWord(words[index]);
   }, [index])
   return (
-    <div
-      onClick={onClick} as="section"
+    <section
+      onClick={onClick} 
       className={`custom-cursor ${
         loading === true || nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? "hovered" : ""
       }`}
@@ -108,7 +108,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
     >
       <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText===""?"Click":nodeText :loading===false? currentWord:"Welcome"}</p>
       <div />
-    </div>
+    </section>
   );
 };
 
