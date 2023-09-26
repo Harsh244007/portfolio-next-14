@@ -574,4 +574,11 @@ max-width:325px;
 }
 
 .fadeOut { opacity: 0.2; }
-.fadeIn { opacity: 1; }
+.fadeIn { 
+  0% {transform:translateY(0)}
+  50% {transform:translateY(-20px)}
+  100% {
+    opacity: 1; 
+    transform:translateY(0)
+  }
+}
