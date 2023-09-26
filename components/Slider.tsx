@@ -59,14 +59,14 @@ const SliderComponent: React.FC = () => {
   }, [showSlider, sliderNumber, startFilling]);
 
   return (
-<section id="slider" className="container fade fadeOut mx-auto py-10">
-  <h1 className="text-center font-bold text-4xl">
+<section id="slider" className="container mx-auto py-10">
+  <h1 className="text-center font-bold text-4xl fade  fadeOut ">
     <h1 className="text-center flex justify-center items-center gap-10 flex-wrap">
       Give any number in this input and see the magic <BsMagic />
     </h1>
     <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
   </h1>
-  <div className="w-80 flex -flex-col flex-wrap m-auto">
+  <div className="w-80 flex -flex-col flex-wrap m-auto fade  fadeOut ">
     <input
       type="number"
       id="numberInput"
@@ -85,14 +85,14 @@ const SliderComponent: React.FC = () => {
       Submit
     </button>
 
-    <div id="progress-bar" className="w-full h-2 my-4 rounded">
+    <div id="progress-bar" className="w-full h-2 my-4 rounded ">
       <input type="range" disabled={showSlider} ref={progressBarRef} step="2" defaultValue="0" className="w-full h-2 mt-4 thumb-teal" />
     </div>
     <p className="mt-4 text-sm">
       Progress Bar Value: <span ref={progressBarTextRef}>0</span>
     </p>
   </div>
-  <div className="flex flex-row pt-5 items-center text-center justify-center ">
+  <div className="flex flex-row pt-5 items-center text-center justify-center fade fadeOut ">
     <Link to="projects" activeClass="active" spy={true} className="noBlackShadow" smooth={true} offset={-100} duration={500}>
       <HiArrowDown size={35} className="animate-bounce" />
     </Link>

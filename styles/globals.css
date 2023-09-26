@@ -146,7 +146,6 @@ a:active::after,
 .noBlackShadow:active,
 a:active::before {
   box-shadow: 0px 0px 18px 4px rgba(13, 148, 136, 0.7) !important;
-  
   animation:scale-out 4s ease-in infinite; 
 }
 .projectSection:hover,
@@ -200,6 +199,7 @@ a:active::before {
   align-items: center;
   flex-direction: column;
   z-index: 1;
+  will-change:opacity;
   background-color: #1c1917 !important;
   -webkit-animation: 1.5s ease 0s normal forwards 1 fadein;
   animation: 1.5s ease 0s normal forwards 1 fadein;
@@ -226,12 +226,13 @@ a:active::before {
 }
 .left-door {
   transform-origin: left;
+  will-change:opacity;
   animation: openDoor 3s ease-in forwards;
   left:0;
 }
 .right-door {
   right: 0;
-  bottom: 50%;
+  will-change:opacity;
   animation: openDoor 3.5s ease-in  forwards;
   transform-origin:  right;
 }
@@ -290,6 +291,7 @@ html.dark-mode {
 }
 .activeCarousal {
   display: inline-block !important;
+  /* will-change:opacity,scale; */
   animation: fadeIn 750ms ease-in forwards, nudge .4s linear;
   ;
 
@@ -529,6 +531,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   .iosNudge{
     display:flex;
+    /* will-change:opacity,display; */
     animation:hideNudge 20s linear forwards;
   }
 }
@@ -568,12 +571,31 @@ max-width:325px;
   cursor:pointer;
 }
 .fade {
-  /* margin: 50px; */
-  /* background-color: lightgreen; */
-  transition: all 0.5s ease-in forwards;
+  will-change: opacity, scale;
+  transition: opacity 0.7s ease-in linear forwards,scale 0.5s ease-in forwards,transform 0.7s ease-in forwards;
 }
 
-.fadeOut { opacity: 0.2;
-         scale:0.95;}
-.fadeIn { opacity: 1;
-        scale:1.05;}
+.fadeOut { 
+  opacity: 0.2;
+  scale:0.90;
+  }
+.fadeIn { 
+  opacity: 1;
+  scale:1.05;
+  /* transform: none; */
+  animation:translate 0.3s forwards linear ease-in;
+  animation-iteration-count:1;
+  }
+  @keyframes translate{
+    from{
+      transform: translateY(-20px);
+    }
+    to{
+      transform: translateY(0px);
+    }
+  }
+.h-full{
+  max-height:600px !important;
+  min-height:500px !important;
+  height:auto !important;
+}
