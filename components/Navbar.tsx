@@ -93,7 +93,7 @@ const Navbar = () => {
               </div>
             </Link>
             <div className="lg:hidden">
-              <button className="p-2 text-gray-700 rounded-lg outline-none focus:border-gray-400 focus:border" onClick={handleNavbarToggle}>
+              <button className="p-2 text-gray-700 rounded-lg outline-none focus:border-gray-400 focus:border " onClick={handleNavbarToggle}>
                 {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
               </button>
             </div>
@@ -101,7 +101,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div className={`flex-1 bg-opacity-90 bg-stone-900 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
+          <div className={`flex-1 bg-opacity-90 bg-stone-900 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 mb-10 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
             <div className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {renderNavItems}
             </div>

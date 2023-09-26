@@ -613,10 +613,15 @@ button:hover {
   animation-iteration-count: 1 !important;
   -webkit-animation-iteration-count: 1 !important;
 }
+.h-full {
+  max-height: 600px !important;
+  min-height: 500px !important;
+  height: auto !important;
+}
+
 @media (max-width: 600px) {
-  .fadeIn {
-    opacity: 1;
-    scale: 1.02;
+  .h-full {
+    min-height: 400px !important;
   }
 }
 @keyframes scroll-up {
@@ -628,8 +633,3 @@ button:hover {
   }
 }
 
-.h-full {
-  max-height: 600px !important;
-  min-height: 500px !important;
-  height: auto !important;
-}
