@@ -92,7 +92,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full backdrop-blur-sm mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-stone-900 bg-opacity-70 border-b border-stone-600">
-      <div className="justify-between lg:items-center lg:flex mx-auto max-w-3xl  lg:max-w-5xl">
+      <div className="justify-between fade fadeOut lg:items-center lg:flex mx-auto max-w-3xl  lg:max-w-5xl">
         <div>
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link to="home" className="noBlackShadow">
