@@ -27,7 +27,7 @@ const IntersectionObserverComponent = () => {
 
   const fadeElms = document.querySelectorAll(".fade");
   fadeElms.forEach((el) => observer.observe(el));
-return () => observer.disconnect();
+
   }, []);
     
 };
