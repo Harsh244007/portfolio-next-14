@@ -100,7 +100,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   }, [index])
   return (
     <div
-      onClick={onClick}
+      onClick={onClick} as="section"
       className={`custom-cursor ${
         loading === true || nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? "hovered" : ""
       }`}

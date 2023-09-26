@@ -44,8 +44,8 @@ const HeroSection = () => {
     }
   };
   return (
-    <section id="home" className="md:fade md:fadeOut" tabIndex={1}>
-      <div className="flex h-90vh flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 lg:py-48 lg:flex-row lg:space-x-4 lg:text-left">
+    <section id="home"  tabIndex={1}>
+      <div className="flex h-90vh gap-x-5 flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 lg:py-48 lg:flex-row lg:space-x-4 lg:text-left">
         <div className="lg:mt-2 lg:w-1/2 CarouselParent">
           {image.map((e, i) => {
             return (
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 key={i}
                 onTouchStart={handleSwipeStart}
                 onTouchMove={handleSwipeMove}
-                className={`shadow-2xl ${activeIndex == i && "activeCarousal"}`}
+                className={`shadow-2xl  ${activeIndex == i && "activeCarousal"}`}
               >
                 <Image
                   src={e}
@@ -94,19 +94,19 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="lg:mt-2 lg:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 leading-tight lg:mt-0 lg:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">
+          <h1 className="text-4xl fade fadeOut font-bold mt-6 leading-tight lg:mt-0 lg:text-7xl bg-teal-500 bg-opacity-20 w-max mx-auto lg:mx-0 ">
             Hello, I&#39;m Harsh!
           </h1>
-          <p className="text-lg mt-4 mb-6 lg:text-2xl">
+          <p className="text-lg fade fadeOut mt-4 mb-6 lg:text-2xl">
             <span className="font-semibold text-teal-600">
               A Software Engineer{" "}
             </span>
             from Delhi, India.
           </p>
-          <p className="text-lg mt-4 mb-6 lg:text-2xl">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl fade fadeOut">
             Dedicated to developing software that enhances lives and adds value.
           </p>
-          <p className="text-lg mt-4 mb-6 lg:text-2xl hidden">
+          <p className="text-lg mt-4 mb-6 lg:text-2xl hidden fade fadeOut">
             Also, creating insightful DSA and System Design videos on YouTube
             and Instagram for effective learning.{" "}
           </p>
@@ -114,7 +114,7 @@ const HeroSection = () => {
             href="https://github.com/Harsh244007?tab=repositories"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 fade fadeOut m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             // activeClass="active"
           >
             Github
@@ -122,7 +122,7 @@ const HeroSection = () => {
           <a
             href="/Resume-Harsh-Patel.pdf"
             target="_blank"
-            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 fade fadeOut m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             // activeClass="active"
           >
             Resume
@@ -131,7 +131,7 @@ const HeroSection = () => {
             href="https://leetcode.com/patelharsh241999/"
             rel="noreferrer"
             target="_blank"
-            className="text-neutral-100 m-1 sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+            className="text-neutral-100 m-1 fade fadeOut sm:m-3 font-semibold px-3 sm:px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
             // activeClass="active"
           >
             Leetcode
