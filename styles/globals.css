@@ -567,3 +567,11 @@ max-width:325px;
   max-width:325px;
   cursor:pointer;
 }
+.fade {
+  /* margin: 50px; */
+  /* background-color: lightgreen; */
+  transition: opacity 0.7s ease-in;
+}
+
+.fadeOut { opacity: 0.2; }
+.fadeIn { opacity: 1; }

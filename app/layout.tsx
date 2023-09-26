@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React, { useEffect, useState, useRef } from "react";
 import { ClipLoader } from "react-spinners";
-
+import IntersectionObserverComponent from "./intersectionObserver"
 interface CustomCursorProps {
   nodeName: string;
   loading:boolean;
@@ -157,6 +157,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     setClicked((prev) => !prev);
   };
 
+
+
+  IntersectionObserverComponent()
   return (
     <html lang="en">
       <style>@import url("/font.css");</style>
