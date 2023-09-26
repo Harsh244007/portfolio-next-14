@@ -59,7 +59,7 @@ const SliderComponent: React.FC = () => {
   }, [showSlider, sliderNumber, startFilling]);
 
   return (
-<section id="slider" className="container mx-auto py-10">
+<section id="slider" className="container fade fadeOut mx-auto py-10">
   <h1 className="text-center font-bold text-4xl">
     <h1 className="text-center flex justify-center items-center gap-10 flex-wrap">
       Give any number in this input and see the magic <BsMagic />
