@@ -34,14 +34,6 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "solar",
   },
   {
-    label: "Car",
-    page: "car",
-  },
-  {
-    label: "Slider",
-    page: "slider",
-  },
-  {
     label: "Projects",
     page: "projects",
   },
