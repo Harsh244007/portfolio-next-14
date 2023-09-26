@@ -601,13 +601,12 @@ button:hover {
 
 .fadeOut {
   opacity: 0.2;
-  scale: 0.9;
+  scale: 0.75;
 }
 
 .fadeIn {
   opacity: 1;
-  scale: 1.05;
-  /* transform: none; */
+  scale: 1;
   animation: scroll-up 1s forwards linear ease-in;
   -webkit-animation: scroll-up 1s forwards linear ease-in;
   animation-iteration-count: 1 !important;
@@ -625,14 +624,12 @@ button:hover {
   }
 }
 @keyframes scroll-up {
-  0% {
+  from {
     transform: translateY(-20px);
   }
-  70% {
+  to {
     transform: translateY(0px);
   }
-  100%{
-  scale: 1;
-  }
+
 }
 
