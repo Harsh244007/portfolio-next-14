@@ -21,10 +21,15 @@ function observerCallback(
 }
 
 const IntersectionObserverComponent = () => {
+  
+  useEffect(() => {
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
   const fadeElms = document.querySelectorAll(".fade");
   fadeElms.forEach((el) => observer.observe(el));
+return () => observer.disconnect();
+  }, []);
+    
 };
 
 export default IntersectionObserverComponent;
