@@ -44,7 +44,7 @@ const HeroSection = () => {
     }
   };
   return (
-    <section id="home" className="fade fadeOut" tabIndex={1}>
+    <section id="home" className="" tabIndex={1}>
       <div className="flex h-90vh flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 lg:py-48 lg:flex-row lg:space-x-4 lg:text-left">
         <div className="lg:mt-2 lg:w-1/2 CarouselParent">
           {image.map((e, i) => {
