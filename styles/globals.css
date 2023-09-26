@@ -603,11 +603,7 @@ button:hover {
   opacity: 0.2;
   scale: 0.9;
 }
-@media (max-width:600px){
-  .md-fade.fadeOut{
-    opacity:1;
-  }
-}
+
 .fadeIn {
   opacity: 1;
   scale: 1.05;
@@ -617,6 +613,12 @@ button:hover {
   animation-iteration-count: 1 !important;
   -webkit-animation-iteration-count: 1 !important;
 }
+@media (max-width: 600px) {
+  .fadeIn {
+    opacity: 1;
+    scale: 1.02;
+  }
+}
 @keyframes scroll-up {
   from {
     transform: translateY(-20px);
@@ -625,6 +627,7 @@ button:hover {
     transform: translateY(0px);
   }
 }
+
 .h-full {
   max-height: 600px !important;
   min-height: 500px !important;
