@@ -583,10 +583,10 @@ max-width:325px;
   opacity: 1;
   scale:1.05;
   /* transform: none; */
-  animation:translate 0.3s forwards linear ease-in;
+  animation:scroll-up 0.3s forwards linear ease-in;
   animation-iteration-count:1 !important;
   }
-  @keyframes translate{
+  @keyframes scroll-up{
     from{
       transform: translateY(-20px);
     }
