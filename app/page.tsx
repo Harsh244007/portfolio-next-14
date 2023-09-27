@@ -6,6 +6,7 @@ import SolarComponent from "@/components/Solar";
 import ElementSearch from "@/components/ElementSearch"
 import TictactoeComponent from "@/components/Tictactoe";
 import Nudge from "@/components/IosNudge"
+import CountryComponent from "@/components/Country"
 import CarComponent from "@/components/Car";
 import ProjectsSection from "@/components/ProjectsSection";
 export default function Home() {
@@ -47,6 +48,10 @@ export default function Home() {
     currentProtocol ==="https:"
     ? "https://breaking-word-element-table.vercel.app"
     : "http://breaking-word-element-table.vercel.app"
+  const iframeCountry =
+    currentProtocol ==="https:"
+    ? "https://country-game-two.vercel.app/"
+    : "http://country-game-two.vercel.app/"
   return (
     <>
       {/* // @ts-ignore */}
@@ -68,6 +73,9 @@ export default function Home() {
       <Nudge/>
       <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
         <HeroSection />
+        <section className="iframe">
+          <CountryComponent url={iframeCountry} />
+        </section>
         <section className="iframe">
           <ElementSearch url={iframeBreak} />
         </section>
