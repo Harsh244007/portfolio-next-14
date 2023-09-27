@@ -501,9 +501,7 @@ html.dark-mode {
   transition-delay: 0 !important;
   color: black;
 }
-/* .custom-cursor.hovered {
-border-width:6px !important;
-} */
+
 .min-h-20 {
   min-height: 20rem;
   padding-top: 60px;

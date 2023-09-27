@@ -14,9 +14,7 @@ function observerCallback(
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.replace("fadeOut", "fadeIn");
-    } else {
-      entry.target.classList.replace("fadeIn", "fadeOut");
-    }
+    } 
   });
 }
 
