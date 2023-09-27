@@ -3,6 +3,7 @@ import SliderComponent from "@/components/Slider";
 import HeroSection from "@/components/HeroSection";
 import EmbeddedIframes from "@/components/Csswork";
 import SolarComponent from "@/components/Solar";
+import ElementSearch from "@/components/ElementSearch"
 import TictactoeComponent from "@/components/Tictactoe";
 import Nudge from "@/components/IosNudge"
 import CarComponent from "@/components/Car";
@@ -42,7 +43,10 @@ export default function Home() {
     currentProtocol === "https:"
       ? "https://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl"
       : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl";
-
+  const iframeBreak =
+    currentProtocol ==="https:"
+    ? "https://breaking-word-element-table.vercel.app"
+    : "http://breaking-word-element-table.vercel.app"
   return (
     <>
       {/* // @ts-ignore */}
@@ -64,6 +68,9 @@ export default function Home() {
       <Nudge/>
       <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
         <HeroSection />
+        <section className="iframe">
+          <ElementSearch url={iframeBreak} />
+        </section>
         <section className="iframe">
           <TictactoeComponent url={iframeUrlTic} />
         </section>
