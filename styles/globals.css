@@ -593,7 +593,7 @@ button:hover {
   max-width: 325px;
   cursor: pointer;
 }
-.md-fade.fade {
+.fade {
   will-change: opacity, scale;
   transition: opacity 0.7s ease-in linear forwards, scale 0.5s ease-in forwards,
     transform 0.7s ease-in forwards;
