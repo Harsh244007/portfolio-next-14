@@ -255,13 +255,13 @@ a:active::before {
 .left-door {
   transform-origin: left;
   will-change: opacity;
-  animation: openDoor 3s ease-in forwards;
+  animation: openDoor-left 3s ease-in forwards;
   left: 0;
 }
 .right-door {
   right: 0;
   will-change: opacity;
-  animation: openDoor 3.5s ease-in forwards;
+  animation: openDoor-right 3.5s ease-in forwards;
   transform-origin: right;
 }
 @keyframes fadein {
@@ -269,20 +269,51 @@ a:active::before {
     opacity: 0;
   }
 }
-@keyframes openDoor {
+
+@keyframes openDoor-left {
   20% {
+    border-bottom-right-radius:20%;
     transform: scaleX(70%);
   }
   40% {
+    border-bottom-right-radius:50%;    
     transform: scaleX(75%);
+
   }
   60% {
+    border-bottom-right-radius:10%;
     transform: scaleX(50%);
   }
   80% {
+    border-bottom-right-radius:50%;
     transform: scaleX(55%);
   }
   100% {
+    border-bottom-right-radius:0%;
+    transform: scaleX(-100%);
+    display: none;
+  }
+}
+@keyframes openDoor-right {
+  20% {
+    transform: scaleX(70%);
+    border-bottom-left-radius:20%;
+  }
+  40% {
+    border-bottom-left-radius:50%;
+    transform: scaleX(75%);
+
+  }
+  60% {
+    border-bottom-left-radius:10%;
+    transform: scaleX(50%);
+  }
+  80% {
+    border-bottom-left-radius:50%;
+    transform: scaleX(55%);
+  }
+  100% {
+    border-bottom-left-radius:0%;
     transform: scaleX(-100%);
     display: none;
   }
