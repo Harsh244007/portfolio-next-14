@@ -272,24 +272,23 @@ a:active::before {
 
 @keyframes openDoor-left {
   20% {
-    border-bottom-right-radius:20%;
+    border-bottom-right-radius: 20%;
     transform: scaleX(70%);
   }
   40% {
-    border-bottom-right-radius:50%;    
+    border-bottom-right-radius: 50%;
     transform: scaleX(75%);
-
   }
   60% {
-    border-bottom-right-radius:10%;
+    border-bottom-right-radius: 10%;
     transform: scaleX(50%);
   }
   80% {
-    border-bottom-right-radius:50%;
+    border-bottom-right-radius: 50%;
     transform: scaleX(55%);
   }
   100% {
-    border-bottom-right-radius:0%;
+    border-bottom-right-radius: 0%;
     transform: scaleX(-100%);
     display: none;
   }
@@ -297,23 +296,22 @@ a:active::before {
 @keyframes openDoor-right {
   20% {
     transform: scaleX(70%);
-    border-bottom-left-radius:20%;
+    border-bottom-left-radius: 20%;
   }
   40% {
-    border-bottom-left-radius:50%;
+    border-bottom-left-radius: 50%;
     transform: scaleX(75%);
-
   }
   60% {
-    border-bottom-left-radius:10%;
+    border-bottom-left-radius: 10%;
     transform: scaleX(50%);
   }
   80% {
-    border-bottom-left-radius:50%;
+    border-bottom-left-radius: 50%;
     transform: scaleX(55%);
   }
   100% {
-    border-bottom-left-radius:0%;
+    border-bottom-left-radius: 0%;
     transform: scaleX(-100%);
     display: none;
   }
@@ -551,20 +549,20 @@ html.dark-mode {
   opacity: 1; */
 }
 @keyframes scaleUpVideo {
-  0%{
-    scale: 1.0;
+  0% {
+    scale: 1;
   }
-  25%{
+  25% {
     scale: 1.3;
   }
-  50%{
+  50% {
     scale: 1.1;
   }
-  75%{
+  75% {
     scale: 1.3;
   }
-  100%{
-    scale: 1.0;
+  100% {
+    scale: 1;
   }
 }
 
@@ -604,6 +602,10 @@ html.dark-mode {
     display: flex;
     /* will-change:opacity,display; */
     animation: hideNudge 20s linear forwards;
+  }
+
+  .bgVideo {
+    animation: none !important;
   }
 }
 @keyframes hideNudge {
@@ -677,6 +679,4 @@ button:hover {
   to {
     transform: translateY(0px);
   }
-
 }
-
