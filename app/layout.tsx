@@ -180,9 +180,6 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
             <Navbar />
             {children}
             <Footer />
-            {loadingDoor?<>
-            <div className="left-door"></div>
-            <div className="right-door"></div></>:""}
             {/* <TextToSpeechPlayer/> */}
           </>
         ) : (
