@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
-
+var musicFlag = true
 const MusicButton: React.FC = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [isAudioLoaded, setIsAudioLoaded] = useState(false);
@@ -10,9 +10,12 @@ const MusicButton: React.FC = () => {
     if (isAudioLoaded) {
       const audioElement = audioRef.current;
       if (audioElement) {
-        if (audioElement.paused) {
+        if (audioElement.paused || musicFlag) {
+            audioElement.volume = 0.3;
+            musicFlag = false 
+            audioElement.muted = false; 
           audioElement.play();
-          audioElement.volume = 0.5; 
+        //   audioElement.autoplay = true;
         } else {
           audioElement.pause(); 
         }
@@ -41,7 +44,7 @@ const MusicButton: React.FC = () => {
   return (
     <>
     <section aria-hidden="true"
-      className={`fixed bottom-4 right-4 h-12 w-12 flex items-center justify-center bg-stone-900  border border-gray-300 text-white rounded-full cursor-pointer ${
+      className={`fixed bottom-4 z-10 right-4 h-12 w-12 flex items-center justify-center bg-stone-900  border border-gray-300 text-white rounded-full cursor-pointer ${
         isRotating ? "rotate" : ""
       } ${isAudioLoaded?"flex":"hidden"}`}
       onClick={handleClick}
@@ -51,8 +54,12 @@ const MusicButton: React.FC = () => {
       </button>
     </section>
       {/* // @ts-ignore */}
-      <audio ref={audioRef} preload="auto" data-wf-ignore="true" loop className="bgAudio">
+      <audio ref={audioRef} autoPlay muted preload="auto" data-wf-ignore="true"  loop className="bgAudio">
+        <source src={"/music.mp3"} type="audio/mpeg" />
         <source src={"/music.mp3"} type="audio/mp3" />
+        <source src={"/music.m4a"} type="audio/m4a" />
+        <source src={"/music.ogg"} type="audio/ogg" />
+        <source src={"/music.aac"} type="audio/ogg" />
       </audio>
       </>
   );
