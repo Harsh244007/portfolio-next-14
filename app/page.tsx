@@ -9,6 +9,7 @@ import Nudge from "@/components/IosNudge"
 import CountryComponent from "@/components/Country"
 import CarComponent from "@/components/Car";
 import ProjectsSection from "@/components/ProjectsSection";
+import MusicButton from "@/components/Music/Music";
 export default function Home() {
   const currentProtocol =
     typeof window !== "undefined" ? window.location.protocol : "https:";
@@ -72,10 +73,11 @@ export default function Home() {
       </video>
       <Nudge/>
       <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
+        <MusicButton/>
         <HeroSection />
-        <section className="iframe">
+        {/* <section className="iframe">
           <CountryComponent url={iframeCountry} />
-        </section>
+        </section> */}
         <section className="iframe">
           <ElementSearch url={iframeBreak} />
         </section>

@@ -544,7 +544,7 @@ html.dark-mode {
   overflow: hidden;
   z-index: -1;
   opacity: 0.3;
-  animation: scaleUpVideo 10s ease-in infinite;
+  /* animation: scaleUpVideo 10s ease-in infinite; */
   /* z-index: 001000;
   opacity: 1; */
 }
@@ -580,15 +580,14 @@ html.dark-mode {
 }
 .iosNudge {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 0px;
   z-index: 10;
   background-color: rgba(28, 20, 23, 0.5);
   backdrop-filter: blur(3px);
-  display: none;
   padding: 5px 20px;
   border-radius: 5px;
-  display: flex;
+  /* display: flex; */
   width: fit-content;
   display: none;
   align-items: center;
@@ -598,15 +597,17 @@ html.dark-mode {
   font-family: "Ysabeau SC", sans-serif !important;
 }
 @supports (-webkit-touch-callout: none) {
-  .iosNudge {
-    display: flex;
-    /* will-change:opacity,display; */
-    animation: hideNudge 20s linear forwards;
+  @media (max-width:1022px){
+
+    .iosNudge {
+      display: flex;
+      animation: hideNudge 20s linear forwards;
   }
 
   .bgVideo {
     animation: none !important;
   }
+}
 }
 @keyframes hideNudge {
   from {
@@ -644,8 +645,7 @@ button:hover {
 }
 .fade {
   will-change: opacity, scale;
-  transition: opacity 0.7s ease-in linear forwards, scale 0.5s ease-in forwards,
-    transform 0.7s ease-in forwards;
+  transition: opacity 0.7s ease-in linear forwards, scale 0.5s ease-in forwards, transform 0.7s ease-in forwards;
 }
 
 .fadeOut {
@@ -678,5 +678,27 @@ button:hover {
   }
   to {
     transform: translateY(0px);
+  }
+}
+.rotate {
+  animation: rotateAll 3s ease-in infinite;
+}
+@keyframes rotateAll {
+  0% {
+    rotate: 0deg;
+    scale:1.0;
+  }
+  85% {
+    scale:1.0;
+  }
+  90% {
+    scale:1.1;
+  }
+  95% {
+    scale:1.0;
+  }
+  100% {
+    rotate: 360deg;
+    scale:1.1;
   }
 }
