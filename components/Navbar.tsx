@@ -92,7 +92,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div className={`flex-1 bg-opacity-60 bg-stone-900 justify-self-center pb-3 px-4 mt-8 lg:block lg:pb-0 lg:mt-0 mb-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
+          <div className={`flex-1 bg-opacity-60 bg-stone-900 justify-self-center pb-3 px-4 mt-8 lg:block lg:pb-0 lg:mt-0 mb-8 lg:mb-0 ${navbar ? "block bg-opacity-100" : "hidden"}`}>
             <div className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
               {renderNavItems}
             </div>
