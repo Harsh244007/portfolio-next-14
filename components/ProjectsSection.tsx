@@ -175,7 +175,7 @@ const ProjectsSection = () => {
                     :""
                   }
                   {project.github !== "" ? 
-                      <Link href={project.link} target="_blank" className="projectSection">
+                      <Link href={project.github} target="_blank" className="projectSection">
                         <AiOutlineGithub size={30} className="hover:-translate-y-1 transition-transform cursor-pointer" />
                       </Link>
                     :""
