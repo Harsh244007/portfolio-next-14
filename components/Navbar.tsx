@@ -16,26 +16,17 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Home",
     page: "home",
   },
-
   {
-    label: "Tic-Tac",
-    page: "tictactoe",
-  },
-  {
-    label: "CSS",
-    page: "css",
+    label: "Projects",
+    page: "projects",
   },
   {
     label: "About",
     page: "about",
   },
   {
-    label: "Solar",
-    page: "solar",
-  },
-  {
-    label: "Projects",
-    page: "projects",
+    label: "Cool Stuffs",
+    page: "tictactoe",
   },
 ];
 

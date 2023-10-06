@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-
 import { AiOutlineGithub, AiFillPhone, AiOutlineLinkedin, AiFillInstagram, AiFillYoutube, AiOutlineMail } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
 const Footer = () => {

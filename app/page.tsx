@@ -75,16 +75,15 @@ export default function Home() {
       <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
         <MusicButton/>
         <HeroSection />
-        <section className="iframe">
-          <CountryComponent url={iframeCountry} />
-        </section>
-        {/* <section className="iframe">
-          <ElementSearch url={iframeBreak} />
-        </section> */}
+        <AboutSection />
+        <ProjectsSection />
         <section className="iframe">
           <TictactoeComponent url={iframeUrlTic} />
         </section>
 
+        <section className="iframe">
+          <CountryComponent url={iframeCountry} />
+        </section>
         <section className="iframe">
           <EmbeddedIframes
             url1={iFrameURL6}
@@ -94,7 +93,6 @@ export default function Home() {
             url5={iframeUrl5}
           />
         </section>
-        <AboutSection />
         <section className="iframe">
           <SolarComponent url={iframeUrlSolar} />
         </section>
@@ -103,7 +101,10 @@ export default function Home() {
           <CarComponent url={iframeUrl1} />
         </section>
         <SliderComponent />
-        <ProjectsSection />
+        <section className="iframe">
+          <ElementSearch url={iframeBreak} />
+        </section>
+        
       </main>
     </>
   );

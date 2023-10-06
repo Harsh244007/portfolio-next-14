@@ -1,5 +1,7 @@
 "use client";
 import React, { memo } from "react";
+import { Link } from "react-scroll/modules";
+import { HiArrowDown } from "react-icons/hi";
 
 const skills = [
   { skill: "Spring-FrameWork" },
@@ -164,6 +166,12 @@ const AboutSection = () => {
       >
         {expandedSection ? "Read Less" : "Read More"}
       </button>
+      <div className="flex flex-row pt-5 items-center text-center justify-center fade fadeOut ">
+    <Link to="projects" activeClass="active" spy={true} className="noBlackShadow mb-10" smooth={true} offset={-100} duration={500}>
+      <HiArrowDown size={35} className="animate-bounce" />
+    </Link>
+  </div>
+
     </div>
   </section>);
 };
