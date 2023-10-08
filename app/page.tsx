@@ -10,6 +10,8 @@ import CountryComponent from "@/components/Country"
 import CarComponent from "@/components/Car";
 import ProjectsSection from "@/components/ProjectsSection";
 import MusicButton from "@/components/Music/Music";
+import RecursiveCommentComponent from "@/components/Comment"
+
 export default function Home() {
   const currentProtocol =
     typeof window !== "undefined" ? window.location.protocol : "https:";
@@ -53,6 +55,10 @@ export default function Home() {
     currentProtocol ==="https:"
     ? "https://country-game-two.vercel.app/"
     : "http://country-game-two.vercel.app/"
+    const iframeComment =
+    currentProtocol ==="https:"
+    ? "https://recursive-nested-comments.vercel.app/"
+    : "http://recursive-nested-comments.vercel.app/"
   return (
     <>
       {/* // @ts-ignore */}
@@ -77,6 +83,9 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <section className="iframe">
+          <RecursiveCommentComponent url={iframeComment} />
+        </section>
         <section className="iframe">
           <TictactoeComponent url={iframeUrlTic} />
         </section>

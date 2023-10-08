@@ -8,6 +8,14 @@ import { AiOutlineGithub} from "react-icons/ai";
 
 const projects = [
   {
+    name: "Recursive Comment Section.",
+    description:
+      "Explore an engaging and intuitive comment section built with Preact, TypeScript, and Tailwind CSS. Dive into a seamless experience of nested comments, replies, and discussions. Discover the power of interactive web development in this feature-rich example. Join the conversation and make your voice heard!",
+    image: "/comment.JPG",
+    link:"https://recursive-nested-comments.vercel.app/",
+    github: "https://github.com/Harsh244007/Recursive-nested-comments",
+  },
+  {
     name: "Ecommerce App with discount on individual items from backend.",
     description:
       "I've developed an eCommerce app using Next.js, fetching data from Node.js with a 5-item limit per page. Each item comes with its unique discount coupon for user application. I have used tailwind and typescript with next js and mongoose.",
