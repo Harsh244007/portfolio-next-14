@@ -32,6 +32,14 @@ const projects = [
     github: "https://github.com/Harsh244007/Master-algo-in-react-typescript-",
   },
   {
+    name: "Rate limiting algorithms in express - typescript.",
+    description:
+      "I've created a Rate limiting algorithms in Express with TypeScript help manage and control the number of requests a server can handle from a single client within a specified timeframe.",
+    image: "",
+    link:"",
+    github: "https://github.com/Harsh244007/rate-limiting-algos",
+  },
+  {
     name: "Fully Working Movie and TV Shows streming using React and Node",
     description:
       "I've built a movie and TV series clone using Preact and TypeScript, showcasing an extensive collection of films. I've also set up a proxy for the BonkuMovies API on Vercel, leveraging Node.js to provide seamless access to a wide range of content.",
