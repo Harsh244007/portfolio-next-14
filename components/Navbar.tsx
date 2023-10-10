@@ -17,14 +17,15 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "home",
   },
   {
-    label: "Projects",
-    page: "projects",
-  },
-  {
     label: "About",
     page: "about",
   },
   {
+    label: "Projects",
+    page: "projects",
+  },
+  {
+    
     label: "Cool Stuffs",
     page: "tictactoe",
   },
