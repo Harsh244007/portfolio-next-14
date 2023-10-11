@@ -157,7 +157,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     setClicked((prev) => !prev);
   };
 
-
+debugger
 
   IntersectionObserverComponent()
   return (
