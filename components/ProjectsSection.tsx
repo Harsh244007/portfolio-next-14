@@ -27,8 +27,16 @@ const projects = [
     name: "Master algo with visualize app in preact and typescript.",
     description:
       "I've created a user-friendly app using Preact, TypeScript, and Tailwind CSS to simplify mastering Data Structures and Algorithms, covering topics from strings to trees and graphs. The app includes visualizations to aid in comprehension, making the learning process more accessible in today's chaotic world.",
-    image: "",
+    image: "/algos.JPG",
     link:"https://master-algo-in-react-typescript.vercel.app",
+    github: "https://github.com/Harsh244007/Master-algo-in-react-typescript-",
+  },
+  {
+    name: "Master System Design with app in preact and typescript.",
+    description:
+      "I've created a user-friendly app using Preact, TypeScript, and Tailwind CSS to simplify mastering System Design and it's some of concepts, covering topics from DB Types to Messaging queues and Sharding. The app includes visualizations to aid in comprehension, making the learning process more accessible in today's chaotic world.",
+    image: "/system.JPG",
+    link:"https://master-algo-in-react-typescript.vercel.app/",
     github: "https://github.com/Harsh244007/Master-algo-in-react-typescript-",
   },
   {
