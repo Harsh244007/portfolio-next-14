@@ -58,8 +58,6 @@ const MusicButton: React.FC = () => {
         <source src={"/music.mp3"} type="audio/mpeg" />
         <source src={"/music.mp3"} type="audio/mp3" />
         <source src={"/music.m4a"} type="audio/m4a" />
-        <source src={"/music.ogg"} type="audio/ogg" />
-        <source src={"/music.aac"} type="audio/ogg" />
       </audio>
       </>
   );
