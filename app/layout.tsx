@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={[Ysabeau_Font.variable, Ysabeau_Font.className].join(" ")}>
       <head></head>
-      <body className={`bg-slate-900 debug-screens`}>
+      <body className={`bg-slate-900`}>
         <Analytics />
         <ProgressBar/>
         {children}
