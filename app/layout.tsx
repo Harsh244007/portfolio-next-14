@@ -3,7 +3,8 @@ import "../public/nprogress.css";
 import { Ysabeau_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
-import ProgressBar from "./progressBar";
+import React from "react";
+const ProgressBar = React.lazy(()=>import("./progressBar"));
 
 export const metadata: Metadata = {
   title: {
@@ -56,7 +57,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head></head>
       <body className={`bg-slate-900`}>
         <Analytics />
-        <ProgressBar/>
+        <React.Suspense fallback={"loding"}>
+          <ProgressBar/>
+        </React.Suspense>
+      
         {children}
       </body>
     </html>
