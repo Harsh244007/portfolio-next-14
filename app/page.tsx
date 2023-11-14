@@ -1,117 +1,60 @@
-import AboutSection from "@/components/AboutSection";
-import SliderComponent from "@/components/Slider";
-import HeroSection from "@/components/HeroSection";
-import EmbeddedIframes from "@/components/Csswork";
-import SolarComponent from "@/components/Solar";
-import ElementSearch from "@/components/ElementSearch"
-import TictactoeComponent from "@/components/Tictactoe";
-import Nudge from "@/components/IosNudge"
-import CountryComponent from "@/components/Country"
-import CarComponent from "@/components/Car";
-import ProjectsSection from "@/components/ProjectsSection";
-import MusicButton from "@/components/Music/Music";
-import RecursiveCommentComponent from "@/components/Comment"
+import Link from "next/link";
+import React from "react";
+import Particles from "./components/particles";
+
+const navigation = [
+  { name: "Projects", href: "/projects",target:"_self" },
+  { name: "Contact", href: "/contact" ,target:"_self"},
+  { name: "Resume", href: "/Resume-Harsh-Patel.pdf",target:"_blank" },
+];
+
+const aboutMe={
+  name:"Harsh Patel",
+  quote:"Building tech that redefines industry standards.",
+  github:{title:"github",link:"https://github.com/Harsh244007?tab=repositories"}
+}
 
 export default function Home() {
-  const currentProtocol =
-    typeof window !== "undefined" ? window.location.protocol : "https:";
-  const iframeUrl1 =
-    currentProtocol === "https:"
-      ? "https://harsh-car.netlify.app/"
-      : "http://harsh-car.netlify.app/";
-  const iframeUrlTic =
-    currentProtocol === "https:"
-      ? "https://tic-tac-toe-preact-ts-tw.vercel.app/?iframeUrl"
-      : "http://tic-tac-toe-preact-ts-tw.vercel.app/?iframeUrl";
-  const iframeUrl3 =
-    currentProtocol === "https:"
-      ? "https://triangle-ballon.netlify.app/"
-      : "http://triangle-ballon.netlify.app/";
-  const iframeUrl2 =
-    currentProtocol === "https:"
-      ? "https://circular-overlap.netlify.app/"
-      : "http://circular-overlap.netlify.app/";
-  const iframeUrl4 =
-    currentProtocol === "https:"
-      ? "https://animated-tab-bar.netlify.app/"
-      : "http://animated-tab-bar.netlify.app/";
-  const iframeUrl5 =
-    currentProtocol === "https:"
-      ? "https://chameleon-harsh.netlify.app/"
-      : "http://chameleon-harsh.netlify.app/";
-  const iFrameURL6 =
-    currentProtocol === "https:"
-      ? "https://css-piano-ts.vercel.app/"
-      : "http://css-piano-ts.vercel.app/";
-  const iframeUrlSolar =
-    currentProtocol === "https:"
-      ? "https://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl"
-      : "http://solar-system-css-harsh-preact-ts-tw.vercel.app/?iframeUrl";
-  const iframeBreak =
-    currentProtocol ==="https:"
-    ? "https://breaking-word-element-table.vercel.app"
-    : "http://breaking-word-element-table.vercel.app"
-  const iframeCountry =
-    currentProtocol ==="https:"
-    ? "https://country-game-two.vercel.app/"
-    : "http://country-game-two.vercel.app/"
-    const iframeComment =
-    currentProtocol ==="https:"
-    ? "https://recursive-nested-comments.vercel.app/"
-    : "http://recursive-nested-comments.vercel.app/"
   return (
-    <>
-      {/* // @ts-ignore */}
-      <video
-        preload="auto"
-        className="bgVideo"
-        autoPlay
-        data-wf-ignore="true"
-        data-object-fit="cover"
-        loop
-        muted
-        playsInline
-      >
-        <source src={"/NatureBG.mp4"} type="video/mp4" />
-      </video>
-      <Nudge/>
-      <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
-        <MusicButton/>
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <section className="iframe">
-          <RecursiveCommentComponent url={iframeComment} />
-        </section>
-        <section className="iframe">
-          <TictactoeComponent url={iframeUrlTic} />
-        </section>
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <nav className="my-16 animate-fade-in">
+        <ul className="flex items-center justify-center gap-4">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              target={item.target}
+              href={item.href}
+              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </ul>
+      </nav>
+      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+      <Particles
+        className="absolute inset-0 -z-10 animate-fade-in"
+        quantity={100}
+      />
+      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+        {aboutMe.name}
+      </h1>
 
-        <section className="iframe">
-          <CountryComponent url={iframeCountry} />
-        </section>
-        <section className="iframe">
-          <EmbeddedIframes
-            url1={iFrameURL6}
-            url2={iframeUrl2}
-            url3={iframeUrl3}
-            url4={iframeUrl4}
-            url5={iframeUrl5}
-          />
-        </section>
-        <section className="iframe">
-          <SolarComponent url={iframeUrlSolar} />
-        </section>
-
-        <section className="iframe">
-          <CarComponent url={iframeUrl1} />
-        </section>
-        <SliderComponent />
-        <section className="iframe">
-          <ElementSearch url={iframeBreak} />
-        </section>
-        
-      </main>
-    </>
+      <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+      <div className="my-16 text-center animate-fade-in">
+        <h2 className="text-sm text-zinc-500 ">
+          {aboutMe.quote}
+          
+        </h2>
+        <h3 className="text-sm text-zinc-500"><Link
+            target="_blank"
+            href={aboutMe.github.link}
+            className="underline duration-500 hover:text-zinc-300"
+          >
+            {aboutMe.github.title}
+          </Link></h3>
+      </div>
+    </div>
   );
+
 }

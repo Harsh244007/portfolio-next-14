@@ -1,203 +1,64 @@
-"use client";
-import "../styles/globals.css";
-import { Analytics } from '@vercel/analytics/react';
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import React, { useEffect, useState, useRef } from "react";
-import { ClipLoader } from "react-spinners";
-import IntersectionObserverComponent from "./intersectionObserver"
-interface CustomCursorProps {
-  nodeName: string;
-  loading:boolean;
-  nodeText: string;
-  setNodeName: React.Dispatch<React.SetStateAction<string>>; 
-  setNodeText: React.Dispatch<React.SetStateAction<string>>; 
-  isClicked: boolean;
-  onClick: (e: React.MouseEvent) => void;
-}
+import "../public/global.css";
+import "../public/nprogress.css";
+import { Ysabeau_SC } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
+import ProgressBar from "./progressBar";
 
-const CustomCursor: React.FC<CustomCursorProps> = ({
-  nodeName,
-  nodeText,
-  setNodeName,
-  loading,
-  setNodeText,
-  isClicked,
-  onClick,
-}) => {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  let  mouseDebouncer:number
-  useEffect(() => {
-
-    const handleMouseMove = (event: MouseEvent) => {
-
-      // console.log("Mouse Move : ",event.target,event.target.nodeName)
-      if (event.target instanceof HTMLElement) {
-        if (
-          event.target.nodeName.toLowerCase() === "iframe"||
-          event.target.nodeName.toLowerCase() === "h1"||
-          event.target.className.includes("carousel-dot")||
-          event.target.nodeName.toLowerCase() === "img"
-        ) {
-          if (cursorRef.current) {
-            cursorRef.current.style.display = "none";
-            document.body.style.cursor = "auto";
-          }
-        } else {
-          // console.log("Mouse Move Event : ",event)
-          setNodeName(event.target.nodeName);
-          setNodeText(event.target.innerText);
-          clearTimeout(mouseDebouncer);
-
-          if (cursorRef.current) {
-            cursorRef.current.style.display = "flex";
-            document.body.style.cursor = "none";
-          }
-          const mouseX = event.pageX;
-          const mouseY = event.pageY;
-          const positionElement = () => {
-            if (cursorRef.current) {
-              cursorRef.current.style.top = mouseY + "px";
-              cursorRef.current.style.left = mouseX + "px";
-            }
-          };
-          positionElement();
-
-          mouseDebouncer = window.setTimeout(() => {
-            if (cursorRef.current) {
-              cursorRef.current.style.display = "none";
-              document.body.style.cursor = "auto";
-            }
-          }, 10000);
-
-        }
-      }
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      // document.removeEventListener("scroll", handleVideoPlay);
-      clearTimeout(mouseDebouncer);
-    };
-  }, []);
-  const words = ['Hello👋', 'Welcome', 'to My',"Portfolio"];
-  const [index, setIndex] = useState(0);
-  const [currentWord, setCurrentWord] = useState(words[index]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); 
-    return () => {
-      clearInterval(timer); 
-    };
-  }, []);
-
-  useEffect(() => {
-    setCurrentWord(words[index]);
-  }, [index])
-  return (
-    <section
-      onClick={onClick} 
-      className={`custom-cursor ${
-        loading === true || nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? "hovered" : ""
-      }`}
-      ref={cursorRef}
-    >
-      <p>{loading === false && nodeName.toLowerCase() === "a" ||  nodeName.toLowerCase() === "H2" || nodeName.toLowerCase() === "button" ? nodeText===""?"Click":nodeText :loading===false? currentWord:"Welcome"}</p>
-      <div />
-    </section>
-  );
+export const metadata: Metadata = {
+  title: {
+    default: "Harsh Patel | Portfolio",
+    template: "%s | Harsh Patel",
+  },
+  description: "Harsh Patel | Building tech that redefines industry standards.",
+  openGraph: {
+    title: "harsh-portfolio-flax.vercel.app",
+    description: "Building tech that redefines industry standards.",
+    url: "https://harsh-portfolio-flax.vercel.app",
+    siteName: "harsh-portfolio-flax.vercel.app",
+    images: [
+      {
+        url: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    shortcut:
+      "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>",
+  },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
+const Ysabeau_Font = Ysabeau_SC({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-ysabeau",
+});
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
-  const override = {
-    display: "block",
-    margin: "auto",
-  };
-  const [loading, setLoading] = useState(true);
-  const [loadingDoor, setLoadingDoor] = useState(true);
-
-  useEffect(() => {
-    document.addEventListener(
-      "contextmenu",
-      (e) => {
-        e.preventDefault();
-      },
-      false
-    );
-
-    setTimeout(() => setLoading(false), 1000);
-    setTimeout(() => setLoadingDoor(false), 4500);
-    console.log(()=>{})
-    console.info(()=>{})
-
-    console.error(()=>{})
-
-    console.warn(()=>{})
-    return () => {
-      document.removeEventListener("contextmenu",  (e) => {
-        e.preventDefault();
-      });
-          };
-  }, []);
-
-  const [nodeName, setNodeName] = useState("");
-  const [nodeText, setNodeText] = useState("");
-  const [isClicked, setClicked] = useState(false);
-
-  const onClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setClicked((prev) => !prev);
-  };
-
-debugger
-
-  IntersectionObserverComponent()
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <style>@import url("/font.css");</style>
-      <head />
-      <body className="bg-stone-900 overflow-x-hidden">
+    <html lang="en" className={[Ysabeau_Font.variable, Ysabeau_Font.className].join(" ")}>
+      <head></head>
+      <body className={`bg-slate-900 debug-screens`}>
         <Analytics />
-        <CustomCursor
-            nodeName={nodeName}
-            setNodeName={setNodeName}
-            loading={loading}
-            nodeText={nodeText}
-            setNodeText={setNodeText}
-            isClicked={isClicked}
-            onClick={onClick}
-        />
-        {!loading ? (
-          <>
-            <Navbar />
-            {children}
-            <Footer />
-            {/* <TextToSpeechPlayer/> */}
-          </>
-        ) : (
-          <div className="loader">
-            <ClipLoader
-              color="#0d9488"
-              size={150}
-              cssOverride={override}
-              loading={loading}
-              aria-label="Loading Spinner"
-              data-testid="loader"
-            />
-            <p>Loading...</p>
-          </div>
-        )}
+        <ProgressBar/>
+        {children}
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
