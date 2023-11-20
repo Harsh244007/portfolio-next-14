@@ -7,6 +7,8 @@ import { lazy, Suspense } from "react";
 import { NavigationType } from "@/types/types";
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 export default async function ProjectsPage() {
+  
+  // await new Promise((resolve) => setTimeout(resolve, 20000));
   return (
     <div className="relative pb-16">
       <Suspense fallback={<Loading />}>

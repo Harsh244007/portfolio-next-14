@@ -14,6 +14,8 @@ type Props = {
 };
 
 export default async function PostPage({ params }: Props) {
+  
+  // await new Promise((resolve) => setTimeout(resolve, 20000));
   const slug = decodeURIComponent(params?.slug);
   const project: ProjectDeatailsType | undefined = PROJECTJSON.find(
     (project: ProjectDeatailsType) => project.title === slug
