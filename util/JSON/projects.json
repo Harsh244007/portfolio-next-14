@@ -1,5 +1,19 @@
 [
   {
+    "title": "3D Island with all weather.",
+    "description": "I love to explore new tech so here's my try on three js . An world of island with birds sky and everything inspired frm js mastery. Built on Next js and typescript with glb files for modal.",
+    "image": "/comment.JPG",
+    "link": "https://next-three-js-island.vercel.app/",
+    "github": "https://github.com/Harsh244007/next-three-js-island"
+  },
+  {
+    "title": "Live meeting using WEBRTC - Google meet clone.",
+    "description": "It's an live meeting app using next js to host upto 3 users per room and max 5 rooms at a time using webrtc. Bult with Next js, TYpescript, WEBRtc and NextAPI",
+    "image": "/comment.JPG",
+    "link": "https:/nextjs-live-video-webrtc-ts-tw.vercel.app/",
+    "github": "https://github.com/Harsh244007/nextjs-live-video-webrtc-ts-tw"
+  },
+  {
     "title": "Recursive Comment Section.",
     "description": "Explore an engaging and intuitive comment section built with Preact, TypeScript, and Tailwind CSS. Dive into a seamless experience of nested comments, replies, and discussions. Discover the power of interactive web development in this feature-rich example. Join the conversation and make your voice heard!",
     "image": "/comment.JPG",
