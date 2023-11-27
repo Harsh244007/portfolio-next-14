@@ -15,12 +15,6 @@ body * {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-body {
-  overflow: hidden;
-}
-body > * {
-  overflow: auto;
-}
 .font-ysabeau {
   font-family: var(--font-ysabeau);
 }

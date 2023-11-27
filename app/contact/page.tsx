@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Card } from "../components/card";
 import Loading from "@/app/loading";
 import React, { lazy, Suspense } from "react";
+import Particles from "../components/particles";
 import { NavigationType } from "@/types/types";
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 const socials = [
@@ -29,10 +30,11 @@ const socials = [
 const Contact: React.FC = () => {
   return (
     <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+      <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={200} />
       <Suspense fallback={<Loading />}>
         <Navigation />
       </Suspense>
-      <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
+      <div className="container flex items-center justify-center min-h-screen px-4 mx-auto relative z-20">
         <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
           {socials.map((s, i) => (
             <Card key={i}>
