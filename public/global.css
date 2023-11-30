@@ -15,13 +15,11 @@ body * {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-.font-ysabeau {
-  font-family: var(--font-ysabeau);
-}
+
 .bg-red-custom:hover > div > div:nth-child(2) {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+    var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   background-color: rgba(241, 5, 5, 0.45);
 }
 /* Scrollbar Styles */
@@ -66,4 +64,57 @@ body::-webkit-scrollbar,
 * ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+}
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-timing-function: ease-out;
+  will-change: opacity;
+}
+
+::view-transition-old(*) {
+  animation: fade-out-opacity linear forwards 1s;
+  animation-delay: 500ms;
+}
+
+::view-transition-new(*) {
+  animation: fade-in-opacity linear forwards 1s;
+}
+.animate-z {
+  animation: animateZ 1s linear forwards;
+}
+@keyframes animateZ {
+  from {
+    z-index: 0;
+  }
+  to {
+    z-index: 20;
+  }
+}
+.fade-in {
+  animation: fade-in-opacity linear forwards 1s;
+}
+.fade-out {
+  animation: fade-out-opacity linear forwards 1s;
+}
+@keyframes fade-in-opacity {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade-out-opacity {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }

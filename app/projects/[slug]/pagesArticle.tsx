@@ -13,13 +13,15 @@ export const PagesArticle: React.FC<Props> = ({ project, views }) => {
       <div className="flex justify-between gap-2 items-center">
         <span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange"></span>
         <span className="text-zinc-500 text-xs  flex items-center gap-1">
-          <Eye className="w-4 h-4" />{" "}
-          {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
+          <Eye className="w-4 h-4" /> {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
         </span>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
+          <h1
+            style={{ viewTransitionName: project.title }}
+            className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display"
+          >
             {project.title}
           </h1>
           <p className="mt-6 text-lg leading-8 text-zinc-300">{project.description}</p>

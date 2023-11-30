@@ -4,6 +4,7 @@ import { Ysabeau_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import React from "react";
+
 const ProgressBar = React.lazy(()=>import("./progressBar"));
 
 export const metadata: Metadata = {
@@ -55,12 +56,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={[Ysabeau_Font.variable, Ysabeau_Font.className].join(" ")}>
       <head></head>
-      <body className={`bg-slate-900`}>
+      <body className={`bg-slate-950`}>
         <Analytics />
         <React.Suspense fallback={"loding"}>
           <ProgressBar/>
         </React.Suspense>
-      
         {children}
       </body>
     </html>
