@@ -12,7 +12,7 @@ export default async function ProjectsPage() {
   // await new Promise((resolve) => setTimeout(resolve, 20000));
   return (
     <div className="relative pb-16">
-      <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={200} />
+      <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={2000} />
       <Suspense fallback={<Loading />}>
         <Navigation />
       </Suspense>

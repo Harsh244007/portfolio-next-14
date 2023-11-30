@@ -4,6 +4,7 @@ import { Ysabeau_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import React from "react";
+import Particles from '@/app/components/particles';
 
 const ProgressBar = React.lazy(()=>import("./progressBar"));
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <React.Suspense fallback={"loding"}>
           <ProgressBar/>
         </React.Suspense>
+        <Particles className="absolute inset-0 z-auto animate-fade-in" quantity={200} />
         {children}
       </body>
     </html>

@@ -33,13 +33,13 @@ const Contact: React.FC = () => {
       style={{ viewTransitionName: "Contact" }}
       className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 opacity-0 fade-in relative"
     >
-      <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={200} />
+      <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={400} />
       <Suspense fallback={<Loading />}>
         <Navigation />
       </Suspense>
-      <div className="container flex flex-col gap-4 items-center justify-center min-h-screen  overflow-y-hidden px-4 mx-auto relative mt-16">
+      <div className="container flex flex-col gap-4 items-center justify-center min-h-screen  overflow-y-hidden px-4 mx-auto relative mt-16 md:mt-0">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Contact</h2>
-        <div className="grid w-full grid-cols-1 gap-8 mx-autosm:mt-0 sm:grid-cols-3 lg:gap-16">
+        <div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
           {socials.map((s, i) => (
             <Card key={i}>
               <Link
