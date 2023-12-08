@@ -7,13 +7,13 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
 }
-body * {
+html,body,body * {
   box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #0d9488 black;
   transition: all 0.4s ease-out;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
+  --webkit-tap-highlight-color: transparent;
 }
 
 .bg-red-custom:hover > div > div:nth-child(2) {
@@ -51,17 +51,17 @@ body::-webkit-scrollbar-track {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-body *::-webkit-scrollbar-thumb {
+body *::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
   background-color: #0d9488 !important;
 }
-body *::-webkit-scrollbar-track {
+body *::-webkit-scrollbar-track,body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px #0d9488 !important;
   scrollbar-width: thin;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 body::-webkit-scrollbar,
-* ::-webkit-scrollbar {
+body * ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
@@ -117,4 +117,7 @@ body::-webkit-scrollbar,
   100% {
     opacity: 0%;
   }
+}
+body:has(.nav-Home){
+  overflow: hidden;
 }

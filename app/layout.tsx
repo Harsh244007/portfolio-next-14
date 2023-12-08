@@ -14,21 +14,6 @@ export const metadata: Metadata = {
     template: "%s | Harsh Patel",
   },
   description: "Harsh Patel | Building tech that redefines industry standards.",
-  openGraph: {
-    title: "harsh-portfolio-flax.vercel.app",
-    description: "Building tech that redefines industry standards.",
-    url: "https://harsh-portfolio-flax.vercel.app",
-    siteName: "harsh-portfolio-flax.vercel.app",
-    images: [
-      {
-        url: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
-    type: "website",
-  },
   robots: {
     index: true,
     follow: true,
