@@ -30,8 +30,8 @@ export default async function PostPage({ params }: Props) {
       <Suspense fallback={<Loading />}>
         <Navigation />
       </Suspense>
-      <div className="px-6 pt-30 mx-auto prose prose-zinc prose-quoteless space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 mt-24 md:mt-0 lg:pt-32">
-        <Card>
+      <div className="px-6  mx-auto prose prose-zinc prose-quoteless space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 pt-24 md:mt-0 lg:pt-32">
+        <Card className="">
           <PagesArticle project={project} views={Math.round(Math.random() * (4980 - 120) + 120)} />
         </Card>
       </div>

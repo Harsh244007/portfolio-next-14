@@ -1,10 +1,11 @@
 import "../public/global.css";
 import "../public/nprogress.css";
-import { Ysabeau_SC } from "next/font/google";
+import { Ysabeau_Infant } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import React from "react";
 import Particles from '@/app/components/particles';
+import TransitionLayout from "./transitionLayout";
 
 const ProgressBar = React.lazy(()=>import("./progressBar"));
 
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
 };
 
-const Ysabeau_Font = Ysabeau_SC({
+const Ysabeau_Font = Ysabeau_Infant({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
@@ -48,7 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ProgressBar/>
         </React.Suspense>
         <Particles className="absolute inset-0 z-auto animate-fade-in" quantity={200} />
+        <TransitionLayout>
         {children}
+        </TransitionLayout>
       </body>
     </html>
   );

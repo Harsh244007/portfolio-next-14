@@ -1,8 +1,11 @@
 "use client";
 import { motion, useMotionTemplate, useSpring } from "framer-motion";
 import { PropsWithChildren } from "react";
-
-export const Card: React.FC<PropsWithChildren> = ({ children }) => {
+type CardType = {
+  children: React.ReactNode;
+  className: string;
+};
+export const Card: React.FC<CardType> = ({ children, className }) => {
   const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
 
@@ -17,7 +20,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       onMouseMove={onMouseMove}
-      className="animate-z overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 bg-red-custom backdrop-blur-sm"
+      className={`animate-z overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 bg-red-custom backdrop-blur-2px ${className}`}
     >
       <div className="pointer-events-none ">
         <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,red)]" />

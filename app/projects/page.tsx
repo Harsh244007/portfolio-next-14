@@ -26,7 +26,7 @@ export default async function ProjectsPage() {
           <div className="grid grid-cols-1 gap-8 mx-auto">
             <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
               {PROJECTJSON.map((project, index) => (
-                <Card key={index}>
+                <Card key={index} className="">
                   <Article project={project} views={Math.round(Math.random() * (4980 - 120) + 120)} />
                 </Card>
               ))}
