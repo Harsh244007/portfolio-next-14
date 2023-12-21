@@ -8,7 +8,7 @@ export const navigation = [
 export const aboutMe = {
   name: "Harsh Patel",
   transition: "Home",
-  quote: "Building tech that redefines industry standards.",
+  quote: "Full MERN Stack Developer Currently learning Golang.",
   github: { title: "github", link: "https://github.com/Harsh244007?tab=repositories" },
 };
 

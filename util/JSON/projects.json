@@ -1,5 +1,19 @@
 [
   {
+    "title": "Todo Application with CRUD and Authentication/autorization",
+    "description": "It's an simple Next js Todo task application with CRUD OPERATION TO Create Read Update or delete tasks. It also has login and signup and Authorization with jwt Token and brcyptjs.",
+    "image": "/todo.JPG",
+    "link": "https://next-todo-lime-theta.vercel.app/",
+    "github": "https://github.com/Harsh244007/Next-todo"
+  },
+  {
+    "title": "Survey Dashboard with query Pagination.",
+    "description": "It's an dashboard to display surveys based on query limits and filters. Most of the functionality is achieved by making custom hooks for fetching filtering based on filters and searching.",
+    "image": "/comment.JPG",
+    "link": "https://cleverx-dashboard-assignment.vercel.app/",
+    "github": "https://github.com/Harsh244007/cleverx-dashboard-assignment"
+  },
+  {
     "title": "3D Island with all weather.",
     "description": "I love to explore new tech so here's my try on three js . An world of island with birds sky and everything inspired frm js mastery. Built on Next js and typescript with glb files for modal.",
     "image": "/comment.JPG",
