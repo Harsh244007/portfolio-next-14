@@ -29,7 +29,7 @@ export default async function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 px-2 sm:px-0 text-center animate-fade-in">
-        <h2 className="flex justify-center items-center gap-1 text-sm text-zinc-500 ">{aboutMe.quote}<Image src={"/golang.png"} alt="Go" width={20} quality={100} priority  height={20}/></h2>
+        <h2 className="flex justify-center items-center gap-1 text-sm text-zinc-500 ">{aboutMe.quote}</h2>
         <h3 className="text-sm text-zinc-500">
           <Link target="_blank" href={aboutMe.github.link} className="underline duration-500 hover:text-zinc-300">
             {aboutMe.github.title}
