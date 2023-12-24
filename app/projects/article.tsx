@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Eye } from "lucide-react";
-import { ProjectType } from "@/types/types";
+import {  ProjectType } from "@/types/types";
 
 type Props = {
   project: ProjectType;

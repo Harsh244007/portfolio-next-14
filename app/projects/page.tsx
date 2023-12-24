@@ -6,6 +6,8 @@ import Loading from "@/app/loading";
 import { lazy, Suspense } from "react";
 import { NavigationType } from "@/types/types";
 import Particles from "../components/particles";
+import useIinfiniteScroll from "@/hooks/useInfiniteScroll";
+import RenderProjects from "./renderProjects";
 
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 export default async function ProjectsPage() {
@@ -23,15 +25,7 @@ export default async function ProjectsPage() {
         </div>
         <div className="w-full h-px bg-zinc-800" />
         <Suspense fallback={<Loading />}>
-          <div className="grid grid-cols-1 gap-8 mx-auto">
-            <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-              {PROJECTJSON.map((project, index) => (
-                <Card key={index} className="">
-                  <Article project={project} views={Math.round(Math.random() * (4980 - 120) + 120)} />
-                </Card>
-              ))}
-            </div>
-          </div>
+           <RenderProjects/>
         </Suspense>
         <div className="hidden w-full h-px md:block bg-zinc-800" />
       </div>
