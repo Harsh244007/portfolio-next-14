@@ -1,13 +1,14 @@
 import "../public/global.css";
 import "../public/nprogress.css";
-import { Ysabeau_Infant } from "next/font/google";
+import { Electrolize, Raleway, Kurale, Caveat, Permanent_Marker, Ysabeau_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import React from "react";
-import Particles from '@/app/components/particles';
+import Particles from "@/app/components/particles";
 import TransitionLayout from "./transitionLayout";
+import useCustomNumber from "@/hooks/useCustomNumber";
 
-const ProgressBar = React.lazy(()=>import("./progressBar"));
+const ProgressBar = React.lazy(() => import("./progressBar"));
 
 export const metadata: Metadata = {
   title: {
@@ -32,26 +33,59 @@ export const metadata: Metadata = {
   },
 };
 
-const Ysabeau_Font = Ysabeau_Infant({
+const electrolize = Electrolize({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const kurale = Kurale({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const marker = Permanent_Marker({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+const ysabeau = Ysabeau_SC({
   weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
   variable: "--font-ysabeau",
 });
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const customNumber = useCustomNumber(0, 5);
   return (
-    <html lang="en" className={[Ysabeau_Font.variable, Ysabeau_Font.className].join(" ")}>
+    <html
+      lang="en"
+      className={
+        customNumber === 0
+          ? electrolize.className
+          : customNumber === 1
+          ? raleway.className
+          : customNumber === 2
+          ? kurale.className
+          : customNumber === 3
+          ? caveat.className
+          : customNumber === 4
+          ? marker.className
+          : ysabeau.className
+      }
+    >
       <head></head>
       <body className={`bg-slate-950`}>
         <Analytics />
         <React.Suspense fallback={"loding"}>
-          <ProgressBar/>
+          <ProgressBar />
         </React.Suspense>
         <Particles className="absolute inset-0 z-auto animate-fade-in" quantity={200} />
-        <TransitionLayout>
-        {children}
-        </TransitionLayout>
+        <TransitionLayout>{children}</TransitionLayout>
       </body>
     </html>
   );

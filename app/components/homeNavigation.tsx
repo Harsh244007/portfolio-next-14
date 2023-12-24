@@ -12,7 +12,7 @@ const HomeNavigation: React.FC<HomeNavigationTypes> = ({ Navigation }) => {
         <li
           key={item.href}
           onClick={() => handleRouting(item.href, router, false)}
-          className={`text-sm duration-500 text-zinc-500 hover:text-zinc-300 cursor-pointer`}
+          className={`text-sm duration-500 text-zinc-400 hover:text-white cursor-pointer`}
           style={{ viewTransitionName: item.name }}
         >
           {item.name}

@@ -144,7 +144,7 @@ body:has(.nav-Home) {
 .backdrop-blur-2px {
   backdrop-filter: blur(2px);
 }
-body{
+body {
   overflow-x: hidden;
 }
 .shooting-star {
@@ -183,12 +183,12 @@ body{
     box-shadow: 0 0 0 4px rgba(52, 51, 51, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
     opacity: 1;
   }
-  100%{
+  100% {
     transform: rotate(315deg) translateX(-1000px);
     opacity: 0;
   }
 }
-.star2{
+.star2 {
   top: 0%;
   left: 50%;
   animation-delay: 5s;
@@ -197,4 +197,7 @@ span:first-child {
   top: 0;
   right: 0;
   left: initial;
+}
+.custom-box-shadow {
+  box-shadow: 0 0px 3px 0px white;
 }

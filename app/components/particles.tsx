@@ -211,7 +211,7 @@ export default function Particles({
     <div className={className} ref={canvasContainerRef} aria-hidden="true">
 		<span className="shooting-star"/>
 		<span className="shooting-star star2"/>
-      <canvas ref={canvasRef} />
+      <canvas ref={canvasRef} className="h-screen"/>
     </div>
   );
 }
