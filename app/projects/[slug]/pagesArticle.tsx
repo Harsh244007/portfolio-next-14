@@ -17,7 +17,7 @@ export const PagesArticle: React.FC<Props> = ({ project, views }) => {
         </span>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-2xl w-full lg:mx-0">
           <h1
             style={{ viewTransitionName: project.title }}
             className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display"
