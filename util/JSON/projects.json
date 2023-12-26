@@ -3,7 +3,7 @@
     "title": "Live meeting using WEBRTC - Google meet clone.",
     "description": "It's an live meeting app using next js with SFU selective forwarding unit in Next js API routes to support room based meeting for multiple peers. Bult with Next js, TYpescript, WEBRtc and NextAPI",
     "image": "/comment.JPG",
-    "link": "https:/nextjs-live-video-webrtc-ts-tw.vercel.app/",
+    "link": "https://nextjs-live-video-webrtc-ts-tw.vercel.app/",
     "github": "https://github.com/Harsh244007/nextjs-live-video-webrtc-ts-tw"
   },
   {
