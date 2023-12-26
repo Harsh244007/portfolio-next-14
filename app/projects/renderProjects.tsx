@@ -24,7 +24,7 @@ const RenderProjects = () => {
         </div>
         :PROJECTSDATA.map((project, index) => (
           <Card key={index} className="">
-            <Article project={project} views={Math.round(Math.random() * (4980 - 120) + 120)} />
+            <Article project={project}  />
           </Card>
         ))}
       </div>

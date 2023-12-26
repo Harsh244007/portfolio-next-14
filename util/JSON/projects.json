@@ -1,6 +1,13 @@
 [
   {
-    "title": "Todo Application with CRUD and Authentication/autorization",
+    "title": "Live meeting using WEBRTC - Google meet clone.",
+    "description": "It's an live meeting app using next js to host upto 3 users per room and max 5 rooms at a time using webrtc. Bult with Next js, TYpescript, WEBRtc and NextAPI",
+    "image": "/comment.JPG",
+    "link": "https:/nextjs-live-video-webrtc-ts-tw.vercel.app/",
+    "github": "https://github.com/Harsh244007/nextjs-live-video-webrtc-ts-tw"
+  },
+  {
+    "title": "Todo Application with CRUD and Authentication - Autorization",
     "description": "It's an simple Next js Todo task application with CRUD OPERATION TO Create Read Update or delete tasks. It also has login and signup and Authorization with jwt Token and brcyptjs.",
     "image": "/todo.JPG",
     "link": "https://next-todo-lime-theta.vercel.app/",
@@ -19,13 +26,6 @@
     "image": "/comment.JPG",
     "link": "https://next-three-js-island.vercel.app/",
     "github": "https://github.com/Harsh244007/next-three-js-island"
-  },
-  {
-    "title": "Live meeting using WEBRTC - Google meet clone.",
-    "description": "It's an live meeting app using next js to host upto 3 users per room and max 5 rooms at a time using webrtc. Bult with Next js, TYpescript, WEBRtc and NextAPI",
-    "image": "/comment.JPG",
-    "link": "https:/nextjs-live-video-webrtc-ts-tw.vercel.app/",
-    "github": "https://github.com/Harsh244007/nextjs-live-video-webrtc-ts-tw"
   },
   {
     "title": "Recursive Comment Section.",
