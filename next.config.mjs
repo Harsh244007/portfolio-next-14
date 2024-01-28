@@ -2,7 +2,15 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode:false
+  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+    serverMinification: true,
+    serverSourceMaps: false,
+    optimizeServerReact: true,
+    optimisticClientCache: true,
+  },
+  optimizeFonts: true,
 };
 
 export default nextConfig;
