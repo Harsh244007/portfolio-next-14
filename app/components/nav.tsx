@@ -49,6 +49,7 @@ export default function Navigation() {
             style={{ viewTransitionName: "Home" }}
             className="duration-200 text-zinc-300 hover:text-zinc-100 cursor-pointer"
           >
+            {/* @ts-ignore */}
             <ArrowLeft className="w-6 h-6 " />
           </button>
         </nav>

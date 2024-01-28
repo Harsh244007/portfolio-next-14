@@ -5,10 +5,31 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import React from "react";
 import Particles from "@/app/components/particles";
-import TransitionLayout from "./transitionLayout";
 import useCustomNumber from "@/hooks/useCustomNumber";
+// import { Head } from "next/document";
+// import { readFileSync } from "fs";
+// import { join } from "path";
 
+const TransitionLayout =React.lazy(()=>import("./transitionLayout"));
 const ProgressBar = React.lazy(() => import("./progressBar"));
+// class InlineStylesHead extends Head {
+//   getCssLinks: Head["getCssLinks"] = ({ allFiles }) => {
+//     const { assetPrefix } = this.context;
+//     if (!allFiles || allFiles.length === 0) return null;
+//     return allFiles
+//       .filter((file: any) => /\.css$/.test(file))
+//       .map((file: any) => (
+//         <style
+//           key={file}
+//           nonce={this.props.nonce}
+//           data-href={`${assetPrefix}/_next/${file}`}
+//           dangerouslySetInnerHTML={{
+//             __html: readFileSync(join(process.cwd(), ".next", file), "utf-8"),
+//           }}
+//         />
+//       ));
+//   };
+// }
 
 export const metadata: Metadata = {
   title: {
@@ -78,14 +99,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           : ysabeau.className
       }
     >
-      <head></head>
+      <head>
+
+        {/* <InlineStylesHead/> */}
+      </head>
       <body className={`bg-slate-950`}>
         <Analytics />
         <React.Suspense fallback={"loding"}>
           <ProgressBar />
         </React.Suspense>
         <Particles className="absolute inset-0 z-auto animate-fade-in" quantity={200} />
+        <React.Suspense fallback={"loding"}>
+
         <TransitionLayout>{children}</TransitionLayout>
+        </React.Suspense>
       </body>
     </html>
   );
