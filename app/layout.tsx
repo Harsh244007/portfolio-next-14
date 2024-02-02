@@ -52,6 +52,15 @@ export const metadata: Metadata = {
     shortcut:
       "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>",
   },
+other: {
+    'theme-color': '#0d1117',
+    "color-scheme": "dark only",
+    "twitter:image": '/IMG_0596.jpeg',
+    "twitter:card": "summary_large_image",
+    "og:url": "https://harsh-portfolio-flax.vercel.app",
+    "og:image": '/IMG_0596.jpeg',
+    "og:type": "website",
+  }
 };
 
 const electrolize = Electrolize({
