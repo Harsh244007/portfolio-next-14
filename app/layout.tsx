@@ -112,13 +112,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* <InlineStylesHead/> */}
       </head>
-      <body className={`bg-slate-950`}>
+      <body className={`bg-slate-950 overflow-auto overflow-x-hidden m-auto h-screen w-full`}>
         <Analytics />
-        <React.Suspense fallback={"loding"}>
+        <React.Suspense fallback={<></>}>
           <ProgressBar />
         </React.Suspense>
         <Particles className="absolute inset-0 z-auto animate-fade-in" quantity={200} />
-        <React.Suspense fallback={"loding"}>
+        <React.Suspense fallback={<></>}>
 
         <TransitionLayout>{children}</TransitionLayout>
         </React.Suspense>

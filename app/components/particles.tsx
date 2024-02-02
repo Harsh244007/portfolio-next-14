@@ -12,7 +12,7 @@ interface ParticlesProps {
 
 export default function Particles({
   className = "overflow-x-hidden",
-  quantity = 60,
+  quantity = 20,
   staticity = 10,
   ease = 10,
   refresh = false,
@@ -208,10 +208,9 @@ export default function Particles({
   };
 
   return (
-    <div className={className} ref={canvasContainerRef} aria-hidden="true">
+    <div className={`${className} h-screen w-full min-w-full	min-h-full`} ref={canvasContainerRef} aria-hidden="true">
 		<span className="shooting-star"/>
-		<span className="shooting-star star2"/>
-      <canvas ref={canvasRef} className="h-screen"/>
+      <canvas ref={canvasRef} className="h-screen w-full min-w-full	min-h-full"/>
     </div>
   );
 }

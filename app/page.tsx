@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React, { Suspense,lazy } from "react";
 import Particles from "./components/particles";
 import { ExtendedDocument } from "@/types/types";
 import { useRouter } from "next/navigation";
@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import Loading from "./loading";
 import { navigation, aboutMe } from "@/util/JSON/profileData";
 import Image from "next/image";
-const HomeNavigation = dynamic(() => import("./components/homeNavigation"));
+const HomeNavigation = lazy(() => import("./components/homeNavigation"));
 
 export default async function Home() {
   // await new Promise((resolve) => setTimeout(resolve, 20000));

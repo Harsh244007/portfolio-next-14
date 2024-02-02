@@ -7,6 +7,7 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
 }
+
 html,
 body,
 body * {
@@ -72,7 +73,7 @@ body * ::-webkit-scrollbar {
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
-::view-transition-old(*),
+/* ::view-transition-old(*),
 ::view-transition-new(*) {
   animation-timing-function: ease-out;
   will-change: opacity;
@@ -85,7 +86,7 @@ body * ::-webkit-scrollbar {
 
 ::view-transition-new(*) {
   animation: fade-in-opacity linear forwards 1s;
-}
+} */
 .animate-z {
   animation: animateZ 1s linear forwards;
 }
@@ -122,8 +123,12 @@ body * ::-webkit-scrollbar {
     opacity: 0%;
   }
 }
-body:has(.nav-Home) {
-  overflow: hidden;
+body {
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
 }
 .content {
   opacity: 0;
