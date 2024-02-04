@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     ...PROJECTJSON.map((item) => ({
-      url: `${siteUrl}/projects/${item.title}`,
+      url: `${siteUrl}/projects/${encodeURIComponent(item.title)}`,
       lastModified: new Date(),
       priority: 0.5,
     })),
