@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import PROJECTJSON from "@/util/JSON/projects.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_ROOT_DOMAIN;
+  const siteUrl = "https://harsh-portfolio-flax.vercel.app/";
   return [
     {
       url: `${siteUrl}`,
