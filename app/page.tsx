@@ -11,6 +11,7 @@ import BodyScroll from "@/hooks/useBodyScroll";
 const HomeNavigation = lazy(() => import("./components/homeNavigation"));
 
 export default async function Home() {
+  console.info("Example Sitemap",process.env.NEXT_PUBLIC_ROOT_DOMAIN )
   // await new Promise((resolve) => setTimeout(resolve, 20000));
   return (
     <div className="flex nav-Home flex-col items-center  justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black opacity-0 fade-in">
