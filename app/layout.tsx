@@ -122,6 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <TransitionLayout>{children}</TransitionLayout>
         </React.Suspense>
+        <footer className="fixed p-0 right-0 overflow-hidden left-0 bottom-0 h-2 w-full"></footer>
       </body>
     </html>
   );
