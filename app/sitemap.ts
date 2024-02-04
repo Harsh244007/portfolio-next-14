@@ -1,25 +1,31 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+import PROJECTJSON from "@/util/JSON/projects.json";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl=window.location.origin
+  const siteUrl = process.env.NEXT_PUBLIC_ROOT_DOMAIN;
   return [
     {
       url: `${siteUrl}`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "weekly",
       priority: 1,
     },
-    { 
+    {
       url: `${siteUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
-    {      
+    {
       url: `${siteUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.5,
     },
-  ]
+    ...PROJECTJSON.map((item) => ({
+      url: `${siteUrl}/projects/${item.title}`,
+      lastModified: new Date(),
+      priority: 0.5,
+    })),
+  ];
 }
