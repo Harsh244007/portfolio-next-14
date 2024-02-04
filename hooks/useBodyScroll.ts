@@ -5,7 +5,7 @@ const BodyScroll = () => {
   if (typeof document !== 'undefined') {
     document.body.style.overflow = "hidden";
   }
-    return ()=>    document?.body.style.overflow = "auto";
+    return ()=> document.body.style.overflow = "auto";
 }, []);
     return null
 };
