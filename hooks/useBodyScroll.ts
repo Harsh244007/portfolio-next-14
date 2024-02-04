@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 const BodyScroll = () => {
   useEffect(() => {
   if (typeof document !== 'undefined') {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflowY = "hidden";
   }
-    return ()=> document.body.style.overflow = "auto";
+    return ()=> document.body.style.overflowY = "auto";
 }, []);
     return null
 };
