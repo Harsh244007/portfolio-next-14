@@ -84,10 +84,10 @@ export default function Particles({
       circles.current.length = 0;
       canvasSize.current.w = canvasContainerRef.current.offsetWidth;
       canvasSize.current.h = canvasContainerRef.current.offsetHeight;
-      canvasRef.current.width = canvasSize.current.w * dpr;
-      canvasRef.current.height = canvasSize.current.h * dpr;
-      canvasRef.current.style.width = `${canvasSize.current.w}px`;
-      canvasRef.current.style.height = `${canvasSize.current.h}px`;
+      // canvasRef.current.width = canvasSize.current.w * dpr;
+      // canvasRef.current.height = canvasSize.current.h * dpr;
+      canvasRef.current.style.width = `100%`;
+      canvasRef.current.style.height = `100%`;
       context.current.scale(dpr, dpr);
     }
   };

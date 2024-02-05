@@ -26,7 +26,7 @@ export const Card: React.FC<CardType> = ({ children, className }) => {
         <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,red)]" />
         {/* @ts-ignore */}
         <motion.div
-          className="absolute inset-0 z-10  opacity-100  via-white-100/5  transition duration-1000  group-hover:opacity-50 "
+          className="absolute inset-0 z-10  opacity-100  via-white-100/5  transition duration-1000  group-hover:opacity-50 will"
           style={style}
         />
         {/* @ts-ignore */}

@@ -13,23 +13,15 @@ module.exports = {
 			typography: {
 				DEFAULT: {
 					css: {
-						"code::before": {
-							content: '""',
-						},
-						"code::after": {
-							content: '""',
-						},
+						
 					},
 				},
 				quoteless: {
 					css: {
-						"blockquote p:first-of-type::before": { content: "none" },
-						"blockquote p:first-of-type::after": { content: "none" },
 					},
 				},
 			},
 			fontFamily: {
-				display: ["var(--font-ysabeau)"],
 			},
 			backgroundImage: {
 				"gradient-radial":

@@ -18,6 +18,9 @@ body * {
   outline: none;
   --webkit-tap-highlight-color: transparent;
 }
+canvas {
+  transition-duration: 0s;
+}
 
 .bg-red-custom:hover > div > div:nth-child(2) {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
@@ -89,6 +92,7 @@ body * ::-webkit-scrollbar {
 } */
 .animate-z {
   animation: animateZ 1s linear forwards;
+  will-change: "z-index";
 }
 @keyframes animateZ {
   from {
@@ -100,8 +104,10 @@ body * ::-webkit-scrollbar {
 }
 .fade-in {
   animation: fade-in-opacity linear forwards 1s;
+  will-change: opacity; 
 }
 .fade-out {
+  will-change: opacity; 
   animation: fade-out-opacity linear forwards 1s;
 }
 @keyframes fade-in-opacity {
@@ -130,10 +136,6 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-.content {
-  opacity: 0;
-  transition: all 6s;
-}
 
 .fadeIn {
   opacity: 1;
@@ -161,6 +163,8 @@ body {
   background: transparent;
   opacity: 0;
   z-index: -1;
+  will-change: transform;
+  transform: translateZ(0);
   border-radius: 50%;
   animation: shhotingStar 10s linear infinite;
 }
