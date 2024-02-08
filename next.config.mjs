@@ -13,6 +13,7 @@ const nextConfig = {
     optimizeServerReact: true,
     optimisticClientCache: true,
   },
+  styledComponents: true,
   optimizeFonts: true,
 };
 
