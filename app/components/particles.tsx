@@ -208,9 +208,9 @@ export default function Particles({
   };
 
   return (
-    <div className={`${className} h-screen w-full min-w-full	min-h-full`} ref={canvasContainerRef} aria-hidden="true">
-		<span className="shooting-star"/>
-      <canvas ref={canvasRef} className="h-screen w-full min-w-full	min-h-full"/>
+    <div className={`${className} h-screen w-full min-w-full	min-h-full`}  aria-hidden="true">
+		
+      
     </div>
   );
 }
