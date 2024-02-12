@@ -1,24 +1,29 @@
 "use client";
 import { HomeNavigationItemTypes, HomeNavigationTypes } from "@/types/types";
-import { useRouter } from "next/navigation";
-import { handleRouting } from "./handleNavigation";
+import { memo } from "react";
+import Link from "next/link";
+import { navigation } from "@/util/JSON/profileData";
 
-const HomeNavigation: React.FC<HomeNavigationTypes> = ({ Navigation }) => {
-  const router = useRouter();
-
+const HomeNavigation = () => {
+ 
   return (
+    <nav>
+
     <ul className="flex items-center justify-center gap-4">
-      {Navigation.map((item: HomeNavigationItemTypes) => (
-        <li
-          key={item.href}
-          onClick={() => handleRouting(item.href, router, false)}
-          className={`text-sm duration-500 text-zinc-400 hover:text-white cursor-pointer`}
-          style={{ viewTransitionName: item.name }}
+      {navigation.map((item: HomeNavigationItemTypes) => (
+        <Link
+        key={item.href}
+          href={item.href}
+          className={`text-md duration-500 text-zinc-400 hover:text-white cursor-pointer`}
         >
-          {item.name}
-        </li>
+          <li>
+
+            {item.name}
+          </li>
+        </Link>
       ))}
     </ul>
+        </nav>
   );
 };
-export default HomeNavigation;
+export default memo(HomeNavigation);

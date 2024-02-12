@@ -24,12 +24,10 @@ export const Card: React.FC<CardType> = ({ children, className }) => {
     >
       <div className="pointer-events-none ">
         <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,red)]" />
-        {/* @ts-ignore */}
         <motion.div
           className="absolute inset-0 z-10  opacity-100  via-white-100/5  transition duration-1000  group-hover:opacity-50 will"
           style={style}
         />
-        {/* @ts-ignore */}
         <motion.div
           className="absolute inset-0 z-10 opacity-0 animate-fade-in mix-blend-overlay transition duration-1000 group-hover:opacity-20"
           style={style}

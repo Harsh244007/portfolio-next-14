@@ -1,12 +1,8 @@
 import Link from "next/link";
 import React, { Suspense,lazy } from "react";
 import Particles from "./components/particles";
-import { ExtendedDocument } from "@/types/types";
-import { useRouter } from "next/navigation";
-import dynamic from "next/dynamic";
 import Loading from "./loading";
-import { navigation, aboutMe } from "@/util/JSON/profileData";
-import Image from "next/image";
+import { aboutMe } from "@/util/JSON/profileData";
 import BodyScroll from "@/hooks/useBodyScroll";
 const HomeNavigation = lazy(() => import("./components/homeNavigation"));
 
@@ -17,7 +13,7 @@ export default async function Home() {
       <BodyScroll/>
       <nav className="my-16 animate-fade-in px-2 sm:px-0 ">
         <Suspense fallback={<Loading />}>
-          <HomeNavigation Navigation={navigation} />
+          <HomeNavigation />
         </Suspense>
       </nav>
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
