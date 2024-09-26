@@ -253,5 +253,7 @@ span:first-child {
 }
 .z-max-hover:hover{
   /* top: 120px !important; */
+  transition-duration: 200ms;
+  scale: 0.8 1 !important;
   z-index: 100000 !important;
 }
