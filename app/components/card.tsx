@@ -60,7 +60,6 @@ const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stac
   const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
   const style = { maskImage, WebkitMaskImage: maskImage };
   const topPosition = calculateTop(scrollPercentage, ix, isMobile)
-  console.log("scrollPercentage", scrollPercentage)
   return (
     <div
       ref={containerRef}

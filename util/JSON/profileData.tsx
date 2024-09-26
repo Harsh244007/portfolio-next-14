@@ -1,8 +1,8 @@
 export const navigation = [
-  { name: "Projects", href: "/projects", target: "_self" },
-  { name: "Contact", href: "/contact", target: "_self" },
-  { name: "Resume", href: "/Resume-Harsh-Patel.pdf", target: "_blank" },
-  { name: "3D Designs", href: "https://next-three-js-island.vercel.app/", target: "_blank" },
+  { name: "Projects", view: "projectHeader", href: "/projects", target: "_self" },
+  { name: "Contact", view: "contactHeader", href: "/contact", target: "_self" },
+  { name: "Resume", view: "resumeHeader", href: "/Resume-Harsh-Patel.pdf", target: "_blank" },
+  { name: "3D Designs", view: "thirdDHeader", href: "https://next-three-js-island.vercel.app/", target: "_blank" },
 ];
 
 export const aboutMe = {
@@ -13,7 +13,7 @@ export const aboutMe = {
 };
 
 export const navigationCommon = [
-  { name: "Projects", href: "/projects", target: "_self" },
-  { name: "Contact", href: "/contact", target: "_self" },
-  { name: "Resume", href: "/Resume-Harsh-Patel.pdf", target: "_blank" },
+  { name: "Projects", view: "projectHeader", href: "/projects", target: "_self" },
+  { name: "Contact", view: "contactHeader", href: "/contact", target: "_self" },
+  { name: "Resume", view: "resumeHeader", href: "/Resume-Harsh-Patel.pdf", target: "_blank" },
 ];

@@ -9,6 +9,7 @@ export type HomeNavigationItemTypes = {
   name: string;
   href: string;
   target: string;
+  view: string;
 };
 export type HomeNavigationTypes = {
   Navigation: HomeNavigationItemTypes[];

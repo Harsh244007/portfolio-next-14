@@ -5,6 +5,8 @@ import Loading from "./loading";
 import { aboutMe } from "@/util/JSON/profileData";
 import BodyScroll from "@/hooks/useBodyScroll";
 import StaggeredText from "./components/Common/StaggeredText";
+import LinkTransition from "@/app/components/Common/ViewLink"
+
 const HomeNavigation = lazy(() => import("./components/homeNavigation"));
 
 export default async function Home() {
@@ -26,13 +28,13 @@ export default async function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 px-2 sm:px-0 text-center animate-fade-in">
-        <h2 className="flex justify-center items-center gap-1 text-sm text-zinc-400 hover:text-white">{aboutMe.quote}</h2>
+        <h2 className="flex  justify-center items-center gap-1 text-sm text-zinc-400 hover:text-white">{aboutMe.quote}</h2>
         <h3 className="text-sm text-zinc-400 hover:text-white">
-          <Link target="_blank" href={aboutMe.github.link} className="underline  group/headerZoop duration-500 hover:text-zinc-300">
+          <LinkTransition target="_blank" href={aboutMe.github.link} className="underline  group/headerZoop duration-500 hover:text-zinc-300">
             {/* {aboutMe.github.title} */}
             
         <StaggeredText focus={false} hoverGroup={false} str={aboutMe.github.title}></StaggeredText>
-          </Link>
+          </LinkTransition>
         </h3>
       </div>
     </div>

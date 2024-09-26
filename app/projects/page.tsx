@@ -19,7 +19,7 @@ export default async function ProjectsPage() {
       </Suspense>
       <div className="px-6 pt-20 mx-auto relative z-20 space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Projects</h2>
+          <h2 className="text-3xl [view-transition-name:projectHeader] font-bold tracking-tight text-zinc-100 sm:text-4xl">Projects</h2>
           <p className="mt-4  sticky top-[120px] text-zinc-400">Some of the projects are from personal work and some are on my own time.</p>
         </div>
         {/* <div className="w-full h-px bg-zinc-800" /> */}

@@ -4,6 +4,7 @@ import { memo } from "react";
 import Link from "next/link";
 import { navigation } from "@/util/JSON/profileData";
 import StaggeredText from "./Common/StaggeredText";
+import LinkTransition from "@/app/components/Common/ViewLink"
 
 const HomeNavigation = () => {
 
@@ -12,11 +13,13 @@ const HomeNavigation = () => {
 
       <ul className="flex items-center justify-center gap-4 ">
         {navigation.map((item: HomeNavigationItemTypes) => (
-          <Link
+          <LinkTransition
             key={item.href}
             href={item.href}
             tabIndex={0}
-            className={`text-md duration-500 group/headerZoop text-zinc-400 hover:text-white cursor-pointer`}
+            style={{ viewTransitionName: item.view }}
+
+            className={`text-md  duration-500 group/headerZoop text-zinc-400 hover:text-white cursor-pointer`}
           >
             <li>
             <StaggeredText className="" focus={false} hoverGroup={false} str={item.name}>
@@ -24,7 +27,7 @@ const HomeNavigation = () => {
 
               </StaggeredText>
             </li>
-          </Link>
+          </LinkTransition>
         ))}
       </ul>
     </nav>

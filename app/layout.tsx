@@ -1,5 +1,4 @@
 import "../public/global.css";
-import "../public/nprogress.css";
 import { Electrolize, Raleway, Kurale, Caveat, Permanent_Marker, Ysabeau_SC } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
@@ -11,9 +10,9 @@ import TransparentImage from "./components/TransparentImage";
 // import { Head } from "next/document";
 // import { readFileSync } from "fs";
 // import { join } from "path";
+import { ViewTransitions } from 'next-view-transitions'
 
-const TransitionLayout =React.lazy(()=>import("./transitionLayout"));
-const ProgressBar = React.lazy(() => import("./progressBar"));
+const TransitionLayout = React.lazy(() => import("./transitionLayout"));
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
     shortcut:
       "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>",
   },
-other: {
+  other: {
     'theme-color': '#0d1117',
     "color-scheme": "dark only",
     "twitter:image": '/IMG_0596.jpeg',
@@ -76,38 +75,39 @@ const ysabeau = Ysabeau_SC({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const customNumber = useCustomNumber(0, 5);
   return (
-    <html
-      lang="en"
-      className={
-        customNumber === 0
-          ? electrolize.className
-          : customNumber === 1
-          ? raleway.className
-          : customNumber === 2
-          ? kurale.className
-          : customNumber === 3
-          ? caveat.className
-          : customNumber === 4
-          ? marker.className
-          : ysabeau.className
-      }
-    >
-      <head>
+    <ViewTransitions>
 
-      </head>
-      <body className={`bg-slate-950 overflow-auto will-change-scroll overflow-x-hidden m-auto h-screen w-full`}>
-        <TransparentImage/>
-        <Analytics />
-        <React.Suspense fallback={<></>}>
-          <ProgressBar />
-        </React.Suspense>
-        <Particles className="absolute inset-0 z-auto animate-fade-in will-change-contents" quantity={200} />
-        <React.Suspense fallback={<></>}>
+      <html
+        lang="en"
+        className={
+          customNumber === 0
+            ? electrolize.className
+            : customNumber === 1
+              ? raleway.className
+              : customNumber === 2
+                ? kurale.className
+                : customNumber === 3
+                  ? caveat.className
+                  : customNumber === 4
+                    ? marker.className
+                    : ysabeau.className
+        }
+      >
+        <head>
 
-        <TransitionLayout>{children}</TransitionLayout>
-        </React.Suspense>
-        <footer className="fixed p-0 right-0 overflow-hidden left-0 bottom-0 h-2 w-full"></footer>
-      </body>
-    </html>
+        </head>
+        <body className={`bg-slate-950 overflow-auto will-change-scroll overflow-x-hidden m-auto h-screen w-full`}>
+          <TransparentImage />
+          <Analytics />
+          <Particles className="absolute inset-0 z-auto animate-fade-in will-change-contents" quantity={200} />
+          <React.Suspense fallback={<></>}>
+
+            <TransitionLayout>{children}</TransitionLayout>
+          </React.Suspense>
+          <footer className="fixed p-0 right-0 overflow-hidden left-0 bottom-0 h-2 w-full"></footer>
+        </body>
+      </html>
+    </ViewTransitions>
+
   );
 }

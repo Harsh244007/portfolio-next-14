@@ -1,11 +1,8 @@
-import { memo, useState } from "react"
+import { memo } from "react"
 
 const ZoopText: React.FC<{ str: string, from?: string, position?: string, className?: string, focus: boolean }> = ({ str, from, focus, position = "", className = "", }) => {
-
-
-
     const focusClass = focus === true ? "  " : ""
-    const classNameRoot = from === "second" ? " absolute inset-0 " : "  "
+    const classNameRoot = from === "second" ? "   absolute inset-0 " : "  "
     const childClassName = from === "second" ? " top-[23px] opacity-0 group-hover/headerZoop:top-[0px] group-active/headerZoop:top-[0px] group-focus/headerZoop:top-[0px] group-hover/headerZoop:opacity-100 group-active/headerZoop:opacity-100 group-focus/headerZoop:opacity-100  " : "  top-[0px] opacity-100 group-hover/headerZoop:top-[-23px] group-active/headerZoop:top-[-23px] group-focus/headerZoop:top-[-23px] group-hover/headerZoop:opacity-0 group-active/headerZoop:opacity-0 group-focus/headerZoop:opacity-0  "
     return <div className={classNameRoot + " " + focusClass + " " + className}>
         {str.split("").map((item, ix) => {
@@ -37,7 +34,7 @@ const ZoopText: React.FC<{ str: string, from?: string, position?: string, classN
 
             const animationTimeLine = firstToLast[ix] + " "
             if (item === " ") return item
-            return <span className={`${childClassName} ${animationTimeLine}  relative  inline-block ${className}`} key={item + ix}>{item}</span>
+            return <span aria-hidden={from==="second"} className={`${childClassName} ${animationTimeLine}  relative  inline-block ${className}`} key={item + ix}>{item}</span>
         })}
     </div>
 }
