@@ -1,31 +1,84 @@
 "use client";
 import { motion, useMotionTemplate, useSpring } from "framer-motion";
-// import { PropsWithChildren } from "react";
+import { useEffect, useRef, useState } from "react";
+
 type CardType = {
   children: React.ReactNode;
   className: string;
+  tabIndex?: number;
+  ix?: number;
+  max?: number;
+  stackAnimation?: boolean;
 };
-export const Card: React.FC<CardType> = ({ children, className }) => {
+
+const BASE_TOP = 100;
+const MIN_WIDTH = 70;
+const BASE_WIDTH = 100;
+const ADDITIONAL_SPACING_MOBILE = 1;
+const ADDITIONAL_SPACING_DESKTOP = 8;
+
+function calculateTop(scrollPercentage = 0, ix = 0, isMobile = false) {
+  const additionalSpacing = isMobile ? ADDITIONAL_SPACING_MOBILE : ADDITIONAL_SPACING_DESKTOP;
+  const scrollOffset = (100 - scrollPercentage);
+  return `${BASE_TOP + (ix * (additionalSpacing + scrollOffset))}px`;
+}
+
+function calculateWidth(scrollPercentage = 0, ix = 0, maxItems = 0) {
+  const decreaseFactor = (BASE_WIDTH - MIN_WIDTH) / (maxItems - 1);
+  const currentWidth = BASE_WIDTH - (decreaseFactor * ix) * (scrollPercentage / 100);
+  return Math.max(currentWidth, MIN_WIDTH);
+}
+
+function calculateValue(min: number, max: number, percentage: number, skip?: boolean, reverse?: boolean) {
+  if (skip) return max;
+  if (reverse) percentage = 100 - percentage;
+  return min + ((max - min) * percentage) / 100;
+}
+
+export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stackAnimation = false, tabIndex = -1 }) => {
   const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
 
-  function onMouseMove({ currentTarget, clientX, clientY }: any) {
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { innerHeight: windowHeight, scrollY: currentPosition } = window;
+      const fullHeight = document.documentElement.scrollHeight;
+      const newScrollPercentage = (currentPosition / (fullHeight - windowHeight)) * 100;
+      setScrollPercentage(Math.round(newScrollPercentage));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isMobile = window.innerWidth < 768;
+  
+  function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
+
   const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
   const style = { maskImage, WebkitMaskImage: maskImage };
 
+  const widthPercentage = Math.round(max ? calculateValue(MIN_WIDTH, BASE_WIDTH, Math.abs(scrollPercentage - (max - ix)), false, true) : 100);
+
   return (
     <div
+      ref={containerRef}
+      tabIndex={tabIndex}
       onMouseMove={onMouseMove}
-      className={` animate-z overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white  bg-red-custom backdrop-blur-2px hover:custom-box-shadow ${className}`}
+      style={stackAnimation ? { zIndex: ix + 1, scale: `${Math.abs(calculateWidth(scrollPercentage, max - ix, max) / 100)} 1`, top: calculateTop(scrollPercentage, ix, isMobile) } : {}}
+      className={`animate-z overflow-hidden lg:overflow-visible ${stackAnimation ? "self-center w-full makeItScroll sticky" : "relative"} duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white bg-red-custom backdrop-blur-2px bg-black hover:custom-box-shadow ${className} ${tabIndex >= 0 ? "focus:ring-2 focus:ring-[#759dab]" : ""}`}
     >
-      <div className="pointer-events-none ">
-        <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,red)]" />
+      <div className="pointer-events-none">
+        <div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,red)]" />
         <motion.div
-          className="absolute inset-0 z-10  opacity-100  via-white-100/5  transition duration-1000  group-hover:opacity-50 will"
+          className="absolute inset-0 z-10 opacity-100 via-white-100/5 transition duration-1000 group-hover:opacity-50"
           style={style}
         />
         <motion.div
@@ -33,7 +86,6 @@ export const Card: React.FC<CardType> = ({ children, className }) => {
           style={style}
         />
       </div>
-
       {children}
     </div>
   );

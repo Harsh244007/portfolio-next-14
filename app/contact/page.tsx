@@ -48,8 +48,8 @@ const Contact: React.FC = () => {
         <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Contact</h2>
         <div className="flex flex-wrap justify-center  w-full  gap-8 mx-auto sm:mt-0  lg:gap-16">
           {socials.map((s, i) => (
-            <Card key={i} className="w-max-16 p-8 aspect-auto">
-              <Link
+            <Card tabIndex={0} key={i} className="w-max-16 p-8 aspect-auto">
+              <Link tabIndex={-1}
                 href={s.href}
                 target="_blank"
                 className=" h-full relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-12  lg:pb-8  md:p-8"

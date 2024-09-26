@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "next/navigation";
 import React, { memo, useEffect, useRef, useState } from "react";
 import { navigationCommon as navigation } from "@/util/JSON/profileData";
 import Link from "next/link";
+import StaggeredText from "./Common/StaggeredText";
 function Navigation() {
   const ref = useRef<HTMLElement>(null);
   const router = useRouter();
@@ -28,12 +29,14 @@ function Navigation() {
             {navigation.map((navItem) => {
               if (pathname !== navItem.href) {
                 return (
-                  <Link href={navItem.href} key={navItem.href}
-                    className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
+                  <Link
+                    tabIndex={0} href={navItem.href} key={navItem.href}
+                    className="duration-200 px-2 pt-1 group/headerZoop text-zinc-400 hover:text-zinc-100 cursor-pointer"
                   >
                     <li
                     >
-                      {navItem.name}
+                      <StaggeredText className="" focus={false} hoverGroup={false} str={navItem.name}>
+                      </StaggeredText>
                     </li>
                   </Link>
                 );
@@ -44,10 +47,14 @@ function Navigation() {
           </ul>
 
           <Link href={"/"}
-            className="duration-200 text-zinc-300 hover:text-zinc-100 cursor-pointer"
+            tabIndex={1}
+            className="duration-200 group/headerArrow text-zinc-300 hover:text-zinc-100 cursor-pointer"
           >
             {/* @ts-ignore */}
-            <ArrowLeft className="w-6 h-6 " />
+            <div className="relative   overflow-hidden">
+              <ArrowLeft className="w-6 h-6 relative top-0 group-focus/headerArrow:top-[24px] group-hover/headerArrow:top-[24px] group-active/headerArrow:top-[24px]" />
+              <ArrowLeft className="w-6 h-6 absolute inset-0 top-[-24px] group-focus/headerArrow:top-[0px] group-hover/headerArrow:top-[0px] group-active/headerArrow:top-[0px] " />
+            </div>
           </Link>
         </nav>
       </div>

@@ -13,21 +13,22 @@ body,
 body * {
   box-sizing: border-box;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
   scrollbar-color: #0d9488 black;
   transition: all 0.4s ease-out;
   outline: none;
   --webkit-tap-highlight-color: transparent;
 }
+
 canvas {
   transition-duration: 0s;
 }
 
-.bg-red-custom:hover > div > div:nth-child(2) {
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-    var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-    var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+.bg-red-custom:hover>div>div:nth-child(2) {
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   background-color: rgba(241, 5, 5, 0.45);
 }
+
 /* Scrollbar Styles */
 ::-webkit-scrollbar,
 body *::-webkit-scrollbar,
@@ -57,10 +58,12 @@ body::-webkit-scrollbar-track {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+
 body *::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background-color: #0d9488 !important;
 }
+
 body *::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px #0d9488 !important;
@@ -68,14 +71,17 @@ body::-webkit-scrollbar-track {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+
 body::-webkit-scrollbar,
 body * ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
+
 /* ::view-transition-old(*),
 ::view-transition-new(*) {
   animation-timing-function: ease-out;
@@ -94,41 +100,51 @@ body * ::-webkit-scrollbar {
   animation: animateZ 1s linear forwards;
   will-change: "z-index";
 }
+
 @keyframes animateZ {
   from {
     z-index: 0;
   }
+
   to {
     z-index: 20;
   }
 }
+
 .fade-in {
   animation: fade-in-opacity linear forwards 1s;
-  will-change: opacity; 
+  will-change: opacity;
 }
+
 .fade-out {
-  will-change: opacity; 
+  will-change: opacity;
   animation: fade-out-opacity linear forwards 1s;
 }
+
 @keyframes fade-in-opacity {
   0% {
     opacity: 0%;
   }
+
   50% {
     opacity: 0%;
   }
+
   100% {
     opacity: 100%;
   }
 }
+
 @keyframes fade-out-opacity {
   0% {
     opacity: 100%;
   }
+
   100% {
     opacity: 0%;
   }
 }
+
 body {
   width: 100%;
   min-width: 100vw;
@@ -140,20 +156,25 @@ body {
 .fadeIn {
   opacity: 1;
 }
+
 .fadeOut {
   opacity: 0;
 }
+
 .w-max-16 {
   min-width: 16rem;
   max-width: 16rem;
   width: 100%;
 }
+
 .backdrop-blur-2px {
   backdrop-filter: blur(2px);
 }
+
 body {
   overflow-x: hidden;
 }
+
 .shooting-star {
   position: absolute;
   top: -10%;
@@ -168,6 +189,7 @@ body {
   border-radius: 50%;
   animation: shhotingStar 10s linear infinite;
 }
+
 .shooting-star::before {
   content: "";
   position: absolute;
@@ -177,36 +199,55 @@ body {
   background: linear-gradient(90deg, #cecece, transparent);
   /* background: transparent; */
 }
+
 @keyframes shhotingStar {
   0% {
     transform: rotate(315deg) translateX(0px);
     opacity: 0;
   }
+
   70% {
     transform: rotate(315deg) translateX(0);
     box-shadow: 0 0 0 4px rgba(52, 51, 51, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
     opacity: 0.4;
   }
+
   90% {
     transform: rotate(315deg) translateX(-1000px);
     box-shadow: 0 0 0 4px rgba(52, 51, 51, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
     opacity: 1;
   }
+
   100% {
     transform: rotate(315deg) translateX(-1000px);
     opacity: 0;
   }
 }
+
 .star2 {
   top: 0%;
   left: 50%;
   animation-delay: 5s;
 }
+
 span:first-child {
   top: 0;
   right: 0;
   left: initial;
 }
+
 .custom-box-shadow {
   box-shadow: 0 0px 3px 0px white;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@layer components {
+  a:focus {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
 }
