@@ -11,15 +11,15 @@ type CardType = {
   stackAnimation?: boolean;
 };
 
-const BASE_TOP = 100;
+const BASE_TOP = 120;
 const MIN_WIDTH = 70;
 const BASE_WIDTH = 100;
-const ADDITIONAL_SPACING_MOBILE = 1;
-const ADDITIONAL_SPACING_DESKTOP = 8;
+const ADDITIONAL_SPACING_MOBILE = 0.5;
+const ADDITIONAL_SPACING_DESKTOP = 10;
 
 function calculateTop(scrollPercentage = 0, ix = 0, isMobile = false) {
   const additionalSpacing = isMobile ? ADDITIONAL_SPACING_MOBILE : ADDITIONAL_SPACING_DESKTOP;
-  const scrollOffset = (100 - scrollPercentage);
+  const scrollOffset = (isMobile ? 5 : (100 - scrollPercentage));
   return `${BASE_TOP + (ix * (additionalSpacing + scrollOffset))}px`;
 }
 
@@ -29,12 +29,6 @@ function calculateWidth(scrollPercentage = 0, ix = 0, maxItems = 0) {
   return Math.max(currentWidth, MIN_WIDTH);
 }
 
-function calculateValue(min: number, max: number, percentage: number, skip?: boolean, reverse?: boolean) {
-  if (skip) return max;
-  if (reverse) percentage = 100 - percentage;
-  return min + ((max - min) * percentage) / 100;
-}
-
 export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stackAnimation = false, tabIndex = -1 }) => {
   const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
@@ -42,7 +36,7 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false)
-  
+
   useEffect(() => {
     setIsMobile(window.innerWidth < 768)
     const handleScroll = () => {
@@ -66,7 +60,7 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
   const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
   const style = { maskImage, WebkitMaskImage: maskImage };
 
-
+  console.log("scrollPercentage", scrollPercentage)
   return (
     <div
       ref={containerRef}

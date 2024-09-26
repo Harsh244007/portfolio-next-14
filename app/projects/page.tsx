@@ -6,14 +6,13 @@ import Loading from "@/app/loading";
 import { lazy, Suspense } from "react";
 import { NavigationType } from "@/types/types";
 import Particles from "../components/particles";
-import useIinfiniteScroll from "@/hooks/useInfiniteScroll";
 import RenderProjects from "./renderProjects";
 
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 export default async function ProjectsPage() {
   // await new Promise((resolve) => setTimeout(resolve, 20000));
   return (
-    <div className="relative pb-16">
+    <div className="relative md:pb-16">
       <Particles className="absolute inset-0 z-10 animate-fade-in" quantity={2000} />
       <Suspense fallback={<Loading />}>
         <Navigation />
