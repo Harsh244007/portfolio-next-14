@@ -41,8 +41,10 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
 
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
+  const [isMobile, setIsMobile] = useState(false)
+  
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
     const handleScroll = () => {
       const { innerHeight: windowHeight, scrollY: currentPosition } = window;
       const fullHeight = document.documentElement.scrollHeight;
@@ -54,8 +56,7 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isMobile = window.innerWidth < 768;
-  
+
   function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
@@ -65,7 +66,6 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
   const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
   const style = { maskImage, WebkitMaskImage: maskImage };
 
-  const widthPercentage = Math.round(max ? calculateValue(MIN_WIDTH, BASE_WIDTH, Math.abs(scrollPercentage - (max - ix)), false, true) : 100);
 
   return (
     <div
