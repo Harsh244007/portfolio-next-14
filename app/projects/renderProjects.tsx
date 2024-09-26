@@ -1,19 +1,15 @@
 "use client";
 import PROJECTJSON from "../../util/JSON/projects.json";
-import useIinfiniteScroll from "@/hooks/useInfiniteScroll";
 import { Article } from "./article";
-import { Card } from "../components/card";
+import Card from "../components/card";
 import { useEffect } from "react";
 import Loading from "../loading";
-import { LoaderIcon } from "lucide-react";
 
 const RenderProjects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const totalLength = PROJECTJSON.length;
-  const [startItems, endItems] = useIinfiniteScroll(5, totalLength);
   const PROJECTSDATA = PROJECTJSON;
   return (
     <div className="grid grid-cols-1 gap-8 mx-auto">

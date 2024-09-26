@@ -1,6 +1,6 @@
 import { Github, Mail, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { Card } from "../components/card";
+import Card  from "../components/card";
 import Loading from "@/app/loading";
 import React, { lazy, Suspense } from "react";
 import Particles from "../components/particles";

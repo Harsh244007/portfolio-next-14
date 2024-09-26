@@ -251,3 +251,7 @@ span:first-child {
   }
 
 }
+.z-max-hover:hover{
+  /* top: 120px !important; */
+  z-index: 100000 !important;
+}

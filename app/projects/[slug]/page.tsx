@@ -6,7 +6,7 @@ import Loading from "@/app/loading";
 import React, { lazy, Suspense } from "react";
 import { NavigationType } from "@/types/types";
 import Particles from "@/app/components/particles";
-import { Card } from "@/app/components/card";
+import Card  from "@/app/components/card";
 
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 

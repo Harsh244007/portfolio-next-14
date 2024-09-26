@@ -1,6 +1,6 @@
 "use client";
 import { motion, useMotionTemplate, useSpring } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 type CardType = {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ const BASE_TOP = 120;
 const MIN_WIDTH = 70;
 const BASE_WIDTH = 100;
 const ADDITIONAL_SPACING_MOBILE = 0.5;
-const ADDITIONAL_SPACING_DESKTOP = 10;
+const ADDITIONAL_SPACING_DESKTOP = 4;
 
 function calculateTop(scrollPercentage = 0, ix = 0, isMobile = false) {
   const additionalSpacing = isMobile ? ADDITIONAL_SPACING_MOBILE : ADDITIONAL_SPACING_DESKTOP;
@@ -29,7 +29,7 @@ function calculateWidth(scrollPercentage = 0, ix = 0, maxItems = 0) {
   return Math.max(currentWidth, MIN_WIDTH);
 }
 
-export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stackAnimation = false, tabIndex = -1 }) => {
+const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stackAnimation = false, tabIndex = -1 }) => {
   const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
 
@@ -52,31 +52,31 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
 
 
   function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-    const { left, top } = currentTarget.getBoundingClientRect();
+   const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
 
   const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
   const style = { maskImage, WebkitMaskImage: maskImage };
-
+  const topPosition = calculateTop(scrollPercentage, ix, isMobile)
   console.log("scrollPercentage", scrollPercentage)
   return (
     <div
       ref={containerRef}
       tabIndex={tabIndex}
       onMouseMove={onMouseMove}
-      style={stackAnimation ? { zIndex: ix + 1, scale: `${Math.abs(calculateWidth(scrollPercentage, max - ix, max) / 100)} 1`, top: calculateTop(scrollPercentage, ix, isMobile) } : {}}
-      className={`animate-z overflow-hidden lg:overflow-visible ${stackAnimation ? "self-center w-full makeItScroll sticky" : "relative"} duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white bg-red-custom backdrop-blur-2px bg-black hover:custom-box-shadow ${className} ${tabIndex >= 0 ? "focus:ring-2 focus:ring-[#759dab]" : ""}`}
+      style={stackAnimation ? { zIndex: ix + 1, scale: `${Math.abs(calculateWidth(scrollPercentage, max - ix, max) / 100)} 1`, top: topPosition } : {}}
+      className={`animate-z backdrop-blur-md overflow-hidden lg:overflow-visible ${stackAnimation ? "self-center z-max-hover w-full makeItScroll sticky" : "relative"} duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white bg-red-custom  bg-black hover:custom-box-shadow ${className} ${tabIndex >= 0 ? "focus:ring-2 focus:ring-[#759dab]" : ""}`}
     >
       <div className="pointer-events-none">
         <div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,red)]" />
         <motion.div
-          className="absolute inset-0 z-10 opacity-100 via-white-100/5 transition duration-1000 group-hover:opacity-50"
+          className={`absolute inset-0  z-10  opacity-100 via-white-100/5 transition duration-1000 group-hover:opacity-50`}
           style={style}
         />
         <motion.div
-          className="absolute inset-0 z-10 opacity-0 animate-fade-in mix-blend-overlay transition duration-1000 group-hover:opacity-20"
+          className={`absolute inset-0  z-10 opacity-0 animate-fade-in mix-blend-overlay transition duration-1000 group-hover:opacity-20`}
           style={style}
         />
       </div>
@@ -84,3 +84,4 @@ export const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -
     </div>
   );
 };
+export default memo(Card)

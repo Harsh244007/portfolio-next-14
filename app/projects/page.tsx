@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../components/card";
+import Card  from "../components/card";
 import { Article } from "./article";
 import PROJECTJSON from "../../util/JSON/projects.json";
 import Loading from "@/app/loading";
