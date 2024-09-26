@@ -66,7 +66,7 @@ const Card: React.FC<CardType> = ({ children, className, max = 10, ix = -1, stac
       tabIndex={tabIndex}
       onMouseMove={onMouseMove}
       style={stackAnimation ? { zIndex: ix + 1, scale: `${Math.abs(calculateWidth(scrollPercentage, max - ix, max) / 100)} 1`, top: topPosition } : {}}
-      className={`animate-z backdrop-blur-md overflow-hidden lg:overflow-visible ${stackAnimation ? "self-center z-max-hover w-full makeItScroll sticky" : "relative"} duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white bg-red-custom  bg-black hover:custom-box-shadow ${className} ${tabIndex >= 0 ? "focus:ring-2 focus:ring-[#759dab]" : ""}`}
+      className={`animate-z backdrop-blur-md overflow-hidden lg:overflow-visible ${stackAnimation ? "self-center z-max-hover w-full makeItScroll sticky" : "relative"} duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 border-zinc-600 hover:border-white bg-red-custom  bg-black hover:custom-box-shadow ${className} pr-1 ${tabIndex >= 0 ? "focus:ring-2 focus:ring-[#759dab]" : ""}`}
     >
       <div className="pointer-events-none">
         <div className="absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,red)]" />
