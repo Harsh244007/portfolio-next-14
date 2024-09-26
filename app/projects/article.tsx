@@ -21,7 +21,7 @@ export const Article: React.FC<Props> = ({ project }) => {
         </div>
         <h2
           style={{ viewTransitionName: project.title.split(" ").join("") }}
-          className={` z-20  text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display pr-2 `}
+          className={` z-20  overflow-hidden text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display pr-2 `}
         >
           <StaggeredText className="text-xl lg:text-xl h-20" focus={false} hoverGroup={false} str={project.title}>
           </StaggeredText>
