@@ -251,7 +251,7 @@ span:first-child {
   }
 
 }
-.z-max-hover:hover{
+.z-max-hover:hover,.z-max-hover:active,.z-max-hover:focus{
   /* top: 120px !important; */
   transition-duration: 200ms;
   scale: 0.8 1 !important;

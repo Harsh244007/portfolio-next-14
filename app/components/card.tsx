@@ -14,8 +14,8 @@ type CardType = {
 const BASE_TOP = 120;
 const MIN_WIDTH = 70;
 const BASE_WIDTH = 100;
-const ADDITIONAL_SPACING_MOBILE = 0.5;
-const ADDITIONAL_SPACING_DESKTOP = 2;
+const ADDITIONAL_SPACING_MOBILE = 0.2;
+const ADDITIONAL_SPACING_DESKTOP = 1;
 
 function calculateTop(scrollPercentage = 0, ix = 0, isMobile = false) {
   const additionalSpacing = isMobile ? ADDITIONAL_SPACING_MOBILE : ADDITIONAL_SPACING_DESKTOP;
