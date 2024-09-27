@@ -15,7 +15,7 @@ body * {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: #0d9488 black;
-  transition: all 0.4s ease-out;
+  transition: all 0.35s cubic-bezier(.3, .86, .36, .95);
   outline: none;
   --webkit-tap-highlight-color: transparent;
 }
