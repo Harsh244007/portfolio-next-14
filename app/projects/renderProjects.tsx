@@ -13,7 +13,7 @@ const RenderProjects = () => {
   const PROJECTSDATA = PROJECTJSON;
   return (
     <div className="grid grid-cols-1 gap-8 mx-auto">
-      <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
+      <div className="flex flex-col pb-10 w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
         {PROJECTSDATA.length === 0 ?
           <div className="flex items-center justify-center">
             <Loading />
