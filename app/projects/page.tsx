@@ -7,6 +7,7 @@ import { lazy, Suspense } from "react";
 import { NavigationType } from "@/types/types";
 import Particles from "../components/particles";
 import RenderProjects from "./renderProjects";
+import GoToTop from "../components/Common/GoToTop";
 
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 export default async function ProjectsPage() {
@@ -26,6 +27,7 @@ export default async function ProjectsPage() {
         <Suspense fallback={<Loading />}>
            <RenderProjects/>
         </Suspense>
+        <GoToTop/>
         <div className="hidden w-full h-px md:block bg-zinc-800" />
       </div>
     </div>

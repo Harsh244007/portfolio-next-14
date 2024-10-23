@@ -7,6 +7,7 @@ import Particles from "../components/particles";
 import { SiLeetcode } from "react-icons/si";
 import { NavigationType } from "@/types/types";
 import LinkTransition from "@/app/components/Common/ViewLink"
+import GoToTop from "../components/Common/GoToTop";
 
 const Navigation: NavigationType = lazy(() => import("@/app/components/nav"));
 const socials = [
@@ -76,6 +77,7 @@ const Contact: React.FC = () => {
           ))}
         </div>
       </div>
+      <GoToTop/>
     </div>
   );
 };
